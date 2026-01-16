@@ -45,6 +45,29 @@
                     <i class="fa-solid fa-server"></i> Conexão
                 </a>
 
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mt-8 mb-4 px-2">Progressão do Modpack</div>
+                <a href="#progression-overview" class="sidebar-link">
+                    <i class="fa-solid fa-chart-line"></i> Visão Geral
+                </a>
+                <a href="#progression-phase1" class="sidebar-link">
+                    <i class="fa-solid fa-seedling"></i> Fase 1: Fundamentos
+                </a>
+                <a href="#progression-phase2" class="sidebar-link">
+                    <i class="fa-solid fa-microchip"></i> Fase 2: Circuitos Intermediários
+                </a>
+                <a href="#progression-phase3" class="sidebar-link">
+                    <i class="fa-solid fa-industry"></i> Fase 3: Motores e Circuitos Avançados
+                </a>
+                <a href="#progression-final" class="sidebar-link">
+                    <i class="fa-solid fa-gem"></i> Fase Final: Ápice do Poder
+                </a>
+                <a href="#botany-pots-progression" class="sidebar-link">
+                    <i class="fa-solid fa-leaf"></i> Botany Pots
+                </a>
+                <a href="#flight-items-progression" class="sidebar-link">
+                    <i class="fa-solid fa-plane-up"></i> Itens de Voo
+                </a>
+
                 <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mt-8 mb-4 px-2">Guias de Mods</div>
                 
                 <a href="#mod-intro" class="sidebar-link">
@@ -101,7 +124,7 @@
                     <p>Escolha sua plataforma preferida para baixar o modpack. Recomendamos o uso do CurseForge ou a instalação manual via DropBox para usuários do TLauncher.</p>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-                        <a href="https://www.dropbox.com/scl/fi/k79t8t61monupvp187tbp/MekaMiners-Oasis-8.2.2.zip?rlkey=iz5ebfls7xis53iiwhwmfp0jj&st=zgxly0px&dl=1" target="_blank" class="group relative bg-[#0061FF]/10 hover:bg-[#0061FF]/20 border border-[#0061FF]/50 p-4 rounded-xl flex items-center transition-all hover:translate-y-[-2px]">
+                        <a href="https://www.dropbox.com/scl/fi/k79t8t61monupvp187tbp/MekaMiners-Oasis-8.2.2.zip?rlkey=iz5ebfls6xis53iiwhwmfp0jj&st=zgxly0px&dl=1" target="_blank" class="group relative bg-[#0061FF]/10 hover:bg-[#0061FF]/20 border border-[#0061FF]/50 p-4 rounded-xl flex items-center transition-all hover:translate-y-[-2px]">
                             <div class="bg-[#0061FF] w-10 h-10 rounded-lg flex items-center justify-center mr-4 shadow-lg flex-none"><i class="fa-brands fa-dropbox text-white text-xl"></i></div>
                             <div><h3 class="!m-0 !text-sm text-white">Dropbox</h3><span class="text-xs text-blue-200">Arquivo .zip direto</span></div>
                         </a>
@@ -153,6 +176,279 @@
                     <p id="copy-feedback-mc" class="text-emerald-400 text-xs mt-2 text-center opacity-0 transition-opacity">IP copiado para a área de transferência!</p>
                 </section>
 
+                <!-- START: Progression System Content -->
+                <section id="progression-overview" class="mt-16 pt-8 border-t border-slate-800 mb-16">
+                    <h2><i class="fa-solid fa-chart-line text-blue-500"></i>Sistema de Progressão do Modpack</h2>
+                    <p>A progressão no modpack MekaMiners Oasis é cuidadosamente balanceada, exigindo que os jogadores explorem diversos mods para avançar. Abaixo, detalhamos os principais marcos e itens que guiarão sua jornada, seguindo a linha de quests principal.</p>
+                    <p>Os "mecanismos" personalizados (itens do KubeJS) são os pilares dessa progressão, servindo como pré-requisitos para desbloquear tecnologias e magias mais avançadas.</p>
+
+                    <section id="progression-phase1" class="mb-8">
+                        <h3><i class="fa-solid fa-seedling text-green-400"></i>Fase 1: Os Fundamentos Iniciais</h3>
+                        <p>Esta fase estabelece as bases da sua infraestrutura, introduzindo a interação entre os primeiros mods e a criação dos mecanismos fundamentais.</p>
+
+                        <div class="info-box">
+                            <i class="fa-solid fa-wrench text-blue-400"></i>
+                            <div>
+                                <h4 class="!mt-0 !text-blue-100 !text-lg !mb-2">1. <code class="text-pink-400">Mecanismo Inicial</code></h4>
+                                <p class="!mb-0 text-blue-200/80 text-sm">
+                                    O primeiro grande marco da sua progressão industrial. É um item composto que exige recursos de vários mods iniciais.
+                                </p>
+                                <ul class="list-disc list-inside text-slate-400 pl-4 mt-2 space-y-1">
+                                    <li><strong>Fabricação:</strong> Bancada de Trabalho (Crafting Table).</li>
+                                    <li><strong>Componentes Chave:</strong> <code class="text-pink-400">Promessa Tier 3</code> (EvilCraft), <code class="text-pink-400">Diodo Guardião</code> (EnderIO), <code class="text-pink-400">Capacitor Octádico</code> (EnderIO), <code class="text-pink-400">Plástico</code> (PneumaticCraft), <code class="text-pink-400">Engrenagem Vibrante</code> (EnderIO), <code class="text-pink-400">Circuito de Controle Ultimate</code> (Mekanism), <code class="text-pink-400">Lingote de Insanium</code> (Mystical Agradditions).</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <i class="fa-solid fa-bolt text-yellow-400"></i>
+                            <div>
+                                <h4 class="!mt-0 !text-yellow-100 !text-lg !mb-2">2. <code class="text-pink-400">Mecanismo Iniciado</code></h4>
+                                <p class="!mb-0 text-yellow-200/80 text-sm">
+                                    Uma evolução do mecanismo inicial, exigindo um processo de energização.
+                                </p>
+                                <ul class="list-disc list-inside text-slate-400 pl-4 mt-2 space-y-1">
+                                    <li><strong>Fabricação:</strong> Powah: Orbe de Energização (Energizing Orb) (Custo: 15.000.000 FE).</li>
+                                    <li><strong>Componentes Chave:</strong> <code class="text-pink-400">Lingote de Gaia</code> (Botania), <code class="text-pink-400">Mecanismo Inicial</code>, <code class="text-pink-400">Circuito de Controle Ultimate</code> (Mekanism), <code class="text-pink-400">Tau Forte</code> (Blood Magic), <code class="text-pink-400">Token de Jogador</code> (EnderIO).</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <i class="fa-solid fa-gear text-orange-400"></i>
+                            <div>
+                                <h4 class="!mt-0 !text-orange-100 !text-lg !mb-2">3. <code class="text-pink-400">Mecanismo de Precisão</code></h4>
+                                <p class="!mb-0 text-orange-200/80 text-sm">
+                                    Um componente vital para as máquinas do mod Create e outros crafts.
+                                </p>
+                                <ul class="list-disc list-inside text-slate-400 pl-4 mt-2 space-y-1">
+                                    <li><strong>Fabricação:</strong> Botania: Altar Rúnico (Runic Altar) (Custo: 10.000 Mana).</li>
+                                    <li><strong>Componentes Chave:</strong> <code class="text-pink-400">Costeleta de Porco</code> (Minecraft), <code class="text-pink-400">Runa da Ira</code> (Botania), <code class="text-pink-400">Runa de Muspelheim</code> (Mythic Botany), <code class="text-pink-400">Circuito de Controle Ultimate</code> (Mekanism), <code class="text-pink-400">Lingote de Divinium</code> (Mystical Expansion), <code class="text-pink-400">Essência de Divinium</code> (Mystical Expansion), <code class="text-pink-400">Mecanismo Inicial</code>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="progression-phase2" class="mb-8">
+                        <h3><i class="fa-solid fa-microchip text-cyan-400"></i>Fase 2: Circuitos e Mecanismos Intermediários</h3>
+                        <p>Esta fase aprofunda-se na criação de componentes eletrônicos e mecanismos mais complexos, utilizando máquinas de mods avançados.</p>
+
+                        <div class="info-box">
+                            <i class="fa-solid fa-rocket text-blue-400"></i>
+                            <div>
+                                <h4 class="!mt-0 !text-blue-100 !text-lg !mb-2">1. <code class="text-pink-400">Mecanismo Iniciado (Draconic)</code></h4>
+                                <p class="!mb-0 text-blue-200/80 text-sm">
+                                    Um passo significativo na cadeia de mecanismos, exigindo fusão de itens.
+                                </p>
+                                <ul class="list-disc list-inside text-slate-400 pl-4 mt-2 space-y-1">
+                                    <li><strong>Fabricação:</strong> Draconic Evolution: Criação por Fusão (Fusion Crafting) (Tier: CHAOTIC, Custo: 3.200.000 FE).</li>
+                                    <li><strong>Componentes Chave:</strong> <code class="text-pink-400">Bloco de Liga Unobtainium-Vibranium</code> (Allthemodium), <code class="text-pink-400">Lingote de Divinium</code> (Mystical Expansion), <code class="text-pink-400">Mecanismo Inicial</code>, <code class="text-pink-400">Lingote de Gaia</code> (Botania), <code class="text-pink-400">Núcleo Despertado</code> (Draconic Evolution), <code class="text-pink-400">Capacitor Nitro</code> (Powah), <code class="text-pink-400">Lingote de Supremium</code> (Mystical Agriculture), <code class="text-pink-400">Mecanismo Iniciado</code>.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <i class="fa-solid fa-cogs text-orange-400"></i>
+                            <div>
+                                <h4 class="!mt-0 !text-orange-100 !text-lg !mb-2">2. <code class="text-pink-400">Mecanismo Iniciador</code></h4>
+                                <p class="!mb-0 text-orange-200/80 text-sm">
+                                    Outro mecanismo intermediário, que combina os mecanismos anteriores.
+                                </p>
+                                <ul class="list-disc list-inside text-slate-400 pl-4 mt-2 space-y-1">
+                                    <li><strong>Fabricação:</strong> Botania: Altar Rúnico (Runic Altar) (Custo: 1.000.000 Mana).</li>
+                                    <li><strong>Componentes Chave:</strong> <code class="text-pink-400">Mecanismo Inicial</code>, <code class="text-pink-400">Mecanismo Iniciado (Draconic)</code>, <code class="text-pink-400">Mecanismo de Precisão</code>, <code class="text-pink-400">Mecanismo Iniciado</code>, <code class="text-pink-400">Promessa de Eficiência 0</code> (EvilCraft), <code class="text-pink-400">Bloco de Liga Unobtainium-Vibranium</code> (Allthemodium).</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <i class="fa-solid fa-microchip text-cyan-400"></i>
+                            <div>
+                                <h4 class="!mt-0 !text-cyan-100 !text-lg !mb-2">3. <code class="text-pink-400">Componente de Circuito Espacial 1</code></h4>
+                                <p class="!mb-0 text-cyan-200/80 text-sm">
+                                    Um componente essencial para a criação de circuitos espaciais.
+                                </p>
+                                <ul class="list-disc list-inside text-slate-400 pl-4 mt-2 space-y-1">
+                                    <li><strong>Fabricação:</strong> Create: Compactação (Compacting).</li>
+                                    <li><strong>Componentes Chave:</strong> <code class="text-pink-400">Mecanismo Iniciado</code>, <code class="text-pink-400">Mecanismo Inicial</code>, <code class="text-pink-400">Lingote de Divinium</code> (Mystical Expansion), <code class="text-pink-400">Fragmento de Sangue Fraco</code> (Blood Magic), <code class="text-pink-400">Mecanismo de Precisão</code>.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <i class="fa-solid fa-ethernet text-purple-400"></i>
+                            <div>
+                                <h4 class="!mt-0 !text-purple-100 !text-lg !mb-2">4. <code class="text-pink-400">Componente de Circuito de Ativação 1</code></h4>
+                                <p class="!mb-0 text-purple-200/80 text-sm">
+                                    Um componente vital para os circuitos de ativação.
+                                </p>
+                                <ul class="list-disc list-inside text-slate-400 pl-4 mt-2 space-y-1">
+                                    <li><strong>Fabricação:</strong> Draconic Evolution: Criação por Fusão (Fusion Crafting) (Tier: CHAOTIC, Custo: 3.200.000 FE).</li>
+                                    <li><strong>Componentes Chave:</strong> <code class="text-pink-400">Mecanismo Iniciado (Draconic)</code>, <code class="text-pink-400">Mecanismo Inicial</code>, <code class="text-pink-400">Lingote de Supremium</code> (Mystical Agriculture), <code class="text-pink-400">Componente de Célula 4M</code> (MegaCells), <code class="text-pink-400">Lingote de Divinium</code> (Mystical Expansion), <code class="text-pink-400">Mecanismo Iniciado</code>, <code class="text-pink-400">Núcleo Despertado</code> (Draconic Evolution), <code class="text-pink-400">Pellet de Plutônio</code> (Mekanism), <code class="text-pink-400">Lingote de Crystaltine</code> (Extended Crafting), <code class="text-pink-400">Estrutura de Máquina Suprema</code> (Industrial Foregoing).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="progression-phase3" class="mb-8">
+                        <h3><i class="fa-solid fa-industry text-red-400"></i>Fase 3: Motores e Circuitos de Alto Nível</h3>
+                        <p>Esta fase foca na construção de motores de alta performance e na montagem dos circuitos mais complexos, que são a espinha dorsal da automação de fim de jogo.</p>
+
+                        <div class="info-box">
+                            <i class="fa-solid fa-engine text-red-400"></i>
+                            <div>
+                                <h4 class="!mt-0 !text-red-100 !text-lg !mb-2">1. <code class="text-pink-400">Motor Avançado</code></h4>
+                                <p class="!mb-0 text-red-200/80 text-sm">
+                                    Um motor de alta performance, crucial para automações de fim de jogo.
+                                </p>
+                                <ul class="list-disc list-inside text-slate-400 pl-4 mt-2 space-y-1">
+                                    <li><strong>Fabricação:</strong> Extended Crafting: Mesa de Criação Modelada (Shaped Table) (receita complexa).</li>
+                                    <li><strong>Componentes Chave:</strong> Inclui itens como <code class="text-pink-400">Núcleo de Energia Caótico</code> (Draconic Evolution), <code class="text-pink-400">Lingote de Meka</code> (MekaMod), <code class="text-pink-400">Lingote de Crystaltine</code> (Extended Crafting), <code class="text-pink-400">Componente de Célula Radioativa</code> (MegaCells), <code class="text-pink-400">Componente de Circuito de Ativação 1</code>, <code class="text-pink-400">Componente de Circuito Espacial 1</code>, <code class="text-pink-400">Essência de Divinium</code> (Mystical Expansion), <code class="text-pink-400">Provedor de Indução Ultimate</code> (Mekanism), <code class="text-pink-400">Injetor de Criação Caótico</code> (Draconic Evolution), <code class="text-pink-400">Célula de Indução Ultimate</code> (Mekanism), e tokens do EnderIO (<code class="text-pink-400">Token de Animal</code>, <code class="text-pink-400">Token de Monstro</code>, <code class="text-pink-400">Token de Jogador</code>).</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <i class="fa-solid fa-rocket text-red-400"></i>
+                            <div>
+                                <h4 class="!mt-0 !text-red-100 !text-lg !mb-2">2. <code class="text-pink-400">Motor Supremo Avançado</code></h4>
+                                <p class="!mb-0 text-red-200/80 text-sm">
+                                    O motor mais potente do modpack, essencial para as automações mais extremas.
+                                </p>
+                                <ul class="list-disc list-inside text-slate-400 pl-4 mt-2 space-y-1">
+                                    <li><strong>Fabricação:</strong> Extended Crafting: Mesa de Criação Modelada (Shaped Table) (receita extremamente complexa).</li>
+                                    <li><strong>Componentes Chave:</strong> Requer itens de tier ainda mais alto que o <code class="text-pink-400">Motor Avançado</code>, como <code class="text-pink-400">Pellet de Plutônio</code> (Mekanism), <code class="text-pink-400">Bloco de Liga Unobtainium-Allthemodium</code> (Allthemodium), <code class="text-pink-400">Runa do Orgulho</code> (Botania), <code class="text-pink-400">Bloco de Liga Unobtainium-Vibranium</code> (Allthemodium), <code class="text-pink-400">Lingote de Supremium</code> (Mystical Agriculture), <code class="text-pink-400">Núcleo Caótico</code> (Draconic Evolution), <code class="text-pink-400">Componente de Circuito Espacial 1</code>, <code class="text-pink-400">Injetor de Criação Caótico</code> (Draconic Evolution), <code class="text-pink-400">Componente de Célula Radioativa</code> (MegaCells), <code class="text-pink-400">Motor Avançado</code>, <code class="text-pink-400">Lingote de Crystaltine</code> (Extended Crafting), <code class="text-pink-400">Pellet de Polônio</code> (Mekanism), <code class="text-pink-400">Pellet de Antimatéria</code> (Mekanism), entre outros.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <i class="fa-solid fa-microchip text-cyan-400"></i>
+                            <div>
+                                <h4 class="!mt-0 !text-cyan-100 !text-lg !mb-2">3. <code class="text-pink-400">Circuito Espacial</code></h4>
+                                <p class="!mb-0 text-cyan-200/80 text-sm">
+                                    Um dos dois circuitos de alto nível, fundamental para automações espaciais.
+                                </p>
+                                <ul class="list-disc list-inside text-slate-400 pl-4 mt-2 space-y-1">
+                                    <li><strong>Fabricação:</strong> Create: Compactação (Compacting).</li>
+                                    <li><strong>Componentes Chave:</strong> <code class="text-pink-400">Componente de Circuito Espacial 2</code>, <code class="text-pink-400">Componente de Circuito Espacial 1</code> (x2), <code class="text-pink-400">Componente de Circuito de Ativação 1</code> (x2), <code class="text-pink-400">Núcleo Despertado</code> (Draconic Evolution) (x2), <code class="text-pink-400">Motor Supremo Avançado</code> (x2), <code class="text-pink-400">Motor Avançado</code> (x2).</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <i class="fa-solid fa-ethernet text-purple-400"></i>
+                            <div>
+                                <h4 class="!mt-0 !text-purple-100 !text-lg !mb-2">4. <code class="text-pink-400">Circuito de Ativação</code></h4>
+                                <p class="!mb-0 text-purple-200/80 text-sm">
+                                    O outro circuito de alto nível, essencial para automações que exigem ativação.
+                                </p>
+                                <ul class="list-disc list-inside text-slate-400 pl-4 mt-2 space-y-1">
+                                    <li><strong>Fabricação:</strong> Create: Compactação (Compacting).</li>
+                                    <li><strong>Componentes Chave:</strong> <code class="text-pink-400">Componente de Circuito de Ativação 2</code>, <code class="text-pink-400">Circuito Espacial</code> (x2), <code class="text-pink-400">Componente de Circuito de Ativação 1</code> (x2), <code class="text-pink-400">Mecanismo Iniciador</code> (x2), <code class="text-pink-400">Motor Supremo Avançado</code> (x2), <code class="text-pink-400">Motor Avançado</code> (x2).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="progression-final" class="mb-8">
+                        <h3><i class="fa-solid fa-gem text-yellow-400"></i>Fase Final: O Ápice da Automação e Poder</h3>
+                        <p>Esta é a fase final da progressão, onde você criará os itens mais poderosos e complexos do modpack, simbolizando a maestria sobre todos os sistemas.</p>
+
+                        <div class="info-box">
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <div>
+                                <h4 class="!mt-0 !text-yellow-100 !text-lg !mb-2">1. <code class="text-pink-400">Essência Criativa</code></h4>
+                                <p class="!mb-0 text-yellow-200/80 text-sm">
+                                    A essência criativa, que permite a criação de itens criativos e a automação máxima.
+                                </p>
+                                <ul class="list-disc list-inside text-slate-400 pl-4 mt-2 space-y-1">
+                                    <li><strong>Fabricação:</strong> Mystical Agriculture: Altar do Despertar (Awakening Altar).</li>
+                                    <li><strong>Componentes Chave:</strong> <code class="text-pink-400">Essência de Divinium</code> (Mystical Expansion), várias essências elementais (Mystical Agriculture: <code class="text-pink-400">Essência do Ar</code>, <code class="text-pink-400">Essência da Terra</code>, <code class="text-pink-400">Essência da Água</code>, <code class="text-pink-400">Essência do Fogo</code>), <code class="text-pink-400">Sigilo do Vidente</code> (Blood Magic), <code class="text-pink-400">Fragmento de Caos</code> (Draconic Evolution), <code class="text-pink-400">Runa do Orgulho</code> (Botania), <code class="text-pink-400">Singularidade</code> (Applied Energistics 2).</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <i class="fa-solid fa-crown text-purple-400"></i>
+                            <div>
+                                <h4 class="!mt-0 !text-purple-100 !text-lg !mb-2">2. <code class="text-pink-400">Lingote Supremo</code></h4>
+                                <p class="!mb-0 text-purple-200/80 text-sm">
+                                    O item final do modpack, representando a conclusão da progressão principal.
+                                </p>
+                                <ul class="list-disc list-inside text-slate-400 pl-4 mt-2 space-y-1">
+                                    <li><strong>Fabricação:</strong> Draconic Evolution: Criação por Fusão (Fusion Crafting) (Tier: CHAOTIC, Custo: 12.100.000 FE).</li>
+                                    <li><strong>Componentes Chave:</strong> <code class="text-pink-400">Lingote de Crystaltine</code> (Extended Crafting), <code class="text-pink-400">Componente de Circuito Espacial 1</code>, <code class="text-pink-400">Runa do Orgulho</code> (Botania), <code class="text-pink-400">Motor Supremo Avançado</code>, <code class="text-pink-400">Circuito Espacial</code>, <code class="text-pink-400">Essência de Supremium Despertada</code> (Mystical Agriculture), <code class="text-pink-400">Núcleo Caótico</code> (Draconic Evolution), <code class="text-pink-400">Componente de Circuito de Ativação 1</code>, <code class="text-pink-400">Magia Suprema Avançada</code>, <code class="text-pink-400">Circuito de Ativação</code>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <section id="botany-pots-progression" class="mb-16 pt-8">
+                    <h2><i class="fa-solid fa-seedling text-green-500"></i>Automação Agrícola: <code class="text-pink-400">Botany Pots</code> e Seus Tiers</h2>
+                    <p>As <code class="text-pink-400">Botany Pots</code> são essenciais para a automação de recursos agrícolas e de essências da Mystical Agriculture. A progressão através de seus tiers é fundamental para o late-game, e cada upgrade depende dos mecanismos principais da progressão geral:</p>
+                    <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                        <li><strong class="text-slate-200">Vaso de Terracota com Funil:</strong> O ponto de partida para a automação.
+                            <ul class="list-circle list-inside ml-4 space-y-0.5">
+                                <li><strong>Receita:</strong> <code class="text-pink-400">Terracota</code> (3x), <code class="text-pink-400">Cama Hidropônica</code> (Industrial Foregoing) (1x), <code class="text-pink-400">Funil</code> (Minecraft) (1x).</li>
+                                <li><strong>Desbloqueio:</strong> Disponível no início da progressão industrial.</li>
+                            </ul>
+                        </li>
+                        <li><strong class="text-slate-200">Vaso de Terracota com Funil Elite:</strong> Um upgrade significativo para maior eficiência.
+                            <ul class="list-circle list-inside ml-4 space-y-0.5">
+                                <li><strong>Receita:</strong> <code class="text-pink-400">Terracota</code> (3x), <code class="text-pink-400">Vaso de Terracota com Funil</code> (1x), <code class="text-pink-400">Mecanismo Inicial</code> (1x).</li>
+                                <li><strong>Desbloqueio:</strong> Requer o <strong><code class="text-pink-400">Mecanismo Inicial</code></strong>, um dos primeiros marcos da progressão geral.</li>
+                            </ul>
+                        </li>
+                        <li><strong class="text-slate-200">Vaso de Terracota com Funil Ultra:</strong> Para automação em larga escala e rendimento superior.
+                            <ul class="list-circle list-inside ml-4 space-y-0.5">
+                                <li><strong>Receita:</strong> <code class="text-pink-400">Terracota</code> (3x), <code class="text-pink-400">Vaso de Terracota com Funil Elite</code> (1x), <code class="text-pink-400">Mecanismo Iniciado</code> (1x).</li>
+                                <li><strong>Desbloqueio:</strong> Requer o <strong><code class="text-pink-400">Mecanismo Iniciado</code></strong>, indicando um avanço considerável na sua jornada.</li>
+                            </ul>
+                        </li>
+                        <li><strong class="text-slate-200">Vaso de Terracota com Funil Criativo:</strong> O ápice da eficiência, oferecendo produção instantânea e ilimitada.
+                            <ul class="list-circle list-inside ml-4 space-y-0.5">
+                                <li><strong>Receita:</strong> <code class="text-pink-400">Terracota</code> (3x), <code class="text-pink-400">Vaso de Terracota com Funil Ultra</code> (1x), <code class="text-pink-400">Essência Criativa</code> (1x).</li>
+                                <li><strong>Desbloqueio:</strong> Requer a cobiçada <strong><code class="text-pink-400">Essência Criativa</code></strong>, um item de fim de jogo que simboliza a conclusão de grande parte da progressão.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="flight-items-progression" class="mb-16 pt-8">
+                    <h2><i class="fa-solid fa-plane-up text-blue-400"></i>Voo e Mobilidade Avançada: Itens de Voo</h2>
+                    <p>A capacidade de voar é uma das maiores conveniências no Minecraft modificado. Existem várias opções, cada uma com seus próprios requisitos de alto nível, interligadas com a progressão dos mecanismos e circuitos:</p>
+                    <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                        <li><strong class="text-slate-200">Módulo de Modulação Gravitacional (Mekanism):</strong> Este módulo, quando acoplado à armadura do Mekanism, concede voo.
+                            <ul class="list-circle list-inside ml-4 space-y-0.5">
+                                <li><strong>Receita (Industrial Foregoing: Câmara de Dissolução):</strong> <code class="text-pink-400">Circuito de Ativação</code>, <code class="text-pink-400">Motor Avançado</code>, <code class="text-pink-400">Cubo de Energia Ultimate</code> (Mekanism), <code class="text-pink-400">Base de Módulo</code> (Mekanism), <code class="text-pink-400">Motor Supremo Avançado</code> e <code class="text-pink-400">Anel de Diamante</code> (Angel Ring).</li>
+                                <li><strong>Desbloqueio:</strong> Requer o <strong><code class="text-pink-400">Circuito de Ativação</code></strong> e motores avançados, indicando um estágio muito avançado da progressão.</li>
+                            </ul>
+                        </li>
+                        <li><strong class="text-slate-200">Anel de Diamante (Angel Ring):</strong> Um item de voo por si só, mas também um componente essencial para o módulo gravitacional e a Tiara de Voo.
+                            <ul class="list-circle list-inside ml-4 space-y-0.5">
+                                <li><strong>Receita (Botania: Altar Rúnico):</strong> <code class="text-pink-400">Amuleto Imortal</code>, <code class="text-pink-400">Lingote de Dreadsteel</code> (4x), <code class="text-pink-400">Catalisador Supremo</code> (Extended Crafting), <code class="text-pink-400">Singularidade Ultimate</code> (Extended Crafting) e <code class="text-pink-400">Quartzo Lavanda</code> (4x).</li>
+                                <li><strong>Desbloqueio:</strong> Requer o <strong><code class="text-pink-400">Lingote de Dreadsteel</code></strong> e quartzos especiais, que são obtidos em fases mais avançadas da magia e tecnologia.</li>
+                            </ul>
+                        </li>
+                        <li><strong class="text-slate-200">Tiara de Voo (Botania):</strong> Outra opção de voo, focada em magia.
+                            <ul class="list-circle list-inside ml-4 space-y-0.5">
+                                <li><strong>Receita (MythicBotany: Infusor):</strong> <code class="text-pink-400">Singularidade Ultimate</code> (Extended Crafting), o <code class="text-pink-400">Anel de Diamante</code>, <code class="text-pink-400">Petrunia</code> (Mythic Botany) e <code class="text-pink-400">Bateria de Mana</code> (Botanical Machinery).</li>
+                                <li><strong>Desbloqueio:</strong> Requer o <strong><code class="text-pink-400">Anel de Diamante</code></strong> e recursos de Mythic Botany, um mod de magia avançada.</li>
+                            </ul>
+                        </li>
+                        <li><strong class="text-slate-200">Anel do Anjo (Angel Ring - Ultimate):</strong> O item de voo mais avançado, feito no <strong>Botania: Altar Rúnico</strong>. Seus ingredientes são um verdadeiro teste de progressão:
+                            <ul class="list-circle list-inside ml-4 space-y-0.5">
+                                <li><strong>Receita:</strong> <code class="text-pink-400">Ardósia Etérea</code> (Blood Magic), Runas de Mythic Botany (<code class="text-pink-400">Runa de Asgard</code>, <code class="text-pink-400">Runa de Vanaheim</code>), <code class="text-pink-400">Catalisador Supremo</code> (Extended Crafting), <code class="text-pink-400">Amuleto Imortal</code>, <code class="text-pink-400">Magia Suprema Avançada</code>, <code class="text-pink-400">Alquimia Suprema Avançada de Máquinas</code>, <code class="text-pink-400">Motor Supremo Avançado</code> e o <code class="text-pink-400">Anel de Diamante</code>.</li>
+                                <li><strong>Desbloqueio:</strong> Este é um dos últimos itens a serem obtidos, exigindo os mecanismos, circuitos e magias mais complexos do modpack, incluindo o <strong><code class="text-pink-400">Alquimia Suprema Avançada de Máquinas</code></strong>.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>Dominar esses caminhos de progressão garantirá que você tenha acesso às ferramentas mais poderosas e eficientes que o modpack MekaMiners Oasis tem a oferecer.</p>
+                </section>
+                <!-- END: Progression System Content -->
+
                 <section id="mod-intro" class="mt-16 pt-8 border-t border-slate-800 mb-16">
                     <h2><i class="fa-solid fa-book-open-reader text-blue-500"></i>Wiki dos Mods</h2>
                     <p>Esta seção contém guias detalhados para os principais mods do pacote, ajudando você na sua progressão industrial e mágica.</p>
@@ -164,32 +460,32 @@
                     <p>Mekanism é um mod de tecnologia que adiciona máquinas de alta tecnologia, processamento de recursos avançado e sistemas de energia complexos. É conhecido por sua capacidade de processar minérios em até 5x o rendimento original.</p>
 
                     <h3><i class="fa-solid fa-play text-red-400"></i>Primeiros Passos</h3>
-                    <p>Para começar, você precisará de um gerador de energia básico e algumas máquinas de processamento. O <code>Basic Universal Cable</code> é essencial para transportar energia.</p>
+                    <p>Para começar, você precisará de um gerador de energia básico e algumas máquinas de processamento. O <code class="text-pink-400">Cabo Universal Básico</code> é essencial para transportar energia.</p>
                     <ul>
-                        <li><strong>Gerador de Energia:</strong> Comece com um <code>Heat Generator</code> (que usa combustível como carvão) ou <code>Solar Generator</code> (energia solar, ideal para o dia). Conecte-o a um <code>Basic Universal Cable</code>.</li>
-                        <li><strong>Processamento Básico (2x):</strong> Construa um <code>Enrichment Chamber</code>. Coloque minérios nele para obter 2x o rendimento em pó. Para isso, você precisará de um <code>Crusher</code> para transformar o minério em pó primeiro.</li>
-                        <li><strong>Transporte:</strong> Use <code>Basic Universal Cable</code> para energia, <code>Basic Logistical Transporter</code> para itens e <code>Basic Mechanical Pipe</code> para fluidos.</li>
+                        <li><strong>Gerador de Energia:</strong> Comece com um <code class="text-pink-400">Gerador de Calor</code> (que usa combustível como carvão) ou <code class="text-pink-400">Gerador Solar</code> (energia solar, ideal para o dia). Conecte-o a um <code class="text-pink-400">Cabo Universal Básico</code>.</li>
+                        <li><strong>Processamento Básico (2x):</strong> Construa uma <code class="text-pink-400">Câmara de Enriquecimento</code>. Coloque minérios nela para obter 2x o rendimento em pó. Para isso, você precisará de um <code class="text-pink-400">Britador</code> para transformar o minério em pó primeiro.</li>
+                        <li><strong>Transporte:</strong> Use <code class="text-pink-400">Cabo Universal Básico</code> para energia, <code class="text-pink-400">Transportador Logístico Básico</code> para itens e <code class="text-pink-400">Tubo Mecânico Básico</code> para fluidos.</li>
                     </ul>
 
                     <h3><i class="fa-solid fa-flask text-red-400"></i>Processamento de Minérios (5x)</h3>
                     <p>O sistema de 5x processamento é o coração do Mekanism, permitindo multiplicar seus recursos. Ele envolve uma série de máquinas e gases:</p>
                     <ol>
-                        <li><strong>Crusher:</strong> Transforma o minério bruto em pó (ex: <code>Iron Ore</code> -> <code>Iron Dust</code>).</li>
-                        <li><strong>Enrichment Chamber:</strong> Enriquece o pó em minério enriquecido (ex: <code>Iron Dust</code> -> <code>Enriched Iron</code>). Isso já te dá 2x o rendimento.</li>
-                        <li><strong>Purification Chamber:</strong> Processa o minério enriquecido com <strong>Oxigênio</strong> para obter minério sujo (3x rendimento). O Oxigênio é gerado no <code>Electrolytic Separator</code> a partir de água.</li>
-                        <li><strong>Chemical Injection Chamber:</strong> Injeta um gás (como <strong>Clorina</strong>) no minério sujo para obter minério químico (4x rendimento). A Clorina é feita no <code>Chemical Oxidizer</code> a partir de <code>Brine</code> (salmoura).</li>
-                        <li><strong>Chemical Dissolution Chamber:</strong> Dissolve o minério químico em uma solução (5x rendimento).</li>
-                        <li><strong>Chemical Washer:</strong> Lava a solução para obter cristais.</li>
-                        <li><strong>Chemical Crystallizer:</strong> Cristaliza os cristais em lingotes.</li>
+                        <li><code class="text-pink-400">Britador</code>: Transforma o minério bruto em pó (ex: Minério de Ferro -> Pó de Ferro).</li>
+                        <li><code class="text-pink-400">Câmara de Enriquecimento</code>: Enriquece o pó em minério enriquecido (ex: Pó de Ferro -> Ferro Enriquecido). Isso já te dá 2x o rendimento.</li>
+                        <li><code class="text-pink-400">Câmara de Purificação</code>: Processa o minério enriquecido com <strong>Oxigênio</strong> para obter minério sujo (3x rendimento). O Oxigênio é gerado no <code class="text-pink-400">Separador Eletrolítico</code> a partir de água.</li>
+                        <li><code class="text-pink-400">Câmara de Injeção Química</code>: Injeta um gás (como <strong>Clorina</strong>) no minério sujo para obter minério químico (4x rendimento). A Clorina é feita no <code class="text-pink-400">Oxidador Químico</code> a partir de <code class="text-pink-400">Salmoura</code> (Brine).</li>
+                        <li><code class="text-pink-400">Câmara de Dissolução Química</code>: Dissolve o minério químico em uma solução (5x rendimento).</li>
+                        <li><code class="text-pink-400">Lavador Químico</code>: Lava a solução para obter cristais.</li>
+                        <li><code class="text-pink-400">Cristalizador Químico</code>: Cristaliza os cristais em lingotes.</li>
                     </ol>
-                    <p>Para gerar <strong>Brine</strong>, você precisará de uma <code>Thermal Evaporation Plant</code>, que usa calor e água para evaporar e concentrar a salmoura.</p>
+                    <p>Para gerar <code class="text-pink-400">Salmoura</code>, você precisará de uma <code class="text-pink-400">Planta de Evaporação Térmica</code>, que usa calor e água para evaporar e concentrar a salmoura.</p>
 
                     <h3><i class="fa-solid fa-star text-red-400"></i>Dicas Avançadas</h3>
                     <ul>
-                        <li><strong>Geradores de Energia:</strong> Explore o <code>Fission Reactor</code> e <code>Fusion Reactor</code> para energia massiva, mas cuidado, eles são complexos e perigosos.</li>
-                        <li><strong>Logística Avançada:</strong> Use <code>Logistical Transporters</code> com <code>Configurators</code> para configurar filtros de itens e auto-ejeção. <code>Pressurized Tubes</code> são para gases e <code>Mechanical Pipes</code> para fluidos.</li>
-                        <li><strong>Automação Completa:</strong> Combine os sistemas de transporte com <code>Digital Miner</code> para mineração automática e <code>Robotic Arm</code> para automação de inventário.</li>
-                        <li><strong>Teleportação de Energia/Itens:</strong> O <code>Quantum Entangloporter</code> permite transportar energia, itens e fluidos instantaneamente através de dimensões.</li>
+                        <li><strong>Geradores de Energia:</strong> Explore o <code class="text-pink-400">Reator de Fissão</code> e <code class="text-pink-400">Reator de Fusão</code> para energia massiva, mas cuidado, eles são complexos e perigosos.</li>
+                        <li><strong>Logística Avançada:</strong> Use <code class="text-pink-400">Transportadores Logísticos</code> com <code class="text-pink-400">Configuradores</code> para configurar filtros de itens e auto-ejeção. <code class="text-pink-400">Tubos Pressurizados</code> são para gases e <code class="text-pink-400">Tubos Mecânicos</code> para fluidos.</li>
+                        <li><strong>Automação Completa:</strong> Combine os sistemas de transporte com <code class="text-pink-400">Minerador Digital</code> para mineração automática e <code class="text-pink-400">Braço Robótico</code> para automação de inventário.</li>
+                        <li><strong>Teleportação de Energia/Itens:</strong> O <code class="text-pink-400">Entangloporter Quântico</code> permite transportar energia, itens e fluidos instantaneamente através de dimensões.</li>
                     </ul>
                 </section>
 
@@ -201,9 +497,9 @@
                     <h3><i class="fa-solid fa-play text-orange-400"></i>Primeiros Passos</h3>
                     <p>A base do Create é a energia cinética (rotação). Você precisará de uma fonte de rotação e engrenagens para transmitir essa energia.</p>
                     <ul>
-                        <li><strong>Fonte de Energia:</strong> Comece com uma <code>Water Wheel</code> (roda d'água) ou <code>Encased Fan</code> (ventilador enclausurado) com uma fonte de calor (lava ou fogo) para gerar vento.</li>
-                        <li><strong>Componentes Essenciais:</strong> Crie <code>Andesite Alloy</code> (liga de andesito) combinando andesito e pepitas de ferro. Use-o para fazer <code>Cogwheels</code> (engrenagens), <code>Shafts</code> (eixos) e <code>Andesite Casing</code> (caixa de andesito).</li>
-                        <li><strong>Transmissão de Energia:</strong> Conecte sua fonte de energia a <code>Shafts</code> e <code>Cogwheels</code> para levar a rotação às suas máquinas. Engrenagens grandes e pequenas podem mudar a velocidade e o torque.</li>
+                        <li><strong>Fonte de Energia:</strong> Comece com uma <code class="text-pink-400">Roda D'água</code> ou <code class="text-pink-400">Ventilador Enclausurado</code> com uma fonte de calor (lava ou fogo) para gerar vento.</li>
+                        <li><strong>Componentes Essenciais:</strong> Crie <code class="text-pink-400">Liga de Andesito</code> combinando andesito e pepitas de ferro. Use-o para fazer <code class="text-pink-400">Engrenagens</code>, <code class="text-pink-400">Eixos</code> e <code class="text-pink-400">Caixa de Andesito</code>.</li>
+                        <li><strong>Transmissão de Energia:</strong> Conecte sua fonte de energia a <code class="text-pink-400">Eixos</code> e <code class="text-pink-400">Engrenagens</code> para levar a rotação às suas máquinas. Engrenagens grandes e pequenas podem mudar a velocidade e o torque.</li>
                     </ul>
 
                     <h3><i class="fa-solid fa-wrench text-orange-400"></i>Máquinas e Automação</h3>
@@ -211,82 +507,82 @@
                     <ul>
                         <li><strong>Processamento:</strong>
                             <ul>
-                                <li><code>Millstone</code>: Moer itens (grãos, minérios em pó). Conecte-o a um eixo rotativo.</li>
-                                <li><code>Crushing Wheel</code>: Esmagar itens (minérios em pó, pedras em cascalho). Requer duas rodas girando em direções opostas.</li>
-                                <li><code>Mechanical Press</code>: Comprimir itens (chapas de metal, blocos). Use sobre um <code>Basin</code> para receitas de compactação.</li>
-                                <li><code>Mechanical Mixer</code>: Misturar ingredientes (com calor de um <code>Blaze Burner</code> abaixo). Também usa um <code>Basin</code>.</li>
-                                <li><code>Saw</code> e <code>Drill</code>: Para cortar madeira e minerar blocos automaticamente.</li>
+                                <li><code class="text-pink-400">Moinho</code>: Moer itens (grãos, minérios em pó). Conecte-o a um eixo rotativo.</li>
+                                <li><code class="text-pink-400">Roda de Britagem</code>: Esmagar itens (minérios em pó, pedras em cascalho). Requer duas rodas girando em direções opostas.</li>
+                                <li><code class="text-pink-400">Prensa Mecânica</code>: Comprimir itens (chapas de metal, blocos). Use sobre uma <code class="text-pink-400">Bacia</code> para receitas de compactação.</li>
+                                <li><code class="text-pink-400">Misturador Mecânico</code>: Misturar ingredientes (com calor de um <code class="text-pink-400">Queimador de Blaze</code> abaixo). Também usa uma <code class="text-pink-400">Bacia</code>.</li>
+                                <li><code class="text-pink-400">Serra</code> e <code class="text-pink-400">Perfuratriz</code>: Para cortar madeira e minerar blocos automaticamente.</li>
                             </ul>
                         </li>
                         <li><strong>Transporte:</strong>
                             <ul>
-                                <li><code>Conveyor Belt</code>: Transporta itens horizontalmente.</li>
-                                <li><code>Chute</code>: Transporta itens verticalmente para baixo.</li>
-                                <li><code>Smart Fluid Pipe</code> e <code>Hoses</code>: Para fluidos, com filtros e controle de fluxo.</li>
-                                <li><code>Item Vault</code> e <code>Fluid Tank</code>: Soluções de armazenamento modulares.</li>
+                                <li><code class="text-pink-400">Esteira Transportadora</code>: Transporta itens horizontalmente.</li>
+                                <li><code class="text-pink-400">Calha</code>: Transporta itens verticalmente para baixo.</li>
+                                <li><code class="text-pink-400">Tubo de Fluido Inteligente</code> e <code class="text-pink-400">Mangueiras</code>: Para fluidos, com filtros e controle de fluxo.</li>
+                                <li><code class="text-pink-400">Cofre de Itens</code> e <code class="text-pink-400">Tanque de Fluido</code>: Soluções de armazenamento modulares.</li>
                             </ul>
                         </li>
-                        <li><strong>Contraptions:</strong> Crie máquinas móveis com <code>Mechanical Bearings</code> (rolamentos mecânicos), <code>Pistons</code> (pistões) e <code>Gantry Carriages</code> (vagões de pórtico) para construir pontes, elevadores e até veículos.</li>
+                        <li><strong>Contraptions:</strong> Crie máquinas móveis com <code class="text-pink-400">Rolamentos Mecânicos</code>, <code class="text-pink-400">Pistões</code> e <code class="text-pink-400">Vagões de Pórtico</code> para construir pontes, elevadores e até veículos.</li>
                     </ul>
                     <h4><i class="fa-solid fa-lightbulb text-orange-400"></i>Exemplo de Automação Simples: Moagem de Grãos</h4>
                     <ol>
-                        <li>Coloque uma <code>Water Wheel</code> em um fluxo de água para gerar rotação.</li>
-                        <li>Conecte a <code>Water Wheel</code> a um <code>Shaft</code> e, em seguida, a um <code>Cogwheel</code>.</li>
-                        <li>Posicione um <code>Millstone</code> e conecte-o ao <code>Cogwheel</code> com outro <code>Shaft</code>.</li>
-                        <li>Acima do <code>Millstone</code>, coloque um <code>Chute</code> conectado a um baú com grãos.</li>
-                        <li>Abaixo do <code>Millstone</code>, outro <code>Chute</code> para coletar a farinha em outro baú.</li>
+                        <li>Coloque uma <code class="text-pink-400">Roda D'água</code> em um fluxo de água para gerar rotação.</li>
+                        <li>Conecte a <code class="text-pink-400">Roda D'água</code> a um <code class="text-pink-400">Eixo</code> e, em seguida, a uma <code class="text-pink-400">Engrenagem</code>.</li>
+                        <li>Posicione um <code class="text-pink-400">Moinho</code> e conecte-o à <code class="text-pink-400">Engrenagem</code> com outro <code class="text-pink-400">Eixo</code>.</li>
+                        <li>Acima do <code class="text-pink-400">Moinho</code>, coloque uma <code class="text-pink-400">Calha</code> conectada a um baú com grãos.</li>
+                        <li>Abaixo do <code class="text-pink-400">Moinho</code>, outra <code class="text-pink-400">Calha</code> para coletar a farinha em outro baú.</li>
                     </ol>
 
                     <h3><i class="fa-solid fa-star text-orange-400"></i>Dicas Avançadas</h3>
                     <ul>
-                        <li><strong>Automação de Fazendas:</strong> Use <code>Mechanical Harvesters</code> e <code>Ploughs</code> para fazendas automáticas de colheita e plantio.</li>
-                        <li><strong>Trens:</strong> Construa sistemas de trem complexos para transporte de longa distância e automação de estações com <code>Train Stations</code> e <code>Depots</code>.</li>
-                        <li><strong>Fluidos:</strong> Gerencie fluidos com <code>Portable Storage Interfaces</code> para transferir fluidos entre contraptions móveis e <code>Fluid Tanks</code> para armazenamento em massa.</li>
-                        <li><strong>Redstone:</strong> Use <code>Redstone Links</code> para controle sem fio e <code>Adjustable Cogs</code> para controle de velocidade via redstone.</li>
+                        <li><strong>Automação de Fazendas:</strong> Use <code class="text-pink-400">Colheitadeiras Mecânicas</code> e <code class="text-pink-400">Arados</code> para fazendas automáticas de colheita e plantio.</li>
+                        <li><strong>Trens:</strong> Construa sistemas de trem complexos para transporte de longa distância e automação de estações com <code class="text-pink-400">Estações de Trem</code> e <code class="text-pink-400">Depósitos</code>.</li>
+                        <li><strong>Fluidos:</strong> Gerencie fluidos com <code class="text-pink-400">Interfaces de Armazenamento Portátil</code> para transferir fluidos entre contraptions móveis e <code class="text-pink-400">Tanques de Fluido</code> para armazenamento em massa.</li>
+                        <li><strong>Redstone:</strong> Use <code class="text-pink-400">Links de Redstone</code> para controle sem fio e <code class="text-pink-400">Engrenagens Ajustáveis</code> para controle de velocidade via redstone.</li>
                     </ul>
                 </section>
 
                 <!-- Ars Nouveau Guide -->
                 <section id="arsnouveau-guide" class="mb-16">
                     <h2><i class="fa-solid fa-wand-magic-sparkles text-purple-500"></i>Ars Nouveau: Magia e Feitiçaria</h2>
-                    <p>Ars Nouveau é um mod de magia que permite aos jogadores criar e personalizar seus próprios feitiços, invocar familiares e automatizar tarefas com magia.</p>
+                    <p>Ars Nouveau é um mod de magia que permite criar feitiços personalizados, invocar ajudantes mágicos e automatizar tarefas com rituais.</p>
 
                     <h3><i class="fa-solid fa-play text-purple-400"></i>Primeiros Passos</h3>
-                    <p>Para iniciar sua jornada mágica, você precisará de um <code>Worn Spellbook</code> e uma fonte de <code>Source</code> (mana).</p>
+                    <p>Para iniciar sua jornada mágica, você precisará de um <code class="text-pink-400">Livro de Feitiços Desgastado</code> e uma fonte de <code class="text-pink-400">Fonte</code> (mana).</p>
                     <ul>
-                        <li><strong>Spellbook:</strong> O item central para criar e armazenar feitiços. Crafte-o com couro e papel.</li>
-                        <li><strong>Source Jar:</strong> Armazena Source, que pode ser gerado por <code>Source Link</code> (conectado a blocos de Source como <code>Source Gem Block</code>) ou <code>Source Berry Bush</code> (arbustos de bagas de Source).</li>
-                        <li><strong>Glyphs:</strong> Colete os primeiros glyphs (ex: <code>Projectile</code>, <code>Harm</code>, <code>Touch</code>) explorando o mundo, encontrando bibliotecas ou crafte-os na <code>Glyph Press</code>.</li>
+                        <li><strong>Livro de Feitiços:</strong> O item central para criar e armazenar feitiços. Crafte-o com couro e papel.</li>
+                        <li><strong>Jarra de Fonte:</strong> Armazena <code class="text-pink-400">Fonte</code>, que pode ser gerado por <code class="text-pink-400">Link de Fonte</code> (conectado a blocos de Fonte como <code class="text-pink-400">Bloco de Gema de Fonte</code>) ou <code class="text-pink-400">Arbusto de Bagas de Fonte</code>.</li>
+                        <li><strong>Glifos:</strong> Colete os primeiros <code class="text-pink-400">Glifos</code> (ex: <code class="text-pink-400">Projétil</code>, <code class="text-pink-400">Dano</code>, <code class="text-pink-400">Toque</code>) explorando o mundo, encontrando bibliotecas ou crafte-os na <code class="text-pink-400">Prensa de Glifos</code>.</li>
                     </ul>
 
                     <h3><i class="fa-solid fa-hat-wizard text-purple-400"></i>Criação de Feitiços</h3>
-                    <p>Feitiços são criados combinando <code>Glyphs</code> em um <code>Ars Nouveau Lectern</code>. Cada feitiço tem três componentes principais:</p>
+                    <p>Feitiços são criados combinando <code class="text-pink-400">Glifos</code> em um <code class="text-pink-400">Púlpito Ars Nouveau</code>. Cada feitiço tem três componentes principais:</p>
                     <ul>
-                        <li><strong>Shape (Forma):</strong> Define como o feitiço é lançado (ex: <code>Projectile</code> para atirar, <code>Touch</code> para contato, <code>Self</code> para aplicar em si mesmo).</li>
-                        <li><strong>Effect (Efeito):</strong> O que o feitiço faz (ex: <code>Harm</code> para dano, <code>Heal</code> para cura, <code>Break</code> para quebrar blocos, <code>Grow</code> para plantas).</li>
-                        <li><strong>Augment (Aumento):</strong> Modifica o feitiço (ex: <code>Amplify</code> para aumentar o poder, <code>Split</code> para múltiplos alvos, <code>Duration</code> para estender a duração, <code>Pierce</code> para atravessar inimigos).</li>
+                        <li><strong>Forma (Shape):</strong> Define como o feitiço é lançado (ex: <code class="text-pink-400">Projétil</code> para atirar, <code class="text-pink-400">Toque</code> para contato, <code class="text-pink-400">Si Mesmo</code> para aplicar em si mesmo).</li>
+                        <li><strong>Efeito (Effect):</strong> O que o feitiço faz (ex: <code class="text-pink-400">Dano</code> para dano, <code class="text-pink-400">Cura</code> para cura, <code class="text-pink-400">Quebrar</code> para quebrar blocos, <code class="text-pink-400">Crescer</code> para plantas).</li>
+                        <li><strong>Aumento (Augment):</strong> Modifica o feitiço (ex: <code class="text-pink-400">Amplificar</code> para aumentar o poder, <code class="text-pink-400">Dividir</code> para múltiplos alvos, <code class="text-pink-400">Duração</code> para estender a duração, <code class="text-pink-400">Perfurar</code> para atravessar inimigos).</li>
                     </ul>
                     <p>Experimente diferentes combinações para descobrir novos e poderosos feitiços. Por exemplo:</p>
                     <ul>
-                        <li><strong>Feitiço de Ataque Básico:</strong> <code>Projectile + Harm</code></li>
-                        <li><strong>Feitiço de Mineração:</strong> <code>Touch + Break</code></li>
-                        <li><strong>Feitiço de Cura em Área:</strong> <code>Self + AoE + Heal</code></li>
+                        <li><strong>Feitiço de Ataque Básico:</strong> <code class="text-pink-400">Projétil + Dano</code></li>
+                        <li><strong>Feitiço de Mineração:</strong> <code class="text-pink-400">Toque + Quebrar</code></li>
+                        <li><strong>Feitiço de Cura em Área:</strong> <code class="text-pink-400">Si Mesmo + Área de Efeito + Cura</code></li>
                     </ul>
-                    <p>Use o <code>Spell Turret</code> para automatizar o lançamento de feitiços em uma área.</p>
+                    <p>Use a <code class="text-pink-400">Torreta de Feitiços</code> para automatizar o lançamento de feitiços em uma área.</p>
 
                     <h3><i class="fa-solid fa-robot text-purple-400"></i>Automação Mágica</h3>
                     <ul>
-                        <li><strong>Golems:</strong> Invoque <code>Golems</code> para automatizar tarefas como colheita, mineração, combate e transporte de itens. Eles podem ser equipados com ferramentas e programados com <code>Golem Charm</code>.</li>
-                        <li><strong>Warding Candle:</strong> Protege áreas contra mobs hostis.</li>
-                        <li><strong>Rituals:</strong> Realize rituais em um <code>Ritual Altar</code> para efeitos poderosos, como invocar familiares, gerar recursos ou alterar o clima.</li>
+                        <li><strong>Golems:</strong> Invoque <code class="text-pink-400">Golems</code> para automatizar tarefas como colheita, mineração, combate e transporte de itens. Eles podem ser equipados com ferramentas e programados com <code class="text-pink-400">Amuleto de Golem</code>.</li>
+                        <li><strong>Vela de Proteção:</strong> Protege áreas contra mobs hostis.</li>
+                        <li><strong>Rituais:</strong> Realize rituais em um <code class="text-pink-400">Altar de Ritual</code> para efeitos poderosos, como invocar familiares, gerar recursos ou alterar o clima.</li>
                     </ul>
 
                     <h3><i class="fa-solid fa-star text-purple-400"></i>Dicas Avançadas</h3>
                     <ul>
-                        <li><strong>Familiar:</strong> Escolha e treine um familiar (como um <code>Whirlisprig</code> ou <code>Drygmy</code>) para auxiliá-lo em combate, coleta de itens ou geração de Source.</li>
-                        <li><strong>Infusion Altar:</strong> Use o <code>Infusion Altar</code> para criar itens mágicos avançados, como armaduras e ferramentas encantadas, e aprimorar seu equipamento com <code>Archwood</code>.</li>
-                        <li><strong>Mana Generation:</strong> Otimize a geração de Source com <code>Source Jars</code> e <code>Source Links</code> em áreas com muitos mobs (para <code>Warding Candle</code>) ou plantas (para <code>Drygmy</code>).</li>
-                        <li><strong>Aprimoramentos de Feitiços:</strong> Use <code>Spell Foci</code> e <code>Spell Scrolls</code> para aprimorar e armazenar feitiços complexos.</li>
+                        <li><strong>Familiar:</strong> Escolha e treine um familiar (como um <code class="text-pink-400">Whirlisprig</code> ou <code class="text-pink-400">Drygmy</code>) para auxiliá-lo em combate, coleta de itens ou geração de <code class="text-pink-400">Fonte</code>.</li>
+                        <li><strong>Altar de Infusão:</strong> Use o <code class="text-pink-400">Altar de Infusão</code> para criar itens mágicos avançados, como armaduras e ferramentas encantadas, e aprimorar seu equipamento com <code class="text-pink-400">Madeira Arcana</code>.</li>
+                        <li><strong>Geração de Mana:</strong> Otimize a geração de <code class="text-pink-400">Fonte</code> com <code class="text-pink-400">Jarras de Fonte</code> e <code class="text-pink-400">Links de Fonte</code> em áreas com muitos mobs (para <code class="text-pink-400">Vela de Proteção</code>) ou plantas (para <code class="text-pink-400">Drygmy</code>).</li>
+                        <li><strong>Aprimoramentos de Feitiços:</strong> Use <code class="text-pink-400">Focos de Feitiço</code> e <code class="text-pink-400">Pergaminhos de Feitiço</code> para aprimorar e armazenar feitiços complexos.</li>
                     </ul>
                 </section>
 
@@ -296,46 +592,46 @@
                     <p>Applied Energistics 2 (AE2) é um mod de tecnologia que revoluciona o armazenamento de itens e a automação de crafting, transformando-os em dados digitais dentro de uma rede.</p>
 
                     <h3><i class="fa-solid fa-play text-cyan-400"></i>Primeiros Passos</h3>
-                    <p>A base de qualquer sistema AE2 é o <code>ME Controller</code>, que fornece energia e canais para a rede.</p>
+                    <p>A base de qualquer sistema AE2 é o <code class="text-pink-400">Controlador ME</code>, que fornece energia e canais para a rede.</p>
                     <ol>
-                        <li><strong>Recursos Essenciais:</strong> Comece coletando <code>Certus Quartz</code> (para <code>Quartz Glass</code>, <code>Charged Certus Quartz</code> e processadores) e <code>Fluix Crystal</code> (para <code>Fluix Dust</code> e <code>Fluix Crystal</code>).</li>
-                        <li><strong>Processadores:</strong> Crie <code>Logic Processor</code>, <code>Calculation Processor</code> e <code>Engineering Processor</code> usando <code>Printed Silicon</code> e os respectivos circuitos.</li>
-                        <li><strong>ME Controller:</strong> O coração da sua rede AE2. Ele precisa de energia para funcionar.</li>
-                        <li><strong>Energy Acceptor:</strong> Conecte-o ao <code>ME Controller</code> e a uma fonte de energia (ex: gerador do Mekanism ou Create) para alimentar a rede.</li>
-                        <li><strong>ME Drive:</strong> Armazena <code>ME Storage Cells</code>, que guardam seus itens digitalmente.</li>
-                        <li><strong>ME Storage Cells:</strong> Crie células de armazenamento (1k, 4k, 16k, 64k, 256k) e coloque-as no <code>ME Drive</code>.</li>
-                        <li><strong>ME Terminal:</strong> A interface principal para acessar e gerenciar todos os itens armazenados na sua rede.</li>
+                        <li><strong>Recursos Essenciais:</strong> Comece coletando <code class="text-pink-400">Quartzo Certus</code> (para <code class="text-pink-400">Vidro de Quartzo</code>, <code class="text-pink-400">Quartzo Certus Carregado</code> e processadores) e <code class="text-pink-400">Cristal Fluix</code> (para <code class="text-pink-400">Pó de Fluix</code> e <code class="text-pink-400">Cristal Fluix</code>).</li>
+                        <li><strong>Processadores:</strong> Crie <code class="text-pink-400">Processador Lógico</code>, <code class="text-pink-400">Processador de Cálculo</code> e <code class="text-pink-400">Processador de Engenharia</code> usando <code class="text-pink-400">Silício Impresso</code> e os respectivos circuitos.</li>
+                        <li><strong>Controlador ME:</strong> O coração da sua rede AE2. Ele precisa de energia para funcionar.</li>
+                        <li><strong>Aceitador de Energia:</strong> Conecte-o ao <code class="text-pink-400">Controlador ME</code> e a uma fonte de energia (ex: gerador do Mekanism ou Create) para alimentar a rede.</li>
+                        <li><strong>Drive ME:</strong> Armazena <code class="text-pink-400">Células de Armazenamento ME</code>, que guardam seus itens digitalmente.</li>
+                        <li><strong>Células de Armazenamento ME:</strong> Crie células de armazenamento (1k, 4k, 16k, 64k, 256k) e coloque-as no <code class="text-pink-400">Drive ME</code>.</li>
+                        <li><strong>Terminal ME:</strong> A interface principal para acessar e gerenciar todos os itens armazenados na sua rede.</li>
                     </ol>
-                    <p>Conecte todos esses componentes usando <code>ME Glass Cables</code>.</p>
+                    <p>Conecte todos esses componentes usando <code class="text-pink-400">Cabos de Vidro ME</code>.</p>
 
                     <h3><i class="fa-solid fa-diagram-project text-cyan-400"></i>Rede e Canais</h3>
-                    <p>AE2 opera com um sistema de canais. Cada cabo pode transportar 8 canais, e cada máquina conectada consome um canal. O <code>ME Controller</code> fornece 32 canais.</p>
+                    <p>AE2 opera com um sistema de canais. Cada cabo pode transportar 8 canais, e cada máquina conectada consome um canal. O <code class="text-pink-400">Controlador ME</code> fornece 32 canais.</p>
                     <ul>
-                        <li><strong>ME Glass Cables:</strong> Cabos básicos que transportam até 8 canais.</li>
-                        <li><strong>Smart Cables:</strong> Versões coloridas dos cabos que mostram visualmente quantos canais estão sendo usados.</li>
-                        <li><strong>Dense Cables:</strong> Cabos mais avançados que podem transportar até 32 canais.</li>
-                        <li><strong>P2P Tunnels:</strong> Permitem estender canais por longas distâncias ou entre sub-redes, economizando canais.</li>
+                        <li><code class="text-pink-400">Cabos de Vidro ME</code>: Cabos básicos que transportam até 8 canais.</li>
+                        <li><code class="text-pink-400">Cabos Inteligentes</code>: Versões coloridas dos cabos que mostram visualmente quantos canais estão sendo usados.</li>
+                        <li><code class="text-pink-400">Cabos Densos</code>: Cabos mais avançados que podem transportar até 32 canais.</li>
+                        <li><code class="text-pink-400">Túneis P2P</code>: Permitem estender canais por longas distâncias ou entre sub-redes, economizando canais.</li>
                     </ul>
                     <p>Planeje sua rede cuidadosamente para não exceder o limite de canais, ou suas máquinas pararão de funcionar.</p>
 
                     <h3><i class="fa-solid fa-box-archive text-cyan-400"></i>Armazenamento e Crafting Automático</h3>
                     <p>O AE2 permite armazenar milhões de itens em um único bloco e automatizar crafting complexos.</p>
                     <ul>
-                        <li><strong>ME Storage Cells:</strong> Variam em tamanho e armazenam itens. Use <code>Item Storage Cells</code> para itens e <code>Fluid Storage Cells</code> para fluidos.</li>
-                        <li><strong>ME Crafting Terminal:</strong> Interface principal para acessar itens e iniciar crafts manuais ou automáticos.</li>
-                        <li><strong>ME Pattern Terminal:</strong> Usado para programar <code>Crafting Patterns</code> (padrões de crafting) para o sistema de automação.</li>
-                        <li><strong>ME Pattern Provider:</strong> Fornece os padrões de crafting para <code>Molecular Assemblers</code>.</li>
-                        <li><strong>Molecular Assembler:</strong> Realiza o crafting automático usando os padrões fornecidos. Conecte-os ao <code>ME Pattern Provider</code>.</li>
-                        <li><strong>Crafting Co-Processor:</strong> Aumenta a capacidade de processamento de crafting da sua rede, permitindo múltiplos crafts simultâneos.</li>
+                        <li><code class="text-pink-400">Células de Armazenamento ME</code>: Variam em tamanho e armazenam itens. Use <code class="text-pink-400">Células de Armazenamento de Itens</code> para itens e <code class="text-pink-400">Células de Armazenamento de Fluidos</code> para fluidos.</li>
+                        <li><code class="text-pink-400">Terminal de Criação ME</code>: Interface principal para acessar itens e iniciar crafts manuais ou automáticos.</li>
+                        <li><code class="text-pink-400">Terminal de Padrões ME</code>: Usado para programar <code class="text-pink-400">Padrões de Criação</code> para o sistema de automação.</li>
+                        <li><code class="text-pink-400">Provedor de Padrões ME</code>: Fornece os padrões de crafting para <code class="text-pink-400">Montadores Moleculares</code>.</li>
+                        <li><code class="text-pink-400">Montador Molecular</code>: Realiza o crafting automático usando os padrões fornecidos. Conecte-os ao <code class="text-pink-400">Provedor de Padrões ME</code>.</li>
+                        <li><code class="text-pink-400">Coprocessador de Criação</code>: Aumenta a capacidade de processamento de crafting da sua rede, permitindo múltiplos crafts simultâneos.</li>
                     </ul>
 
                     <h3><i class="fa-solid fa-star text-cyan-400"></i>Dicas Avançadas</h3>
                     <ul>
-                        <li><strong>Sub-redes:</strong> Crie sub-redes menores com seus próprios <code>ME Controllers</code> e conecte-as à sua rede principal usando <code>P2P Tunnels</code> para gerenciar canais de forma eficiente.</li>
-                        <li><strong>Fluid Storage:</strong> Use <code>Fluid Storage Cells</code> e <code>Fluid Buses</code> para gerenciar fluidos dentro da sua rede AE2.</li>
-                        <li><strong>Wireless Access:</strong> Construa um <code>Wireless Access Point</code> e um <code>Wireless Terminal</code> para acessar sua rede de qualquer lugar, até mesmo de outras dimensões.</li>
-                        <li><strong>Automação de Máquinas:</strong> Use <code>ME Import Bus</code> e <code>ME Export Bus</code> para mover itens de e para máquinas externas, e <code>ME Storage Bus</code> para integrar inventários externos à sua rede.</li>
-                        <li><strong>Segurança:</strong> Use <code>Security Terminal</code> para controlar quem pode acessar sua rede e quais permissões cada jogador tem.</li>
+                        <li><strong>Sub-redes:</strong> Crie sub-redes menores com seus próprios <code class="text-pink-400">Controladores ME</code> e conecte-as à sua rede principal usando <code class="text-pink-400">Túneis P2P</code> para gerenciar canais de forma eficiente.</li>
+                        <li><strong>Armazenamento de Fluidos:</strong> Use <code class="text-pink-400">Células de Armazenamento de Fluidos</code> e <code class="text-pink-400">Barramentos de Fluido</code> para gerenciar fluidos dentro da sua rede AE2.</li>
+                        <li><strong>Acesso Sem Fio:</strong> Construa um <code class="text-pink-400">Ponto de Acesso Sem Fio</code> e um <code class="text-pink-400">Terminal Sem Fio</code> para acessar sua rede de qualquer lugar, até mesmo de outras dimensões.</li>
+                        <li><strong>Automação de Máquinas:</strong> Use <code class="text-pink-400">Barramento de Importação ME</code> e <code class="text-pink-400">Barramento de Exportação ME</code> para mover itens de e para máquinas externas, e <code class="text-pink-400">Barramento de Armazenamento ME</code> para integrar inventários externos à sua rede.</li>
+                        <li><strong>Segurança:</strong> Use <code class="text-pink-400">Terminal de Segurança</code> para controlar quem pode acessar sua rede e quais permissões cada jogador tem.</li>
                     </ul>
                 </section>
 
