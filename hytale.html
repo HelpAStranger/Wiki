@@ -79,6 +79,9 @@
                 <a href="#creature-interaction" class="sidebar-link">
                     <i class="fas fa-paw"></i> Interação com Criaturas
                 </a>
+                <a href="#animal-breeding-guide" class="sidebar-link">
+                    <i class="fas fa-heart"></i> Criação de Animais
+                </a>
                 <a href="#backpacks-guide" class="sidebar-link">
                     <i class="fas fa-briefcase"></i> Mochilas
                 </a>
@@ -671,6 +674,151 @@
                 </section>
                 <!-- END New Section: Guia de Interação com Criaturas (Taming & Breeding) -->
 
+                <!-- START New Section: Lait's Animal Breeding Guide -->
+                <section id="animal-breeding-guide" class="mt-16 pt-8 border-t border-slate-800 mb-16">
+                    <h2><i class="fas fa-heart"></i> Criação de Animais (Lait's Animal Breeding)</h2>
+                    <p class="text-slate-400 text-lg mb-8">
+                        Lait's Animal Breeding é um mod de gameplay para Hytale que introduz reprodução funcional de animais e ciclos de crescimento. Ele permite aos jogadores criar gado, reproduzir animais selvagens e gerenciar populações de animais através de um sistema personalizável de alimentos e predefinições.
+                    </p>
+
+                    <div class="info-box warning">
+                        <div>
+                            <p class="!mb-0 text-yellow-200/80 text-sm">
+                                <i class="fas fa-exclamation-triangle wiki-inline-icon"></i><strong>Nota:</strong> Como em todos os mods, é recomendado fazer backup dos seus arquivos de salvamento antes da instalação, embora este mod principalmente gere entidades.
+                            </p>
+                        </div>
+                    </div>
+
+                    <section id="animal-breeding-features" class="mb-8">
+                        <h3><i class="fas fa-star"></i> Funcionalidades Principais</h3>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li><strong class="text-slate-200">Modo Amoroso & Reprodução:</strong> Alimentar dois animais da mesma espécie com sua comida favorita os coloca em "Modo Amoroso". Se estiverem próximos, eles irão se reproduzir.</li>
+                            <li><strong class="text-slate-200">Crescimento de Filhotes:</strong> A reprodução produz filhotes que crescem até a fase adulta com o tempo. Filhotes selvagens encontrados no mundo também crescerão.</li>
+                            <li><strong class="text-slate-200">Comedores Exigentes:</strong> Animais requerem itens de comida específicos para se reproduzir. Eles não aceitarão qualquer item.</li>
+                            <li><strong class="text-slate-200">Períodos de Recarga:</strong> Após a reprodução, os pais entram em um período de recarga antes de poderem se reproduzir novamente.</li>
+                        </ul>
+                    </section>
+
+                    <section id="animal-breeding-qol" class="mb-8">
+                        <h3><i class="fas fa-sync-alt"></i> Atualizações de Qualidade de Vida (v1.1.0)</h3>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li><strong class="text-slate-200">Montaria de Cavalos:</strong> Você pode montar cavalos com as mãos vazias ou segurando itens não alimentares.</li>
+                            <li><strong class="text-slate-200">Lista Expandida:</strong> Suporte para 49 tipos de animais, desde animais de fazenda até ursos e criaturas míticas.</li>
+                        </ul>
+                    </section>
+
+                    <section id="animal-breeding-diet" class="mb-8">
+                        <h3><i class="fas fa-apple-alt"></i> Dieta e Compatibilidade Animal</h3>
+                        <p class="mb-4">O mod inclui diferentes predefinições que alteram o que os animais comem. Abaixo está a lista para Gado padrão (ativado por padrão).</p>
+                        <div class="overflow-hidden border border-slate-700 rounded-lg">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Animal</th>
+                                        <th>Comida Padrão</th>
+                                        <th>Comidas Curadas / Alternativas</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><code class="font-mono">Vaca</code></td><td>Couve-flor</td><td>Trigo, Alface</td></tr>
+                                    <tr><td><code class="font-mono">Porco</code></td><td>Cogumelo Marrom</td><td>Cenoura, Batata, Maçã</td></tr>
+                                    <tr><td><code class="font-mono">Frango</code></td><td>Milho</td><td>Trigo, Arroz</td></tr>
+                                    <tr><td><code class="font-mono">Ovelha</code></td><td>Alface</td><td>Trigo, Couve-flor</td></tr>
+                                    <tr><td><code class="font-mono">Cabra</code></td><td>Maçã</td><td>Trigo, Cenoura</td></tr>
+                                    <tr><td><code class="font-mono">Cavalo</code></td><td>Cenoura</td><td>Maçã, Trigo</td></tr>
+                                    <tr><td><code class="font-mono">Coelho</code></td><td>Cenoura</td><td>Alface, Maçã</td></tr>
+                                    <tr><td><code class="font-mono">Peru</code></td><td>Milho</td><td>Trigo</td></tr>
+                                    <tr><td><code class="font-mono">Camelo</code></td><td>Trigo</td><td>Fruta de Cacto</td></tr>
+                                    <tr><td><code class="font-mono">Bisão</code></td><td>Trigo</td><td>Milho</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section id="animal-breeding-wild" class="mb-8">
+                        <h3><i class="fas fa-paw"></i> Animais Selvagens (Opcional)</h3>
+                        <p class="mb-4">Por padrão, animais selvagens são desativados para manter o jogo amigável ao vanilla. Eles podem ser ativados via configuração ou usando a predefinição <code class="text-pink-400">Zoo Preset</code>.</p>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li><strong class="text-slate-200">Mamíferos:</strong> Lobo, Raposa, Urso (Grizzly/Polar), Cervo, Alce, Hiena.</li>
+                            <li><strong class="text-slate-200">Pássaros:</strong> Pato, Papagaio, Coruja, Corvo, Pinguim, Flamingo, etc.</li>
+                            <li><strong class="text-slate-200">Répteis/Bichos:</strong> Tartaruga, Crocodilo, Sapo, Gecko, Esquilo.</li>
+                            <li><strong class="text-slate-200">Míticos:</strong> Emberwulf, Yeti, Fen Stalker.</li>
+                        </ul>
+                    </section>
+
+                    <section id="animal-breeding-presets" class="mb-8">
+                        <h3><i class="fas fa-cogs"></i> Predefinições de Configuração</h3>
+                        <p class="mb-4">O mod usa um sistema de predefinições para alterar rapidamente o equilíbrio do jogo. Você pode alternar as predefinições usando o comando <code class="text-pink-400">/breedconfig preset apply &lt;name&gt;</code>.</p>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li><strong class="text-slate-200">default</strong>
+                                <ul class="list-circle list-inside ml-4 space-y-0.5">
+                                    <li><strong class="text-slate-300">Experiência:</strong> Simplificada e direta.</li>
+                                    <li><strong class="text-slate-300">Mecânicas:</strong> Um único tipo de alimento por animal. Apenas gado ativado.</li>
+                                    <li><strong class="text-slate-300">Tempos:</strong> 30 min de crescimento, 5 min de recarga.</li>
+                                </ul>
+                            </li>
+                            <li><strong class="text-slate-200">lait_curated</strong>
+                                <ul class="list-circle list-inside ml-4 space-y-0.5">
+                                    <li><strong class="text-slate-300">Experiência:</strong> Orgânica e natural.</li>
+                                    <li><strong class="text-slate-300">Mecânicas:</strong> Múltiplas opções de alimentos por animal.</li>
+                                    <li><strong class="text-slate-300">Tempos:</strong> Tempos de crescimento lógicos (ex: Galinhas crescem rápido, Cavalos crescem devagar). Coelhos têm ciclos de reprodução rápidos.</li>
+                                </ul>
+                            </li>
+                            <li><strong class="text-slate-200">zoo</strong>
+                                <ul class="list-circle list-inside ml-4 space-y-0.5">
+                                    <li><strong class="text-slate-300">Experiência:</strong> Variedade máxima.</li>
+                                    <li><strong class="text-slate-300">Mecânicas:</strong> Ativa todos os animais do mundo real (Gado, Mamíferos, Pássaros, Répteis). Criaturas míticas permanecem desativadas. Usa os valores de equilíbrio de <code class="text-pink-400">lait_curated</code>.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="animal-breeding-commands" class="mb-8">
+                        <h3><i class="fas fa-terminal"></i> Comandos do Jogador</h3>
+                        
+                        <h4><i class="fas fa-info-circle wiki-inline-icon"></i>Geral</h4>
+                        <div class="command-box">
+                            <div class="flex items-start gap-3">
+                                <code class="text-pink-400 font-bold whitespace-nowrap font-mono"><i class="fas fa-heart wiki-inline-icon"></i>/laitsbreeding</code>
+                                <p class="text-slate-300 text-sm m-0">Mostra o menu de ajuda e a lista de alimentos para reprodução.</p>
+                            </div>
+                        </div>
+                        <div class="command-box">
+                            <div class="flex items-start gap-3">
+                                <code class="text-pink-400 font-bold whitespace-nowrap font-mono"><i class="fas fa-chart-bar wiki-inline-icon"></i>/breedstatus</code>
+                                <p class="text-slate-300 text-sm m-0">Visualiza animais rastreados e suas estatísticas.</p>
+                            </div>
+                        </div>
+
+                        <h4><i class="fas fa-sliders-h wiki-inline-icon"></i>Configuração e Predefinições</h4>
+                        <div class="command-box">
+                            <div class="flex items-start gap-3">
+                                <code class="text-pink-400 font-bold whitespace-nowrap font-mono"><i class="fas fa-list wiki-inline-icon"></i>/breedconfig preset list</code>
+                                <p class="text-slate-300 text-sm m-0">Mostra as predefinições disponíveis.</p>
+                            </div>
+                        </div>
+                        <div class="command-box">
+                            <div class="flex items-start gap-3">
+                                <code class="text-pink-400 font-bold whitespace-nowrap font-mono"><i class="fas fa-play wiki-inline-icon"></i>/breedconfig preset apply &lt;name&gt;</code>
+                                <p class="text-slate-300 text-sm m-0">Ativa uma predefinição específica (ex: <code class="text-pink-400">zoo</code>).</p>
+                            </div>
+                        </div>
+                        <div class="command-box">
+                            <div class="flex items-start gap-3">
+                                <code class="text-pink-400 font-bold whitespace-nowrap font-mono"><i class="fas fa-info-circle wiki-inline-icon"></i>/breedconfig info &lt;animal&gt;</code>
+                                <p class="text-slate-300 text-sm m-0">Informações detalhadas sobre a dieta e os tempos de um animal específico.</p>
+                            </div>
+                        </div>
+                        <div class="command-box">
+                            <div class="flex items-start gap-3">
+                                <code class="text-pink-400 font-bold whitespace-nowrap font-mono"><i class="fas fa-redo-alt wiki-inline-icon"></i>/breedconfig reload</code>
+                                <p class="text-slate-300 text-sm m-0">Recarrega as alterações feitas manualmente no arquivo de configuração.</p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <!-- END New Section: Lait's Animal Breeding Guide -->
+                
                 <!-- START New Section: Backpacks -->
                 <section id="backpacks-guide" class="mt-16 pt-8 border-t border-slate-800 mb-16">
                     <h2><i class="fas fa-briefcase"></i> Mochilas</h2>
