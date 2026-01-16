@@ -52,7 +52,6 @@
 </head>
 <body class="flex flex-col h-screen overflow-hidden">
 
-    <!-- Navbar Fixa -->
     <nav class="w-full bg-slate-900 border-b border-slate-700 h-16 flex-none z-50 px-4">
         <div class="h-full flex items-center justify-between max-w-[1920px] mx-auto">
             <a href="index.html" class="flex items-center cursor-pointer decoration-0">
@@ -70,10 +69,8 @@
         </div>
     </nav>
 
-    <!-- Main Layout (Sidebar + Content) -->
     <div class="flex flex-1 overflow-hidden relative">
         
-        <!-- Sidebar (Wiki.js Style) -->
         <aside class="w-64 bg-slate-900/50 border-r border-slate-700 flex-none overflow-y-auto hidden md:block backdrop-blur-sm">
             <div class="p-4">
                 <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4 px-2">Navegação</div>
@@ -111,15 +108,12 @@
             </div>
         </aside>
 
-        <!-- Main Content Area -->
-        <main class="flex-1 overflow-y-auto bg-[#0f172a] relative">
-            <!-- Background Grid Pattern -->
+        <main class="flex-1 overflow-y-auto bg-[#0f172a] relative" id="main-scroll">
             <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(#334155 1px, transparent 1px); background-size: 24px 24px;"></div>
 
             <div class="max-w-4xl mx-auto p-8 fade-in relative z-10 wiki-content">
                 
-                <!-- New Header Style -->
-                <header class="wiki-header flex items-start gap-6">
+                <header class="wiki-header flex items-start gap-6" id="inicio">
                     <div class="h-20 w-20 bg-emerald-500/10 rounded-2xl border border-emerald-500/30 flex items-center justify-center flex-none">
                         <i class="fa-solid fa-screwdriver-wrench text-4xl text-emerald-500"></i>
                     </div>
@@ -133,8 +127,7 @@
                     </div>
                 </header>
 
-                <!-- Java Warning -->
-                <section id="java-req" class="mb-12">
+                <section id="java-req" class="mb-12 pt-8">
                     <div class="bg-yellow-500/10 border-l-4 border-yellow-500 rounded-r-lg p-6 flex gap-4">
                         <i class="fa-brands fa-java text-4xl text-yellow-500 flex-none py-1"></i>
                         <div>
@@ -146,7 +139,6 @@
                     </div>
                 </section>
 
-                <!-- Downloads Section -->
                 <section id="downloads">
                     <h2><i class="fa-solid fa-download text-emerald-500 mr-2 text-xl"></i>Baixar e Instalar</h2>
                     <p>Escolha sua plataforma preferida para baixar o modpack. Recomendamos o uso do CurseForge ou a instalação manual via DropBox para usuários do TLauncher.</p>
@@ -182,7 +174,6 @@
                     </div>
                 </section>
 
-                <!-- IP Section -->
                 <section id="ip-mc">
                     <h2><i class="fa-solid fa-network-wired text-emerald-500 mr-2 text-xl"></i>Endereço do Servidor</h2>
                     <div class="bg-slate-900 border border-slate-700 rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -202,13 +193,11 @@
                     <p id="copy-feedback-mc" class="text-emerald-400 text-xs mt-2 text-center opacity-0 transition-opacity">IP copiado para a área de transferência!</p>
                 </section>
 
-                <!-- Mods Help Placeholder -->
                 <section id="mod-intro" class="mt-16 pt-8 border-t border-slate-800">
                     <h2><i class="fa-solid fa-book-open-reader text-blue-500 mr-2 text-xl"></i>Wiki dos Mods</h2>
                     <p>Esta seção está sendo construída. Em breve, disponibilizaremos tutoriais detalhados sobre os principais mods do pacote para ajudar na sua progressão industrial e mágica.</p>
                     
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
-                        <!-- Placeholders for future content -->
                         <div class="border border-slate-700/50 bg-slate-800/30 p-4 rounded-lg opacity-60">
                             <i class="fa-solid fa-gear text-slate-500 mb-2 text-xl"></i>
                             <h4 class="text-slate-300 font-bold text-sm">Mekanism</h4>
@@ -227,7 +216,6 @@
                     </div>
                 </section>
 
-                <!-- Footer in content -->
                 <footer class="mt-20 border-t border-slate-800 pt-8 pb-4 text-center text-slate-600 text-sm">
                     <p>© Mekaminers Wiki - Modpack Temporada 8</p>
                 </footer>
@@ -248,6 +236,34 @@
         function showFeedback() {
             const f = document.getElementById('copy-feedback-mc'); f.classList.remove('opacity-0'); setTimeout(() => f.classList.add('opacity-0'), 2000);
         }
+
+        // ScrollSpy Script
+        document.addEventListener('DOMContentLoaded', () => {
+            const mainContainer = document.querySelector('main');
+            const sections = document.querySelectorAll('section, header'); // Header incluído pois tem ID "inicio"
+            const navLinks = document.querySelectorAll('.sidebar-link');
+
+            function highlightSidebar() {
+                let current = "";
+                
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop;
+                    // Ajuste de 150px
+                    if (mainContainer.scrollTop >= sectionTop - 150) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === `#${current}`) {
+                        link.classList.add("active");
+                    }
+                });
+            }
+
+            mainContainer.addEventListener('scroll', highlightSidebar);
+        });
     </script>
 </body>
 </html>
