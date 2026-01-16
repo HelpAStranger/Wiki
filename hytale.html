@@ -76,11 +76,11 @@
                 <a href="#ancient-gateway" class="sidebar-link">
                     <i class="fas fa-door-open"></i> Portais & Dimensões
                 </a>
-                <a href="#creature-interaction" class="sidebar-link">
-                    <i class="fas fa-paw"></i> Interação com Criaturas
+                <a href="#creature-interaction-vanilla" class="sidebar-link">
+                    <i class="fas fa-paw"></i> Interação com Criaturas (Vanilla)
                 </a>
                 <a href="#animal-breeding-guide" class="sidebar-link">
-                    <i class="fas fa-heart"></i> Criação de Animais
+                    <i class="fas fa-heart"></i> Criação de Animais (Lait's)
                 </a>
                 <a href="#backpacks-guide" class="sidebar-link">
                     <i class="fas fa-briefcase"></i> Mochilas
@@ -630,15 +630,15 @@
                 <!-- END New Section: Guia de Pesca (Fishing Guide) -->
 
                 <!-- START New Section: Interação com Criaturas (Taming & Breeding) -->
-                <section id="creature-interaction" class="mt-16 pt-8 border-t border-slate-800 mb-16">
-                    <h2><i class="fas fa-paw"></i> Interação com Criaturas (Taming & Breeding)</h2>
-                    <p class="text-slate-400 text-lg mb-8">Este guia aborda o estado atual da interação com animais no Hytale, incluindo montaria, transporte e as limitações de domesticação e reprodução.</p>
+                <section id="creature-interaction-vanilla" class="mt-16 pt-8 border-t border-slate-800 mb-16">
+                    <h2><i class="fas fa-paw"></i> Interação com Criaturas (Vanilla)</h2>
+                    <p class="text-slate-400 text-lg mb-8">Este guia aborda o estado atual da interação com animais no Hytale base, incluindo montaria, transporte e as limitações de domesticação e reprodução.</p>
 
                     <div class="info-box warning">
                         <div>
-                            <h3 class="!mt-0 !text-yellow-100 !text-lg !mb-2"><i class="fas fa-exclamation-triangle wiki-inline-icon"></i> Atenção: Taming e Breeding Não Implementados</h3>
+                            <h3 class="!mt-0 !text-yellow-100 !text-lg !mb-2"><i class="fas fa-exclamation-triangle wiki-inline-icon"></i> Atenção: Taming e Breeding Não Implementados no Jogo Base</h3>
                             <p class="!mb-0 text-yellow-200/80 text-sm">
-                                Na versão atual do Hytale, não há um sistema funcional para domar (taming) ou reproduzir (breeding) criaturas. Embora você possa interagir com algumas, elas não se tornarão suas companheiras permanentes ou se reproduzirão.
+                                Na versão atual do Hytale, não há um sistema funcional para domar (taming) ou reproduzir (breeding) criaturas nativamente. Embora você possa interagir com algumas, elas não se tornarão suas companheiras permanentes ou se reproduzirão. Para funcionalidades de criação e domesticação, consulte o guia do mod <a href="#animal-breeding-guide" class="text-blue-300 hover:underline">Lait's Animal Breeding</a>.
                             </p>
                         </div>
                     </div>
@@ -663,8 +663,8 @@
                     </section>
 
                     <section id="creature-breeding" class="mb-8">
-                        <h3><i class="fas fa-heart"></i> Reprodução de Mobs (Breeding)</h3>
-                        <p class="mb-2">Atualmente, não há mecânicas de reprodução de mobs implementadas no Hytale. Criaturas não se reproduzirão mesmo se você as alimentar ou mantiver em pares.</p>
+                        <h3><i class="fas fa-heart"></i> Reprodução de Mobs (Vanilla)</h3>
+                        <p class="mb-2">Atualmente, não há mecânicas de reprodução de mobs implementadas no Hytale base. Criaturas não se reproduzirão mesmo se você as alimentar ou mantiver em pares.</p>
                         <div class="info-box">
                             <p class="!mb-0 text-blue-200/80 text-sm">
                                 <i class="fas fa-info-circle wiki-inline-icon"></i><strong>Futuras Atualizações:</strong> É esperado que sistemas de taming e breeding sejam adicionados em futuras atualizações do jogo, mas por enquanto, a interação é limitada.
@@ -672,7 +672,7 @@
                         </div>
                     </section>
                 </section>
-                <!-- END New Section: Guia de Interação com Criaturas (Taming & Breeding) -->
+                <!-- END New Section: Interação com Criaturas (Taming & Breeding) -->
 
                 <!-- START New Section: Lait's Animal Breeding Guide -->
                 <section id="animal-breeding-guide" class="mt-16 pt-8 border-t border-slate-800 mb-16">
@@ -744,77 +744,6 @@
                             <li><strong class="text-slate-200">Répteis/Bichos:</strong> Tartaruga, Crocodilo, Sapo, Gecko, Esquilo.</li>
                             <li><strong class="text-slate-200">Míticos:</strong> Emberwulf, Yeti, Fen Stalker.</li>
                         </ul>
-                    </section>
-
-                    <section id="animal-breeding-presets" class="mb-8">
-                        <h3><i class="fas fa-cogs"></i> Predefinições de Configuração</h3>
-                        <p class="mb-4">O mod usa um sistema de predefinições para alterar rapidamente o equilíbrio do jogo. Você pode alternar as predefinições usando o comando <code class="text-pink-400">/breedconfig preset apply &lt;name&gt;</code>.</p>
-                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
-                            <li><strong class="text-slate-200">default</strong>
-                                <ul class="list-circle list-inside ml-4 space-y-0.5">
-                                    <li><strong class="text-slate-300">Experiência:</strong> Simplificada e direta.</li>
-                                    <li><strong class="text-slate-300">Mecânicas:</strong> Um único tipo de alimento por animal. Apenas gado ativado.</li>
-                                    <li><strong class="text-slate-300">Tempos:</strong> 30 min de crescimento, 5 min de recarga.</li>
-                                </ul>
-                            </li>
-                            <li><strong class="text-slate-200">lait_curated</strong>
-                                <ul class="list-circle list-inside ml-4 space-y-0.5">
-                                    <li><strong class="text-slate-300">Experiência:</strong> Orgânica e natural.</li>
-                                    <li><strong class="text-slate-300">Mecânicas:</strong> Múltiplas opções de alimentos por animal.</li>
-                                    <li><strong class="text-slate-300">Tempos:</strong> Tempos de crescimento lógicos (ex: Galinhas crescem rápido, Cavalos crescem devagar). Coelhos têm ciclos de reprodução rápidos.</li>
-                                </ul>
-                            </li>
-                            <li><strong class="text-slate-200">zoo</strong>
-                                <ul class="list-circle list-inside ml-4 space-y-0.5">
-                                    <li><strong class="text-slate-300">Experiência:</strong> Variedade máxima.</li>
-                                    <li><strong class="text-slate-300">Mecânicas:</strong> Ativa todos os animais do mundo real (Gado, Mamíferos, Pássaros, Répteis). Criaturas míticas permanecem desativadas. Usa os valores de equilíbrio de <code class="text-pink-400">lait_curated</code>.</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </section>
-
-                    <section id="animal-breeding-commands" class="mb-8">
-                        <h3><i class="fas fa-terminal"></i> Comandos do Jogador</h3>
-                        
-                        <h4><i class="fas fa-info-circle wiki-inline-icon"></i>Geral</h4>
-                        <div class="command-box">
-                            <div class="flex items-start gap-3">
-                                <code class="text-pink-400 font-bold whitespace-nowrap font-mono"><i class="fas fa-heart wiki-inline-icon"></i>/laitsbreeding</code>
-                                <p class="text-slate-300 text-sm m-0">Mostra o menu de ajuda e a lista de alimentos para reprodução.</p>
-                            </div>
-                        </div>
-                        <div class="command-box">
-                            <div class="flex items-start gap-3">
-                                <code class="text-pink-400 font-bold whitespace-nowrap font-mono"><i class="fas fa-chart-bar wiki-inline-icon"></i>/breedstatus</code>
-                                <p class="text-slate-300 text-sm m-0">Visualiza animais rastreados e suas estatísticas.</p>
-                            </div>
-                        </div>
-
-                        <h4><i class="fas fa-sliders-h wiki-inline-icon"></i>Configuração e Predefinições</h4>
-                        <div class="command-box">
-                            <div class="flex items-start gap-3">
-                                <code class="text-pink-400 font-bold whitespace-nowrap font-mono"><i class="fas fa-list wiki-inline-icon"></i>/breedconfig preset list</code>
-                                <p class="text-slate-300 text-sm m-0">Mostra as predefinições disponíveis.</p>
-                            </div>
-                        </div>
-                        <div class="command-box">
-                            <div class="flex items-start gap-3">
-                                <code class="text-pink-400 font-bold whitespace-nowrap font-mono"><i class="fas fa-play wiki-inline-icon"></i>/breedconfig preset apply &lt;name&gt;</code>
-                                <p class="text-slate-300 text-sm m-0">Ativa uma predefinição específica (ex: <code class="text-pink-400">zoo</code>).</p>
-                            </div>
-                        </div>
-                        <div class="command-box">
-                            <div class="flex items-start gap-3">
-                                <code class="text-pink-400 font-bold whitespace-nowrap font-mono"><i class="fas fa-info-circle wiki-inline-icon"></i>/breedconfig info &lt;animal&gt;</code>
-                                <p class="text-slate-300 text-sm m-0">Informações detalhadas sobre a dieta e os tempos de um animal específico.</p>
-                            </div>
-                        </div>
-                        <div class="command-box">
-                            <div class="flex items-start gap-3">
-                                <code class="text-pink-400 font-bold whitespace-nowrap font-mono"><i class="fas fa-redo-alt wiki-inline-icon"></i>/breedconfig reload</code>
-                                <p class="text-slate-300 text-sm m-0">Recarrega as alterações feitas manualmente no arquivo de configuração.</p>
-                            </div>
-                        </div>
                     </section>
                 </section>
                 <!-- END New Section: Lait's Animal Breeding Guide -->
