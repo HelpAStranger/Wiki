@@ -7,7 +7,273 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Modded - Mekaminers Wiki</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
     
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #e2e8f0; }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+        
+        .fade-in { animation: fadeIn 0.4s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Sidebar Styling */
+        .sidebar-link {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            color: #94a3b8;
+            border-radius: 0.5rem;
+            transition: all 0.2s;
+            text-decoration: none;
+            margin-bottom: 0.25rem;
+        }
+        .sidebar-link:hover, .sidebar-link.active {
+            background-color: #1e293b;
+            color: #38bdf8; /* Sky blue for Minecraft tech feel */
+        }
+        .sidebar-link i { width: 24px; text-align: center; margin-right: 0.75rem; }
+        
+        .wiki-header {
+            border-bottom: 1px solid #334155;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        /* Content formatting */
+        .wiki-content h2 { font-size: 1.5rem; font-weight: 700; color: #f8fafc; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #1e293b; }
+        .wiki-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        .wiki-content p { margin-bottom: 1rem; line-height: 1.7; color: #cbd5e1; }
+        
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="flex flex-col h-screen overflow-hidden">
+
+    <nav class="w-full bg-slate-900 border-b border-slate-700 h-16 flex-none z-50 px-4">
+        <div class="h-full flex items-center justify-between max-w-[1920px] mx-auto">
+            <a href="index.html" class="flex items-center cursor-pointer decoration-0">
+                <i class="fa-solid fa-book-open text-blue-500 text-2xl mr-2"></i>
+                <span class="font-bold text-xl tracking-tight text-white hidden sm:block">Meka<span class="text-blue-500">Miners</span> Wiki</span>
+            </a>
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="text-slate-400 hover:text-white transition text-sm font-medium">
+                    <i class="fa-solid fa-house mr-1"></i> Início
+                </a>
+                <!-- Link "Ir para Hytale" removido conforme solicitado -->
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex flex-1 overflow-hidden relative">
+        
+        <aside class="w-64 bg-slate-900/50 border-r border-slate-700 flex-none overflow-y-auto hidden md:block backdrop-blur-sm">
+            <div class="p-4">
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4 px-2">Navegação</div>
+                
+                <a href="#inicio" class="sidebar-link active">
+                    <i class="fa-solid fa-circle-info"></i> Visão Geral
+                </a>
+                <a href="#java-req" class="sidebar-link">
+                    <i class="fa-brands fa-java"></i> Requisitos
+                </a>
+                <a href="#downloads" class="sidebar-link">
+                    <i class="fa-solid fa-download"></i> Instalação
+                </a>
+                <a href="#ip-mc" class="sidebar-link">
+                    <i class="fa-solid fa-server"></i> Conexão
+                </a>
+
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mt-8 mb-4 px-2">Guias de Mods</div>
+                
+                <a href="#mod-intro" class="sidebar-link">
+                    <i class="fa-solid fa-book"></i> Introdução
+                </a>
+                <a href="#" class="sidebar-link opacity-50 cursor-not-allowed" title="Em breve">
+                    <i class="fa-solid fa-gear"></i> Mekanism
+                </a>
+                <a href="#" class="sidebar-link opacity-50 cursor-not-allowed" title="Em breve">
+                    <i class="fa-solid fa-train"></i> Create
+                </a>
+                <a href="#" class="sidebar-link opacity-50 cursor-not-allowed" title="Em breve">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Ars Nouveau
+                </a>
+                <a href="#" class="sidebar-link opacity-50 cursor-not-allowed" title="Em breve">
+                    <i class="fa-solid fa-microchip"></i> Applied Energistics
+                </a>
+            </div>
+        </aside>
+
+        <main class="flex-1 overflow-y-auto bg-[#0f172a] relative" id="main-scroll">
+            <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(#334155 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+            <div class="max-w-4xl mx-auto p-8 fade-in relative z-10 wiki-content">
+                
+                <header class="wiki-header flex items-start gap-6" id="inicio">
+                    <div class="h-20 w-20 bg-emerald-500/10 rounded-2xl border border-emerald-500/30 flex items-center justify-center flex-none">
+                        <i class="fa-solid fa-screwdriver-wrench text-4xl text-emerald-500"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 uppercase tracking-wide">Temporada 8</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-700 text-slate-300 border border-slate-600 uppercase tracking-wide">v8.2.2</span>
+                        </div>
+                        <h1 class="text-4xl font-bold text-white mb-2">MekaMiners Oasis</h1>
+                        <p class="text-slate-400 text-lg">Modpack oficial focado em tecnologia, exploração e automação.</p>
+                    </div>
+                </header>
+
+                <section id="java-req" class="mb-12 pt-8">
+                    <div class="bg-yellow-500/10 border-l-4 border-yellow-500 rounded-r-lg p-6 flex gap-4">
+                        <i class="fa-brands fa-java text-4xl text-yellow-500 flex-none py-1"></i>
+                        <div>
+                            <h3 class="!mt-0 !text-yellow-100 !text-lg">Requisito Obrigatório: Java 17</h3>
+                            <p class="!mb-0 text-yellow-200/80 text-sm">
+                                Para jogar na Temporada 8, você <strong>deve</strong> ter o Java 17 instalado. Versões antigas (Java 8) ou muito recentes (Java 21+) podem causar falhas críticas ao iniciar o jogo.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="downloads">
+                    <h2><i class="fa-solid fa-download text-emerald-500 mr-2 text-xl"></i>Baixar e Instalar</h2>
+                    <p>Escolha sua plataforma preferida para baixar o modpack. Recomendamos o uso do CurseForge ou a instalação manual via DropBox para usuários do TLauncher.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+                        <a href="https://www.dropbox.com/scl/fi/k79t8t61monupvp187tbp/MekaMiners-Oasis-8.2.2.zip?rlkey=iz5ebfls7xis53iiwhwmfp0jj&st=zgxly0px&dl=1" target="_blank" class="group relative bg-[#0061FF]/10 hover:bg-[#0061FF]/20 border border-[#0061FF]/50 p-4 rounded-xl flex items-center transition-all hover:translate-y-[-2px]">
+                            <div class="bg-[#0061FF] w-10 h-10 rounded-lg flex items-center justify-center mr-4 shadow-lg flex-none"><i class="fa-brands fa-dropbox text-white text-xl"></i></div>
+                            <div><h3 class="!m-0 !text-sm text-white">Dropbox</h3><span class="text-xs text-blue-200">Arquivo .zip direto</span></div>
+                        </a>
+
+                        <a href="https://www.mediafire.com/file/nape3kj8jp3xk72/MekaMiners_Oasis_8.2.2.zip/file" target="_blank" class="group relative bg-[#129cff]/10 hover:bg-[#129cff]/20 border border-[#129cff]/50 p-4 rounded-xl flex items-center transition-all hover:translate-y-[-2px]">
+                            <div class="bg-[#129cff] w-10 h-10 rounded-lg flex items-center justify-center mr-4 shadow-lg flex-none"><i class="fa-solid fa-cloud-arrow-down text-white text-xl"></i></div>
+                            <div><h3 class="!m-0 !text-sm text-white">MediaFire</h3><span class="text-xs text-blue-200">Arquivo .zip direto</span></div>
+                        </a>
+
+                        <a href="https://www.curseforge.com/minecraft/modpacks/mekaminers" target="_blank" class="group relative bg-[#f16436]/10 hover:bg-[#f16436]/20 border border-[#f16436]/50 p-4 rounded-xl flex items-center transition-all hover:translate-y-[-2px]">
+                            <div class="bg-[#f16436] w-10 h-10 rounded-lg flex items-center justify-center mr-4 shadow-lg flex-none"><i class="fa-solid fa-fire-flame-curved text-white text-lg"></i></div>
+                            <div><h3 class="!m-0 !text-sm text-white">CurseForge</h3><span class="text-xs text-orange-200">Launcher Recomendado</span></div>
+                        </a>
+
+                        <a href="https://www.technicpack.net/modpack/mekaminers.1931118" target="_blank" class="group relative bg-slate-700/30 hover:bg-slate-700/50 border border-slate-600 p-4 rounded-xl flex items-center transition-all hover:translate-y-[-2px]">
+                            <div class="bg-slate-700 w-10 h-10 rounded-lg flex items-center justify-center mr-4 shadow-lg flex-none"><i class="fa-solid fa-gears text-white text-lg"></i></div>
+                            <div><h3 class="!m-0 !text-sm text-white">Technic Launcher</h3><span class="text-xs text-slate-300">Plataforma Legada</span></div>
+                        </a>
+                    </div>
+
+                    <div class="bg-slate-800/50 rounded-lg p-4 border border-slate-700 text-sm">
+                        <strong class="text-slate-200 block mb-1"><i class="fa-solid fa-gamepad mr-1 text-purple-400"></i> Instalação no TLauncher</strong>
+                        <ul class="list-disc list-inside text-slate-400 pl-1 space-y-1">
+                            <li>Opção 1: Pesquise "MekaMiners" na aba <code>TLMods</code>.</li>
+                            <li>Opção 2: Baixe o <code>.zip</code> do Dropbox e importe manualmente ("Criar" > "Importar").</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="ip-mc">
+                    <h2><i class="fa-solid fa-network-wired text-emerald-500 mr-2 text-xl"></i>Endereço do Servidor</h2>
+                    <div class="bg-slate-900 border border-slate-700 rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="flex items-center gap-4">
+                            <div class="h-12 w-12 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-500">
+                                <i class="fa-solid fa-signal"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm text-slate-400">IP de Conexão</div>
+                                <div class="text-xl font-mono text-white font-bold tracking-wide">jogar.mekaminers.net</div>
+                            </div>
+                        </div>
+                        <button onclick="copyIP('jogar.mekaminers.net')" class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-lg font-bold transition flex items-center shadow-lg active:scale-95 text-sm">
+                            <i class="fa-regular fa-copy mr-2"></i> Copiar
+                        </button>
+                    </div>
+                    <p id="copy-feedback-mc" class="text-emerald-400 text-xs mt-2 text-center opacity-0 transition-opacity">IP copiado para a área de transferência!</p>
+                </section>
+
+                <section id="mod-intro" class="mt-16 pt-8 border-t border-slate-800">
+                    <h2><i class="fa-solid fa-book-open-reader text-blue-500 mr-2 text-xl"></i>Wiki dos Mods</h2>
+                    <p>Esta seção está sendo construída. Em breve, disponibilizaremos tutoriais detalhados sobre os principais mods do pacote para ajudar na sua progressão industrial e mágica.</p>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+                        <div class="border border-slate-700/50 bg-slate-800/30 p-4 rounded-lg opacity-60">
+                            <i class="fa-solid fa-gear text-slate-500 mb-2 text-xl"></i>
+                            <h4 class="text-slate-300 font-bold text-sm">Mekanism</h4>
+                            <p class="text-xs text-slate-500 mt-1">Refinação de minérios e gases.</p>
+                        </div>
+                        <div class="border border-slate-700/50 bg-slate-800/30 p-4 rounded-lg opacity-60">
+                            <i class="fa-solid fa-train text-slate-500 mb-2 text-xl"></i>
+                            <h4 class="text-slate-300 font-bold text-sm">Create</h4>
+                            <p class="text-xs text-slate-500 mt-1">Engenharia cinética.</p>
+                        </div>
+                         <div class="border border-slate-700/50 bg-slate-800/30 p-4 rounded-lg opacity-60">
+                            <i class="fa-solid fa-wand-magic-sparkles text-slate-500 mb-2 text-xl"></i>
+                            <h4 class="text-slate-300 font-bold text-sm">Ars Nouveau</h4>
+                            <p class="text-xs text-slate-500 mt-1">Crie seus próprios feitiços.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <footer class="mt-20 border-t border-slate-800 pt-8 pb-4 text-center text-slate-600 text-sm">
+                    <p>© Mekaminers Wiki - Modpack Temporada 8</p>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function copyIP(ip) {
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(ip).then(showFeedback).catch(() => fallbackCopy(ip));
+            } else { fallbackCopy(ip); }
+        }
+        function fallbackCopy(text) {
+            const el = document.createElement("textarea"); el.value = text; document.body.appendChild(el); el.select();
+            try { document.execCommand('copy'); showFeedback(); } catch (err) {} document.body.removeChild(el);
+        }
+        function showFeedback() {
+            const f = document.getElementById('copy-feedback-mc'); f.classList.remove('opacity-0'); setTimeout(() => f.classList.add('opacity-0'), 2000);
+        }
+
+        // ScrollSpy Script
+        document.addEventListener('DOMContentLoaded', () => {
+            const mainContainer = document.querySelector('main');
+            const sections = document.querySelectorAll('section, header'); // Header incluído pois tem ID "inicio"
+            const navLinks = document.querySelectorAll('.sidebar-link');
+
+            function highlightSidebar() {
+                let current = "";
+                
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop;
+                    // Ajuste de 150px
+                    if (mainContainer.scrollTop >= sectionTop - 150) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === `#${current}`) {
+                        link.classList.add("active");
+                    }
+                });
+            }
+
+            mainContainer.addEventListener('scroll', highlightSidebar);
+        });
+    </script>
+</body>
+</html>
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #e2e8f0; }
         /* Custom Scrollbar */
