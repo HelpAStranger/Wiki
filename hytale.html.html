@@ -52,7 +52,6 @@
 </head>
 <body class="flex flex-col h-screen overflow-hidden">
 
-    <!-- Navbar Fixa -->
     <nav class="w-full bg-slate-900 border-b border-slate-700 h-16 flex-none z-50 px-4">
         <div class="h-full flex items-center justify-between max-w-[1920px] mx-auto">
             <a href="index.html" class="flex items-center cursor-pointer decoration-0">
@@ -70,10 +69,8 @@
         </div>
     </nav>
 
-    <!-- Main Layout -->
     <div class="flex flex-1 overflow-hidden relative">
         
-        <!-- Sidebar -->
         <aside class="w-64 bg-slate-900/50 border-r border-slate-700 flex-none overflow-y-auto hidden md:block backdrop-blur-sm">
             <div class="p-4">
                 <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4 px-2">Navegação</div>
@@ -93,6 +90,12 @@
                 <a href="#vip" class="sidebar-link">
                     <i class="fa-solid fa-crown text-purple-400"></i> Vantagens VIP
                 </a>
+                <a href="#ip" class="sidebar-link">
+                    <i class="fa-solid fa-server"></i> IP / Conexão
+                </a>
+                <a href="#help-connect" class="sidebar-link">
+                    <i class="fa-solid fa-life-ring"></i> Ajuda Conexão
+                </a>
 
                 <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mt-8 mb-4 px-2">Guias & Tutoriais</div>
                 <a href="#" class="sidebar-link opacity-50 cursor-not-allowed" title="Em breve">
@@ -104,13 +107,11 @@
             </div>
         </aside>
 
-        <!-- Main Content -->
-        <main class="flex-1 overflow-y-auto bg-[#0f172a] relative">
+        <main class="flex-1 overflow-y-auto bg-[#0f172a] relative" id="main-scroll">
             <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(#334155 1px, transparent 1px); background-size: 24px 24px;"></div>
 
             <div class="max-w-4xl mx-auto p-8 fade-in relative z-10 wiki-content">
                 
-                <!-- Header -->
                 <header class="wiki-header flex items-start gap-6">
                     <div class="h-20 w-20 bg-blue-500/10 rounded-2xl border border-blue-500/30 flex items-center justify-center flex-none">
                         <i class="fa-solid fa-dungeon text-4xl text-blue-500"></i>
@@ -198,6 +199,31 @@
                     </div>
                     <p id="copy-feedback" class="text-blue-400 text-xs mt-2 text-center opacity-0 transition-opacity">IP copiado para a área de transferência!</p>
                 </section>
+
+                <section id="help-connect" class="mt-8">
+                    <h2><i class="fa-solid fa-triangle-exclamation text-yellow-500 mr-2"></i>Problemas de Conexão?</h2>
+                    <div class="bg-slate-800/80 border border-slate-700 rounded-lg p-6">
+                        <p class="text-slate-300 mb-4">Se você está tendo dificuldades para entrar no servidor, tente as soluções abaixo:</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <a href="https://1.1.1.1/" target="_blank" class="group block bg-slate-900/50 hover:bg-slate-900 border border-slate-600 hover:border-orange-500/50 p-4 rounded-lg transition-all decoration-0">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <i class="fa-solid fa-cloud text-orange-500 text-xl"></i>
+                                    <span class="font-bold text-white">CloudFlare Warp</span>
+                                </div>
+                                <p class="text-sm text-slate-400 mb-0">Melhore sua rota de conexão usando o Warp gratuito.</p>
+                            </a>
+
+                            <a href="https://discord.mekaminers.net" target="_blank" class="group block bg-slate-900/50 hover:bg-slate-900 border border-slate-600 hover:border-indigo-500/50 p-4 rounded-lg transition-all decoration-0">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <i class="fa-brands fa-discord text-indigo-500 text-xl"></i>
+                                    <span class="font-bold text-white">Abrir Ticket</span>
+                                </div>
+                                <p class="text-sm text-slate-400 mb-0">Entre no nosso Discord e abra um ticket de suporte.</p>
+                            </a>
+                        </div>
+                    </div>
+                </section>
                 
                 <footer class="mt-20 border-t border-slate-800 pt-8 pb-4 text-center text-slate-600 text-sm">
                     <p>© Mekaminers Wiki - Hytale</p>
@@ -219,6 +245,35 @@
         function showFeedback() {
             const f = document.getElementById('copy-feedback'); f.classList.remove('opacity-0'); setTimeout(() => f.classList.add('opacity-0'), 2000);
         }
+
+        // ScrollSpy Script
+        document.addEventListener('DOMContentLoaded', () => {
+            const mainContainer = document.querySelector('main');
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.sidebar-link');
+
+            function highlightSidebar() {
+                let current = "";
+                
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop;
+                    // Ajuste de 150px para ativar o link um pouco antes da seção chegar ao topo
+                    if (mainContainer.scrollTop >= sectionTop - 150) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === `#${current}`) {
+                        link.classList.add("active");
+                    }
+                });
+            }
+
+            // Escuta o scroll no container principal (main) em vez de window
+            mainContainer.addEventListener('scroll', highlightSidebar);
+        });
     </script>
 </body>
 </html>
