@@ -78,6 +78,9 @@ html {
     width: 24px;
     text-align: center;
     margin-right: 0.75rem;
+    /* Ensure icons inherit color and have a defined size */
+    color: currentColor;
+    font-size: 1.25rem; /* Equivalent to Tailwind's text-xl */
 }
 
 /* Wiki Header */
@@ -240,4 +243,18 @@ html {
 }
 .info-box strong {
     color: #f8fafc;
+}
+
+/* New: Inline icons for lists and commands */
+.wiki-inline-icon {
+    margin-right: 0.5rem;
+    color: #60a5fa; /* blue-400, or a suitable accent color */
+    flex-shrink: 0; /* Prevent icon from shrinking in flex containers */
+}
+/* For warning/danger boxes, use their specific colors */
+.info-box.warning .wiki-inline-icon {
+    color: #facc15; /* yellow-400 */
+}
+.info-box.danger .wiki-inline-icon {
+    color: #ef4444; /* red-500 */
 }
