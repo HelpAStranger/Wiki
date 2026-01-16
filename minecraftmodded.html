@@ -44,7 +44,15 @@
         }
         
         /* Content formatting */
-        .wiki-content h2 { font-size: 1.5rem; font-weight: 700; color: #f8fafc; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #1e293b; }
+        .wiki-content h2 { 
+            font-size: 1.5rem; 
+            font-weight: 700; 
+            color: #f8fafc; 
+            margin-top: 3.5rem; /* Increased margin-top for better separation */
+            margin-bottom: 1.5rem; /* Increased margin-bottom */
+            padding-bottom: 0.5rem; 
+            border-bottom: 1px solid #1e293b; 
+        }
         .wiki-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 1.5rem; margin-bottom: 0.75rem; }
         .wiki-content p { margin-bottom: 1rem; line-height: 1.7; color: #cbd5e1; }
         .wiki-content ul, .wiki-content ol { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1; }
@@ -115,7 +123,7 @@
 
             <div class="max-w-4xl mx-auto p-8 fade-in relative z-10 wiki-content">
                 
-                <header class="wiki-header flex items-start gap-6" id="inicio">
+                <header class="wiki-header flex items-start gap-6 mb-12" id="inicio">
                     <div class="h-20 w-20 bg-emerald-500/10 rounded-2xl border border-emerald-500/30 flex items-center justify-center flex-none">
                         <i class="fa-solid fa-screwdriver-wrench text-4xl text-emerald-500"></i>
                     </div>
@@ -129,7 +137,7 @@
                     </div>
                 </header>
 
-                <section id="java-req" class="mb-12 pt-8">
+                <section id="java-req" class="mb-16 pt-8">
                     <div class="bg-yellow-500/10 border-l-4 border-yellow-500 rounded-r-lg p-6 flex gap-4">
                         <i class="fa-brands fa-java text-4xl text-yellow-500 flex-none py-1"></i>
                         <div>
@@ -141,7 +149,7 @@
                     </div>
                 </section>
 
-                <section id="downloads">
+                <section id="downloads" class="mb-16">
                     <h2><i class="fa-solid fa-download text-emerald-500 mr-2 text-xl"></i>Baixar e Instalar</h2>
                     <p>Escolha sua plataforma preferida para baixar o modpack. Recomendamos o uso do CurseForge ou a instalação manual via DropBox para usuários do TLauncher.</p>
                     
@@ -176,7 +184,7 @@
                     </div>
                 </section>
 
-                <section id="ip-mc">
+                <section id="ip-mc" class="mb-16">
                     <h2><i class="fa-solid fa-network-wired text-emerald-500 mr-2 text-xl"></i>Endereço do Servidor</h2>
                     <div class="bg-slate-900 border border-slate-700 rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                         <div class="flex items-center gap-4">
@@ -195,160 +203,189 @@
                     <p id="copy-feedback-mc" class="text-emerald-400 text-xs mt-2 text-center opacity-0 transition-opacity">IP copiado para a área de transferência!</p>
                 </section>
 
-                <section id="mod-intro" class="mt-16 pt-8 border-t border-slate-800">
+                <section id="mod-intro" class="mt-16 pt-8 border-t border-slate-800 mb-16">
                     <h2><i class="fa-solid fa-book-open-reader text-blue-500 mr-2 text-xl"></i>Wiki dos Mods</h2>
                     <p>Esta seção contém guias detalhados para os principais mods do pacote, ajudando você na sua progressão industrial e mágica.</p>
                 </section>
 
                 <!-- Mekanism Guide -->
-                <section id="mekanism-guide">
+                <section id="mekanism-guide" class="mb-16">
                     <h2><i class="fa-solid fa-industry text-red-500 mr-2 text-xl"></i>Mekanism: Automação Industrial</h2>
                     <p>Mekanism é um mod de tecnologia que adiciona máquinas de alta tecnologia, processamento de recursos avançado e sistemas de energia complexos. É conhecido por sua capacidade de processar minérios em até 5x o rendimento original.</p>
 
                     <h3>Primeiros Passos</h3>
                     <p>Para começar, você precisará de um gerador de energia básico e algumas máquinas de processamento. O <code>Basic Universal Cable</code> é essencial para transportar energia.</p>
                     <ul>
-                        <li><strong>Gerador de Energia:</strong> Comece com um <code>Heat Generator</code> ou <code>Solar Generator</code>.</li>
-                        <li><strong>Processamento Básico:</strong> Construa um <code>Enrichment Chamber</code> (para 2x minério) e um <code>Crusher</code> (para pó).</li>
+                        <li><strong>Gerador de Energia:</strong> Comece com um <code>Heat Generator</code> (que usa combustível como carvão) ou <code>Solar Generator</code> (energia solar, ideal para o dia). Conecte-o a um <code>Basic Universal Cable</code>.</li>
+                        <li><strong>Processamento Básico (2x):</strong> Construa um <code>Enrichment Chamber</code>. Coloque minérios nele para obter 2x o rendimento em pó. Para isso, você precisará de um <code>Crusher</code> para transformar o minério em pó primeiro.</li>
+                        <li><strong>Transporte:</strong> Use <code>Basic Universal Cable</code> para energia, <code>Basic Logistical Transporter</code> para itens e <code>Basic Mechanical Pipe</code> para fluidos.</li>
                     </ul>
 
                     <h3>Processamento de Minérios (5x)</h3>
-                    <p>O sistema de 5x processamento é o coração do Mekanism. Ele envolve uma série de máquinas e gases:</p>
+                    <p>O sistema de 5x processamento é o coração do Mekanism, permitindo multiplicar seus recursos. Ele envolve uma série de máquinas e gases:</p>
                     <ol>
-                        <li><strong>Crusher:</strong> Minério -> Pó.</li>
-                        <li><strong>Enrichment Chamber:</strong> Pó -> Minério Enriquecido (2x).</li>
-                        <li><strong>Purification Chamber:</strong> Minério Enriquecido + Oxigênio -> Minério Sujo (3x).</li>
-                        <li><strong>Chemical Injection Chamber:</strong> Minério Sujo + Gás (ex: Clorina) -> Minério Químico (4x).</li>
-                        <li><strong>Chemical Dissolution Chamber:</strong> Minério Químico -> Solução (5x).</li>
-                        <li><strong>Chemical Washer:</strong> Solução -> Cristais.</li>
-                        <li><strong>Chemical Crystallizer:</strong> Cristais -> Lingotes.</li>
+                        <li><strong>Crusher:</strong> Transforma o minério bruto em pó (ex: <code>Iron Ore</code> -> <code>Iron Dust</code>).</li>
+                        <li><strong>Enrichment Chamber:</strong> Enriquece o pó em minério enriquecido (ex: <code>Iron Dust</code> -> <code>Enriched Iron</code>). Isso já te dá 2x o rendimento.</li>
+                        <li><strong>Purification Chamber:</strong> Processa o minério enriquecido com <strong>Oxigênio</strong> para obter minério sujo (3x rendimento). O Oxigênio é gerado no <code>Electrolytic Separator</code> a partir de água.</li>
+                        <li><strong>Chemical Injection Chamber:</strong> Injeta um gás (como <strong>Clorina</strong>) no minério sujo para obter minério químico (4x rendimento). A Clorina é feita no <code>Chemical Oxidizer</code> a partir de <code>Brine</code> (salmoura).</li>
+                        <li><strong>Chemical Dissolution Chamber:</strong> Dissolve o minério químico em uma solução (5x rendimento).</li>
+                        <li><strong>Chemical Washer:</strong> Lava a solução para obter cristais.</li>
+                        <li><strong>Chemical Crystallizer:</strong> Cristaliza os cristais em lingotes.</li>
                     </ol>
-                    <p>Você precisará de <code>Electrolytic Separator</code> para gerar Oxigênio e Hidrogênio, e <code>Chemical Oxidizer</code> para criar outros gases.</p>
+                    <p>Para gerar <strong>Brine</strong>, você precisará de uma <code>Thermal Evaporation Plant</code>, que usa calor e água para evaporar e concentrar a salmoura.</p>
 
                     <h3>Dicas Avançadas</h3>
                     <ul>
-                        <li><strong>Geradores de Energia:</strong> Explore o <code>Fission Reactor</code> e <code>Fusion Reactor</code> para energia massiva.</li>
-                        <li><strong>Logística:</strong> Use <code>Logistical Transporters</code> para itens, <code>Pressurized Tubes</code> para gases e <code>Mechanical Pipes</code> para fluidos.</li>
-                        <li><strong>Automação:</strong> Configure <code>Configurators</code> para auto-ejeção e automação de máquinas.</li>
+                        <li><strong>Geradores de Energia:</strong> Explore o <code>Fission Reactor</code> e <code>Fusion Reactor</code> para energia massiva, mas cuidado, eles são complexos e perigosos.</li>
+                        <li><strong>Logística Avançada:</strong> Use <code>Logistical Transporters</code> com <code>Configurators</code> para configurar filtros de itens e auto-ejeção. <code>Pressurized Tubes</code> são para gases e <code>Mechanical Pipes</code> para fluidos.</li>
+                        <li><strong>Automação Completa:</strong> Combine os sistemas de transporte com <code>Digital Miner</code> para mineração automática e <code>Robotic Arm</code> para automação de inventário.</li>
+                        <li><strong>Teleportação de Energia/Itens:</strong> O <code>Quantum Entangloporter</code> permite transportar energia, itens e fluidos instantaneamente através de dimensões.</li>
                     </ul>
                 </section>
 
                 <!-- Create Guide -->
-                <section id="create-guide">
+                <section id="create-guide" class="mb-16">
                     <h2><i class="fa-solid fa-gear text-orange-500 mr-2 text-xl"></i>Create: Engenharia e Automação Mecânica</h2>
                     <p>Create é um mod de automação e engenharia que se concentra em máquinas mecânicas, energia cinética e construções estéticas. Ele permite criar fábricas complexas e contraptions móveis.</p>
 
                     <h3>Primeiros Passos</h3>
-                    <p>A base do Create é a energia cinética. Você precisará de uma fonte de rotação e engrenagens para transmitir essa energia.</p>
+                    <p>A base do Create é a energia cinética (rotação). Você precisará de uma fonte de rotação e engrenagens para transmitir essa energia.</p>
                     <ul>
-                        <li><strong>Fonte de Energia:</strong> Comece com uma <code>Water Wheel</code> ou <code>Encased Fan</code> (com lava ou fogo).</li>
-                        <li><strong>Componentes Essenciais:</strong> Crie <code>Andesite Alloy</code>, <code>Cogwheels</code> e <code>Shafts</code>.</li>
+                        <li><strong>Fonte de Energia:</strong> Comece com uma <code>Water Wheel</code> (roda d'água) ou <code>Encased Fan</code> (ventilador enclausurado) com uma fonte de calor (lava ou fogo) para gerar vento.</li>
+                        <li><strong>Componentes Essenciais:</strong> Crie <code>Andesite Alloy</code> (liga de andesito) combinando andesito e pepitas de ferro. Use-o para fazer <code>Cogwheels</code> (engrenagens), <code>Shafts</code> (eixos) e <code>Andesite Casing</code> (caixa de andesito).</li>
+                        <li><strong>Transmissão de Energia:</strong> Conecte sua fonte de energia a <code>Shafts</code> e <code>Cogwheels</code> para levar a rotação às suas máquinas. Engrenagens grandes e pequenas podem mudar a velocidade e o torque.</li>
                     </ul>
 
                     <h3>Máquinas e Automação</h3>
-                    <p>Create oferece diversas máquinas para processamento e transporte:</p>
+                    <p>Create oferece diversas máquinas para processamento e transporte, todas movidas por energia cinética:</p>
                     <ul>
                         <li><strong>Processamento:</strong>
                             <ul>
-                                <li><code>Millstone</code>: Moer itens (grãos, minérios).</li>
-                                <li><code>Crushing Wheel</code>: Esmagar itens (minérios, pedras).</li>
-                                <li><code>Mechanical Press</code>: Comprimir itens (chapas, blocos).</li>
-                                <li><code>Mechanical Mixer</code>: Misturar ingredientes (com calor de um <code>Blaze Burner</code>).</li>
+                                <li><code>Millstone</code>: Moer itens (grãos, minérios em pó). Conecte-o a um eixo rotativo.</li>
+                                <li><code>Crushing Wheel</code>: Esmagar itens (minérios em pó, pedras em cascalho). Requer duas rodas girando em direções opostas.</li>
+                                <li><code>Mechanical Press</code>: Comprimir itens (chapas de metal, blocos). Use sobre um <code>Basin</code> para receitas de compactação.</li>
+                                <li><code>Mechanical Mixer</code>: Misturar ingredientes (com calor de um <code>Blaze Burner</code> abaixo). Também usa um <code>Basin</code>.</li>
+                                <li><code>Saw</code> e <code>Drill</code>: Para cortar madeira e minerar blocos automaticamente.</li>
                             </ul>
                         </li>
                         <li><strong>Transporte:</strong>
                             <ul>
                                 <li><code>Conveyor Belt</code>: Transporta itens horizontalmente.</li>
-                                <li><code>Chute</code>: Transporta itens verticalmente.</li>
-                                <li><code>Smart Fluid Pipe</code> e <code>Hoses</code>: Para fluidos.</li>
+                                <li><code>Chute</code>: Transporta itens verticalmente para baixo.</li>
+                                <li><code>Smart Fluid Pipe</code> e <code>Hoses</code>: Para fluidos, com filtros e controle de fluxo.</li>
+                                <li><code>Item Vault</code> e <code>Fluid Tank</code>: Soluções de armazenamento modulares.</li>
                             </ul>
                         </li>
-                        <li><strong>Contraptions:</strong> Crie máquinas móveis com <code>Mechanical Bearings</code>, <code>Pistons</code> e <code>Gantry Carriages</code>.</li>
+                        <li><strong>Contraptions:</strong> Crie máquinas móveis com <code>Mechanical Bearings</code> (rolamentos mecânicos), <code>Pistons</code> (pistões) e <code>Gantry Carriages</code> (vagões de pórtico) para construir pontes, elevadores e até veículos.</li>
                     </ul>
+                    <h4>Exemplo de Automação Simples: Moagem de Grãos</h4>
+                    <ol>
+                        <li>Coloque uma <code>Water Wheel</code> em um fluxo de água para gerar rotação.</li>
+                        <li>Conecte a <code>Water Wheel</code> a um <code>Shaft</code> e, em seguida, a um <code>Cogwheel</code>.</li>
+                        <li>Posicione um <code>Millstone</code> e conecte-o ao <code>Cogwheel</code> com outro <code>Shaft</code>.</li>
+                        <li>Acima do <code>Millstone</code>, coloque um <code>Chute</code> conectado a um baú com grãos.</li>
+                        <li>Abaixo do <code>Millstone</code>, outro <code>Chute</code> para coletar a farinha em outro baú.</li>
+                    </ol>
 
                     <h3>Dicas Avançadas</h3>
                     <ul>
-                        <li><strong>Automação de Fazendas:</strong> Use <code>Mechanical Harvesters</code> e <code>Ploughs</code> para fazendas automáticas.</li>
-                        <li><strong>Trens:</strong> Construa sistemas de trem complexos para transporte de longa distância e automação de estações.</li>
-                        <li><strong>Fluidos:</strong> Gerencie fluidos com <code>Portable Storage Interfaces</code> e <code>Fluid Tanks</code>.</li>
+                        <li><strong>Automação de Fazendas:</strong> Use <code>Mechanical Harvesters</code> e <code>Ploughs</code> para fazendas automáticas de colheita e plantio.</li>
+                        <li><strong>Trens:</strong> Construa sistemas de trem complexos para transporte de longa distância e automação de estações com <code>Train Stations</code> e <code>Depots</code>.</li>
+                        <li><strong>Fluidos:</strong> Gerencie fluidos com <code>Portable Storage Interfaces</code> para transferir fluidos entre contraptions móveis e <code>Fluid Tanks</code> para armazenamento em massa.</li>
+                        <li><strong>Redstone:</strong> Use <code>Redstone Links</code> para controle sem fio e <code>Adjustable Cogs</code> para controle de velocidade via redstone.</li>
                     </ul>
                 </section>
 
                 <!-- Ars Nouveau Guide -->
-                <section id="arsnouveau-guide">
+                <section id="arsnouveau-guide" class="mb-16">
                     <h2><i class="fa-solid fa-wand-magic-sparkles text-purple-500 mr-2 text-xl"></i>Ars Nouveau: Magia e Feitiçaria</h2>
                     <p>Ars Nouveau é um mod de magia que permite aos jogadores criar e personalizar seus próprios feitiços, invocar familiares e automatizar tarefas com magia.</p>
 
                     <h3>Primeiros Passos</h3>
                     <p>Para iniciar sua jornada mágica, você precisará de um <code>Worn Spellbook</code> e uma fonte de <code>Source</code> (mana).</p>
                     <ul>
-                        <li><strong>Spellbook:</strong> O item central para criar e armazenar feitiços.</li>
-                        <li><strong>Source Jar:</strong> Armazena Source, que pode ser gerado por <code>Source Link</code> ou <code>Source Berry Bush</code>.</li>
-                        <li><strong>Glyphs:</strong> Colete os primeiros glyphs (ex: <code>Projectile</code>, <code>Harm</code>, <code>Touch</code>) para começar a experimentar.</li>
+                        <li><strong>Spellbook:</strong> O item central para criar e armazenar feitiços. Crafte-o com couro e papel.</li>
+                        <li><strong>Source Jar:</strong> Armazena Source, que pode ser gerado por <code>Source Link</code> (conectado a blocos de Source como <code>Source Gem Block</code>) ou <code>Source Berry Bush</code> (arbustos de bagas de Source).</li>
+                        <li><strong>Glyphs:</strong> Colete os primeiros glyphs (ex: <code>Projectile</code>, <code>Harm</code>, <code>Touch</code>) explorando o mundo, encontrando bibliotecas ou crafte-os na <code>Glyph Press</code>.</li>
                     </ul>
 
                     <h3>Criação de Feitiços</h3>
                     <p>Feitiços são criados combinando <code>Glyphs</code> em um <code>Ars Nouveau Lectern</code>. Cada feitiço tem três componentes principais:</p>
                     <ul>
-                        <li><strong>Shape (Forma):</strong> Define como o feitiço é lançado (ex: <code>Projectile</code>, <code>Touch</code>, <code>Self</code>).</li>
-                        <li><strong>Effect (Efeito):</strong> O que o feitiço faz (ex: <code>Harm</code>, <code>Heal</code>, <code>Break</code>).</li>
-                        <li><strong>Augment (Aumento):</strong> Modifica o feitiço (ex: <code>Amplify</code>, <code>Split</code>, <code>Duration</code>).</li>
+                        <li><strong>Shape (Forma):</strong> Define como o feitiço é lançado (ex: <code>Projectile</code> para atirar, <code>Touch</code> para contato, <code>Self</code> para aplicar em si mesmo).</li>
+                        <li><strong>Effect (Efeito):</strong> O que o feitiço faz (ex: <code>Harm</code> para dano, <code>Heal</code> para cura, <code>Break</code> para quebrar blocos, <code>Grow</code> para plantas).</li>
+                        <li><strong>Augment (Aumento):</strong> Modifica o feitiço (ex: <code>Amplify</code> para aumentar o poder, <code>Split</code> para múltiplos alvos, <code>Duration</code> para estender a duração, <code>Pierce</code> para atravessar inimigos).</li>
                     </ul>
-                    <p>Experimente diferentes combinações para descobrir novos e poderosos feitiços.</p>
+                    <p>Experimente diferentes combinações para descobrir novos e poderosos feitiços. Por exemplo:</p>
+                    <ul>
+                        <li><strong>Feitiço de Ataque Básico:</strong> <code>Projectile + Harm</code></li>
+                        <li><strong>Feitiço de Mineração:</strong> <code>Touch + Break</code></li>
+                        <li><strong>Feitiço de Cura em Área:</strong> <code>Self + AoE + Heal</code></li>
+                    </ul>
+                    <p>Use o <code>Spell Turret</code> para automatizar o lançamento de feitiços em uma área.</p>
 
                     <h3>Automação Mágica</h3>
                     <ul>
-                        <li><strong>Golems:</strong> Invoque <code>Golems</code> para automatizar tarefas como colheita, mineração e combate.</li>
-                        <li><strong>Warding Candle:</strong> Protege áreas contra mobs.</li>
-                        <li><strong>Rituals:</strong> Realize rituais para efeitos poderosos, como invocar familiares ou gerar recursos.</li>
+                        <li><strong>Golems:</strong> Invoque <code>Golems</code> para automatizar tarefas como colheita, mineração, combate e transporte de itens. Eles podem ser equipados com ferramentas e programados com <code>Golem Charm</code>.</li>
+                        <li><strong>Warding Candle:</strong> Protege áreas contra mobs hostis.</li>
+                        <li><strong>Rituals:</strong> Realize rituais em um <code>Ritual Altar</code> para efeitos poderosos, como invocar familiares, gerar recursos ou alterar o clima.</li>
                     </ul>
 
                     <h3>Dicas Avançadas</h3>
                     <ul>
-                        <li><strong>Familiar:</strong> Escolha e treine um familiar para auxiliá-lo em combate ou coleta.</li>
-                        <li><strong>Infusion Altar:</strong> Use o <code>Infusion Altar</code> para criar itens mágicos avançados e aprimorar seu equipamento.</li>
-                        <li><strong>Mana Generation:</strong> Otimize a geração de Source com <code>Source Jars</code> e <code>Source Links</code> em áreas com muitos mobs ou plantas.</li>
+                        <li><strong>Familiar:</strong> Escolha e treine um familiar (como um <code>Whirlisprig</code> ou <code>Drygmy</code>) para auxiliá-lo em combate, coleta de itens ou geração de Source.</li>
+                        <li><strong>Infusion Altar:</strong> Use o <code>Infusion Altar</code> para criar itens mágicos avançados, como armaduras e ferramentas encantadas, e aprimorar seu equipamento com <code>Archwood</code>.</li>
+                        <li><strong>Mana Generation:</strong> Otimize a geração de Source com <code>Source Jars</code> e <code>Source Links</code> em áreas com muitos mobs (para <code>Warding Candle</code>) ou plantas (para <code>Drygmy</code>).</li>
+                        <li><strong>Aprimoramentos de Feitiços:</strong> Use <code>Spell Foci</code> e <code>Spell Scrolls</code> para aprimorar e armazenar feitiços complexos.</li>
                     </ul>
                 </section>
 
                 <!-- Applied Energistics 2 Guide -->
-                <section id="ae2-guide">
+                <section id="ae2-guide" class="mb-16">
                     <h2><i class="fa-solid fa-microchip text-cyan-500 mr-2 text-xl"></i>Applied Energistics 2: Armazenamento e Automação Digital</h2>
                     <p>Applied Energistics 2 (AE2) é um mod de tecnologia que revoluciona o armazenamento de itens e a automação de crafting, transformando-os em dados digitais dentro de uma rede.</p>
 
                     <h3>Primeiros Passos</h3>
                     <p>A base de qualquer sistema AE2 é o <code>ME Controller</code>, que fornece energia e canais para a rede.</p>
-                    <ul>
-                        <li><strong>ME Controller:</strong> O coração da sua rede AE2.</li>
+                    <ol>
+                        <li><strong>Recursos Essenciais:</strong> Comece coletando <code>Certus Quartz</code> (para <code>Quartz Glass</code>, <code>Charged Certus Quartz</code> e processadores) e <code>Fluix Crystal</code> (para <code>Fluix Dust</code> e <code>Fluix Crystal</code>).</li>
+                        <li><strong>Processadores:</strong> Crie <code>Logic Processor</code>, <code>Calculation Processor</code> e <code>Engineering Processor</code> usando <code>Printed Silicon</code> e os respectivos circuitos.</li>
+                        <li><strong>ME Controller:</strong> O coração da sua rede AE2. Ele precisa de energia para funcionar.</li>
+                        <li><strong>Energy Acceptor:</strong> Conecte-o ao <code>ME Controller</code> e a uma fonte de energia (ex: gerador do Mekanism ou Create) para alimentar a rede.</li>
                         <li><strong>ME Drive:</strong> Armazena <code>ME Storage Cells</code>, que guardam seus itens digitalmente.</li>
-                        <li><strong>ME Chest:</strong> Uma forma simples de acessar sua rede e armazenar itens no início.</li>
-                        <li><strong>Cables:</strong> Conectam os componentes da sua rede.</li>
-                        <li><strong>Certus Quartz:</strong> Um recurso vital para a maioria dos itens do AE2.</li>
-                    </ul>
+                        <li><strong>ME Storage Cells:</strong> Crie células de armazenamento (1k, 4k, 16k, 64k, 256k) e coloque-as no <code>ME Drive</code>.</li>
+                        <li><strong>ME Terminal:</strong> A interface principal para acessar e gerenciar todos os itens armazenados na sua rede.</li>
+                    </ol>
+                    <p>Conecte todos esses componentes usando <code>ME Glass Cables</code>.</p>
 
                     <h3>Rede e Canais</h3>
-                    <p>AE2 opera com um sistema de canais. Cada cabo pode transportar 8 canais, e cada máquina conectada consome um canal.</p>
+                    <p>AE2 opera com um sistema de canais. Cada cabo pode transportar 8 canais, e cada máquina conectada consome um canal. O <code>ME Controller</code> fornece 32 canais.</p>
                     <ul>
-                        <li><strong>ME Controller:</strong> Fornece 32 canais.</li>
-                        <li><strong>P2P Tunnels:</strong> Permitem estender canais por longas distâncias ou entre sub-redes.</li>
-                        <li><strong>Dense Cable:</strong> Pode transportar 32 canais.</li>
+                        <li><strong>ME Glass Cables:</strong> Cabos básicos que transportam até 8 canais.</li>
+                        <li><strong>Smart Cables:</strong> Versões coloridas dos cabos que mostram visualmente quantos canais estão sendo usados.</li>
+                        <li><strong>Dense Cables:</strong> Cabos mais avançados que podem transportar até 32 canais.</li>
+                        <li><strong>P2P Tunnels:</strong> Permitem estender canais por longas distâncias ou entre sub-redes, economizando canais.</li>
                     </ul>
+                    <p>Planeje sua rede cuidadosamente para não exceder o limite de canais, ou suas máquinas pararão de funcionar.</p>
 
                     <h3>Armazenamento e Crafting Automático</h3>
                     <p>O AE2 permite armazenar milhões de itens em um único bloco e automatizar crafting complexos.</p>
                     <ul>
-                        <li><strong>ME Storage Cells:</strong> Variam em tamanho (1k, 4k, 16k, 64k, 256k) e armazenam itens.</li>
-                        <li><strong>ME Crafting Terminal:</strong> Interface principal para acessar itens e iniciar crafts.</li>
-                        <li><strong>ME Pattern Provider:</strong> Fornece padrões de crafting para <code>Molecular Assemblers</code>.</li>
-                        <li><strong>Molecular Assembler:</strong> Realiza o crafting automático usando os padrões.</li>
+                        <li><strong>ME Storage Cells:</strong> Variam em tamanho e armazenam itens. Use <code>Item Storage Cells</code> para itens e <code>Fluid Storage Cells</code> para fluidos.</li>
+                        <li><strong>ME Crafting Terminal:</strong> Interface principal para acessar itens e iniciar crafts manuais ou automáticos.</li>
+                        <li><strong>ME Pattern Terminal:</strong> Usado para programar <code>Crafting Patterns</code> (padrões de crafting) para o sistema de automação.</li>
+                        <li><strong>ME Pattern Provider:</strong> Fornece os padrões de crafting para <code>Molecular Assemblers</code>.</li>
+                        <li><strong>Molecular Assembler:</strong> Realiza o crafting automático usando os padrões fornecidos. Conecte-os ao <code>ME Pattern Provider</code>.</li>
+                        <li><strong>Crafting Co-Processor:</strong> Aumenta a capacidade de processamento de crafting da sua rede, permitindo múltiplos crafts simultâneos.</li>
                     </ul>
 
                     <h3>Dicas Avançadas</h3>
                     <ul>
-                        <li><strong>Sub-redes:</strong> Crie sub-redes para gerenciar canais e otimizar o desempenho.</li>
-                        <li><strong>Fluid Storage:</strong> Use <code>Fluid Storage Cells</code> e <code>Fluid Buses</code> para gerenciar fluidos.</li>
-                        <li><strong>Wireless Access:</strong> Construa um <code>Wireless Access Point</code> e um <code>Wireless Terminal</code> para acessar sua rede de qualquer lugar.</li>
-                        <li><strong>Segurança:</strong> Use <code>Security Terminal</code> para controlar quem pode acessar sua rede.</li>
+                        <li><strong>Sub-redes:</strong> Crie sub-redes menores com seus próprios <code>ME Controllers</code> e conecte-as à sua rede principal usando <code>P2P Tunnels</code> para gerenciar canais de forma eficiente.</li>
+                        <li><strong>Fluid Storage:</strong> Use <code>Fluid Storage Cells</code> e <code>Fluid Buses</code> para gerenciar fluidos dentro da sua rede AE2.</li>
+                        <li><strong>Wireless Access:</strong> Construa um <code>Wireless Access Point</code> e um <code>Wireless Terminal</code> para acessar sua rede de qualquer lugar, até mesmo de outras dimensões.</li>
+                        <li><strong>Automação de Máquinas:</strong> Use <code>ME Import Bus</code> e <code>ME Export Bus</code> para mover itens de e para máquinas externas, e <code>ME Storage Bus</code> para integrar inventários externos à sua rede.</li>
+                        <li><strong>Segurança:</strong> Use <code>Security Terminal</code> para controlar quem pode acessar sua rede e quais permissões cada jogador tem.</li>
                     </ul>
                 </section>
 
@@ -375,20 +412,26 @@
 
         // ScrollSpy Script
         document.addEventListener('DOMContentLoaded', () => {
-            const mainContainer = document.getElementById('main-scroll'); // Corrected to target the scrollable main element
-            const sections = document.querySelectorAll('section, header'); // Header incluído pois tem ID "inicio"
+            const mainContainer = document.getElementById('main-scroll');
+            const sections = document.querySelectorAll('section[id], header[id]'); // Select sections and header with an ID
             const navLinks = document.querySelectorAll('.sidebar-link');
 
             function highlightSidebar() {
                 let current = "";
-                
-                sections.forEach((section) => {
-                    const sectionTop = section.offsetTop;
-                    // Ajuste de 150px
-                    if (mainContainer.scrollTop >= sectionTop - 150) {
+                const offset = 70; // Adjust this value to fine-tune when a section becomes active
+
+                // Iterate sections in reverse to find the lowest section currently in view
+                // This ensures that when scrolling down, the link for the most recently entered section is highlighted.
+                for (let i = sections.length - 1; i >= 0; i--) {
+                    const section = sections[i];
+                    // Use getBoundingClientRect().top for more accurate position relative to the viewport
+                    // Or stick with offsetTop relative to the scrollable parent
+                    // For offsetTop, we check if the scroll position is past the section's top, minus an offset.
+                    if (mainContainer.scrollTop >= section.offsetTop - offset) {
                         current = section.getAttribute("id");
+                        break; // Found the current section, stop iterating
                     }
-                });
+                }
 
                 navLinks.forEach((link) => {
                     link.classList.remove("active");

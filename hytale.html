@@ -33,7 +33,7 @@
         }
         .sidebar-link:hover, .sidebar-link.active {
             background-color: #1e293b;
-            color: #60a5fa; /* Blue for Hytale */
+            color: #38bdf8; /* Changed to match Minecraft Modded aesthetic */
         }
         .sidebar-link i { width: 24px; text-align: center; margin-right: 0.75rem; }
 
@@ -44,7 +44,15 @@
         }
 
         /* Content formatting */
-        .wiki-content h2 { font-size: 1.5rem; font-weight: 700; color: #f8fafc; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #1e293b; }
+        .wiki-content h2 { 
+            font-size: 1.5rem; 
+            font-weight: 700; 
+            color: #f8fafc; 
+            margin-top: 3.5rem; /* Increased margin-top for better separation */
+            margin-bottom: 1.5rem; /* Increased margin-bottom */
+            padding-bottom: 0.5rem; 
+            border-bottom: 1px solid #1e293b; 
+        }
         .wiki-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 1.5rem; margin-bottom: 0.75rem; }
         .wiki-content h4 { font-size: 1.125rem; font-weight: 600; color: #e2e8f0; margin-top: 1.25rem; margin-bottom: 0.5rem; } /* Added h4 style */
         .wiki-content p { margin-bottom: 1rem; line-height: 1.7; color: #cbd5e1; }
@@ -79,12 +87,17 @@
             <div class="p-4">
                 <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4 px-2">Navegação</div>
                 
-                <a href="#basic-survival" class="sidebar-link active">
-                    <i class="fa-solid fa-seedling"></i> Início & Sobrevivência
+                <a href="#inicio" class="sidebar-link active">
+                    <i class="fa-solid fa-circle-info"></i> Visão Geral
+                </a>
+                <a href="#basic-survival" class="sidebar-link">
+                    <i class="fa-solid fa-seedling"></i> Guia de Sobrevivência
                 </a>
                 <a href="#intro" class="sidebar-link">
-                    <i class="fa-solid fa-circle-info"></i> Introdução
+                    <i class="fa-solid fa-door-open"></i> Introdução ao Servidor
                 </a>
+
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mt-8 mb-4 px-2">Comandos Essenciais</div>
                 <a href="#claims" class="sidebar-link">
                     <i class="fa-solid fa-shield-halved"></i> Proteção (Claims)
                 </a>
@@ -94,35 +107,33 @@
                 <a href="#homes" class="sidebar-link">
                     <i class="fa-solid fa-compass"></i> Homes & Warps
                 </a>
+
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mt-8 mb-4 px-2">Informações do Servidor</div>
                 <a href="#vip" class="sidebar-link">
                     <i class="fa-solid fa-crown text-purple-400"></i> Vantagens VIP
                 </a>
                 <a href="#ip" class="sidebar-link">
-                    <i class="fa-solid fa-server"></i> IP / Conexão
+                    <i class="fa-solid fa-server"></i> Conexão (IP)
                 </a>
                 <a href="#help-connect" class="sidebar-link">
-                    <i class="fa-solid fa-life-ring"></i> Ajuda Conexão
+                    <i class="fa-solid fa-life-ring"></i> Ajuda & Suporte
                 </a>
 
-                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mt-8 mb-4 px-2">Exploração</div>
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mt-8 mb-4 px-2">Exploração & Progressão</div>
                 <a href="#minerios" class="sidebar-link">
                     <i class="fa-solid fa-gem"></i> Localização de Minérios
                 </a>
-
-                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mt-8 mb-4 px-2">Sistemas Essenciais</div>
+                <a href="#agricultura-guia" class="sidebar-link">
+                    <i class="fa-solid fa-seedling"></i> Agricultura
+                </a>
                 <a href="#memory-system" class="sidebar-link">
                     <i class="fa-solid fa-brain"></i> Sistema de Memórias
                 </a>
-
-                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mt-8 mb-4 px-2">Viagem & Exploração</div>
                 <a href="#ancient-gateway" class="sidebar-link">
                     <i class="fa-solid fa-portal-exit"></i> Portais & Dimensões
                 </a>
 
-                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mt-8 mb-4 px-2">Guias & Tutoriais</div>
-                <a href="#agricultura-guia" class="sidebar-link">
-                    <i class="fa-solid fa-seedling"></i> Agricultura
-                </a>
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mt-8 mb-4 px-2">Guias de Atividades</div>
                 <a href="#fishing-guide" class="sidebar-link">
                     <i class="fa-solid fa-fish"></i> Pesca
                 </a>
@@ -140,7 +151,7 @@
 
             <div class="max-w-4xl mx-auto p-8 fade-in relative z-10 wiki-content">
                 
-                <header class="wiki-header flex items-start gap-6">
+                <header class="wiki-header flex items-start gap-6 mb-12" id="inicio">
                     <div class="h-20 w-20 bg-blue-500/10 rounded-2xl border border-blue-500/30 flex items-center justify-center flex-none">
                         <i class="fa-solid fa-dungeon text-4xl text-blue-500"></i>
                     </div>
@@ -154,7 +165,7 @@
                 </header>
 
                 <!-- START New Section: Guia de Início e Sobrevivência Básica -->
-                <section id="basic-survival" class="mb-12">
+                <section id="basic-survival" class="mb-16">
                     <h2><i class="fa-solid fa-seedling text-green-500 mr-3"></i>Guia de Início e Sobrevivência Básica</h2>
                     <p>Este guia cobre os fundamentos para estabelecer sua base, entender a interface e sobreviver aos primeiros dias no jogo.</p>
 
@@ -219,12 +230,12 @@
                 </section>
                 <!-- END New Section: Guia de Início e Sobrevivência Básica -->
 
-                <section id="intro">
+                <section id="intro" class="mb-16">
                     <h2><i class="fa-solid fa-door-open text-blue-500 mr-3"></i>Como Entrar e Jogar</h2>
                     <p>Ao entrar no servidor, você já pode começar sua aventura explorando o mundo, coletando recursos e construindo sua base. Para garantir sua segurança e progresso, utilize o sistema de claim e party para proteger suas conquistas.</p>
                 </section>
 
-                <section id="claims">
+                <section id="claims" class="mb-16">
                     <h2><i class="fa-solid fa-shield-halved text-emerald-500 mr-2"></i> Proteção de Terreno</h2>
                     <div class="command-box">
                         <div class="flex items-start gap-3">
@@ -240,7 +251,7 @@
                     </div>
                 </section>
 
-                <section id="teleport">
+                <section id="teleport" class="mb-16">
                     <h2><i class="fa-solid fa-bolt text-yellow-500 mr-2"></i> Teleporte</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="bg-slate-800 p-4 rounded-lg border border-slate-700"><code class="block text-pink-400 font-bold mb-2">/tpa &lt;jogador&gt;</code><p class="text-slate-400 text-sm m-0">Envia um pedido de teleporte para outro jogador.</p></div>
@@ -250,7 +261,7 @@
                     </div>
                 </section>
 
-                <section id="homes">
+                <section id="homes" class="mb-16">
                     <h2><i class="fa-solid fa-compass text-orange-500 mr-2"></i> Homes, Warps e Spawn</h2>
                     <div class="overflow-hidden border border-slate-700 rounded-lg">
                         <table class="min-w-full divide-y divide-slate-700 bg-slate-800/50">
@@ -264,7 +275,7 @@
                     </div>
                 </section>
 
-                <section id="vip" class="bg-gradient-to-r from-purple-900/40 to-slate-800 border border-purple-500/30 rounded-xl p-6 mt-8">
+                <section id="vip" class="bg-gradient-to-r from-purple-900/40 to-slate-800 border border-purple-500/30 rounded-xl p-6 mt-8 mb-16">
                     <h2 class="!mt-0 !border-0"><i class="fa-solid fa-crown text-purple-400 mr-2"></i> Vantagens VIP</h2>
                     <ul class="space-y-3 mb-6 mt-4">
                         <li class="flex items-center text-slate-300"><i class="fa-solid fa-check text-green-500 mr-3"></i><span>Sem cooldown em comandos.</span></li>
@@ -275,7 +286,7 @@
                     <a href="https://mekaminers.net" target="_blank" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-lg transition shadow-lg shadow-purple-900/20 items-center"><i class="fa-solid fa-store mr-2"></i> Adquirir VIP</a>
                 </section>
 
-                <section id="ip" class="mt-8">
+                <section id="ip" class="mt-8 mb-16">
                     <h2><i class="fa-solid fa-server mr-2 text-xl text-blue-500"></i>Endereço de Conexão</h2>
                      <div class="bg-slate-900 border border-slate-700 rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                         <div class="flex items-center gap-4">
@@ -294,7 +305,7 @@
                     <p id="copy-feedback" class="text-blue-400 text-xs mt-2 text-center opacity-0 transition-opacity">IP copiado para a área de transferência!</p>
                 </section>
 
-                <section id="help-connect" class="mt-8">
+                <section id="help-connect" class="mt-8 mb-16">
                     <h2><i class="fa-solid fa-triangle-exclamation text-yellow-500 mr-2"></i>Problemas de Conexão?</h2>
                     <div class="bg-slate-800/80 border border-slate-700 rounded-lg p-6">
                         <p class="text-slate-300 mb-4">Se você está tendo dificuldades para entrar no servidor, tente as soluções abaixo:</p>
@@ -320,7 +331,7 @@
                 </section>
 
                 <!-- New Section: Ore Location Guide -->
-                <section id="minerios" class="mt-16 pt-8 border-t border-slate-800">
+                <section id="minerios" class="mt-16 pt-8 border-t border-slate-800 mb-16">
                     <h2 class="text-3xl font-bold text-white mb-6"><i class="fa-solid fa-gem text-blue-500 mr-3"></i>Guia de Localização de Minérios</h2>
                     <p class="text-slate-400 text-lg mb-8">Descubra onde encontrar os valiosos minérios de Hytale para otimizar sua exploração e progressão.</p>
 
@@ -436,12 +447,12 @@
                 </section>
 
                 <!-- START New Section: Guia Completo de Agricultura (Crops Farming) -->
-                <section id="agricultura-guia" class="mt-16 pt-8 border-t border-slate-800">
+                <section id="agricultura-guia" class="mt-16 pt-8 border-t border-slate-800 mb-16">
                     <h2 class="text-3xl font-bold text-white mb-6"><i class="fa-solid fa-seedling text-green-500 mr-3"></i>Guia Completo de Agricultura</h2>
                     <p class="text-slate-400 text-lg mb-8">Este guia cobre o processo fundamental para cultivar plantações, obter sementes e progredir através dos níveis de agricultura no Hytale.</p>
 
                     <section id="agricultura-passos" class="mb-8">
-                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-hand-sparkles text-green-400 mr-2"></i>1. Primeiros Passos</h3>
+                        <h3 class="text-xl font-bold text-green-400 mb-3"><i class="fa-solid fa-hand-sparkles text-green-400 mr-2"></i>1. Primeiros Passos</h3>
                         
                         <h4 class="text-lg font-semibold text-slate-200 mb-2">Bancada do Fazendeiro (Farmer's Workbench):</h4>
                         <p class="mb-4">O item essencial para começar. Crie-a utilizando uma bancada de trabalho (workbench) normal.</p>
@@ -455,7 +466,7 @@
                     </section>
 
                     <section id="agricultura-sementes" class="mb-8">
-                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-leaf text-green-400 mr-2"></i>2. Obtendo Sementes e "Essence of Life"</h3>
+                        <h3 class="text-xl font-bold text-green-400 mb-3"><i class="fa-solid fa-leaf text-green-400 mr-2"></i>2. Obtendo Sementes e "Essence of Life"</h3>
                         <p class="mb-4">Diferente de outros jogos, você não obtém sementes quebrando grama.</p>
                         <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
                             <li><strong>Exploração:</strong> Procure pelo mundo por vegetais selvagens maduros (como trigo, alface ou milho) gerados naturalmente.</li>
@@ -464,7 +475,7 @@
                     </section>
 
                     <section id="agricultura-ciclo" class="mb-8">
-                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-recycle text-green-400 mr-2"></i>3. O Ciclo de Cultivo</h3>
+                        <h3 class="text-xl font-bold text-green-400 mb-3"><i class="fa-solid fa-recycle text-green-400 mr-2"></i>3. O Ciclo de Cultivo</h3>
                         <p class="mb-4">O ciclo básico de jogabilidade (gameplay loop) consiste em:</p>
                         <ol class="list-decimal list-inside text-slate-400 pl-4 mb-4 space-y-1">
                             <li><strong>Comprar Sementes:</strong> Use a Essence of Life na Bancada do Fazendeiro para comprar sacos de sementes (iniciando com Trigo e Alface).</li>
@@ -476,7 +487,7 @@
                     </section>
 
                     <section id="agricultura-progresso" class="mb-8">
-                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-layer-group text-green-400 mr-2"></i>4. Progressão e Tiers (Níveis)</h3>
+                        <h3 class="text-xl font-bold text-green-400 mb-3"><i class="fa-solid fa-layer-group text-green-400 mr-2"></i>4. Progressão e Tiers (Níveis)</h3>
                         <p class="mb-4">Para desbloquear novas culturas, é necessário melhorar a Bancada do Fazendeiro.</p>
                         <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
                             <li><strong>Tier 1:</strong> Trigo e Alface.</li>
@@ -496,7 +507,7 @@
                     </section>
 
                     <section id="agricultura-outros" class="mb-8">
-                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-box-open text-green-400 mr-2"></i>5. Outros Itens</h3>
+                        <h3 class="text-xl font-bold text-green-400 mb-3"><i class="fa-solid fa-box-open text-green-400 mr-2"></i>5. Outros Itens</h3>
                         <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
                             <li><strong>Mudas de Árvores (Saplings):</strong> Podem ser compradas e plantadas para crescerem árvores.</li>
                             <li><strong>Decoração:</strong> É possível criar vasos de flores e outros itens decorativos na bancada.</li>
@@ -506,12 +517,12 @@
                 <!-- END New Section: Guia Completo de Agricultura (Crops Farming) -->
 
                 <!-- START New Section: Guia do Sistema de Memórias (Memory System) -->
-                <section id="memory-system" class="mt-16 pt-8 border-t border-slate-800">
+                <section id="memory-system" class="mt-16 pt-8 border-t border-slate-800 mb-16">
                     <h2 class="text-3xl font-bold text-white mb-6"><i class="fa-solid fa-brain text-blue-500 mr-3"></i>Guia do Sistema de Memórias</h2>
                     <p class="text-slate-400 text-lg mb-8">O sistema de memórias é uma mecânica de progressão fundamental no Hytale que permite desbloquear novas receitas de criação (como mochilas melhores e baús), teletransportes e outros itens úteis.</p>
 
                     <section id="memory-unlock" class="mb-8">
-                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-unlock-alt text-blue-400 mr-2"></i>1. Como Desbloquear o Sistema</h3>
+                        <h3 class="text-xl font-bold text-blue-400 mb-3"><i class="fa-solid fa-unlock-alt text-blue-400 mr-2"></i>1. Como Desbloquear o Sistema</h3>
                         <p class="mb-2"><strong class="text-slate-200">Localização Inicial:</strong> Ao iniciar o jogo, procure por uma grande estrutura de pedra (ruína/templo) próxima ao local de spawn.</p>
                         <p class="mb-2"><strong class="text-slate-200">O Guardião:</strong> No centro dessa construção, você encontrará um chefe (boss).</p>
                         <div class="bg-blue-500/10 border-l-4 border-blue-500 rounded-r-lg p-4 my-4">
@@ -523,7 +534,7 @@
                     </section>
 
                     <section id="memory-collect" class="mb-8">
-                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-lightbulb text-blue-400 mr-2"></i>2. Como Coletar Memórias</h3>
+                        <h3 class="text-xl font-bold text-blue-400 mb-3"><i class="fa-solid fa-lightbulb text-blue-400 mr-2"></i>2. Como Coletar Memórias</h3>
                         <p class="mb-2">As memórias são obtidas ao descobrir e observar coisas novas no mundo.</p>
                         <p class="mb-2"><strong class="text-slate-200">Mecânica:</strong> Fique próximo a uma nova criatura, rocha ou construção. Se você vir partículas azuis, significa que a memória está sendo coletada.</p>
                         <p class="mb-2"><strong class="text-slate-200">Variedade:</strong> Cada tipo único de criatura ou objeto concede uma memória.</p>
@@ -536,13 +547,13 @@
                     </section>
 
                     <section id="memory-manage" class="mb-8">
-                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-clipboard-list text-blue-400 mr-2"></i>3. Gerenciamento e Registro</h3>
+                        <h3 class="text-xl font-bold text-blue-400 mb-3"><i class="fa-solid fa-clipboard-list text-blue-400 mr-2"></i>3. Gerenciamento e Registro</h3>
                         <p class="mb-2"><strong class="text-slate-200">Capacidade da Mochila:</strong> Você tem um espaço limitado para carregar memórias não registradas (o vídeo menciona um limite de cerca de 48 memórias na mochila).</p>
                         <p class="mb-2"><strong class="text-slate-200">Registrando:</strong> É necessário retornar à máquina no santuário ("Paradise") e pressionar o botão de "Record" (Gravar) para transferir as memórias da sua mochila para o sistema permanentemente.</p>
                     </section>
 
                     <section id="memory-rewards" class="mb-8">
-                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-gift text-blue-400 mr-2"></i>4. Recompensas</h3>
+                        <h3 class="text-xl font-bold text-blue-400 mb-3"><i class="fa-solid fa-gift text-blue-400 mr-2"></i>4. Recompensas</h3>
                         <p class="mb-4">Ao acumular e registrar memórias suficientes, você desbloqueia recompensas progressivas.</p>
                         <p class="mb-2"><strong class="text-slate-200">Exemplos de Desbloqueios:</strong></p>
                         <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
@@ -555,19 +566,19 @@
                 <!-- END New Section: Guia do Sistema de Memórias (Memory System) -->
 
                 <!-- START New Section: Guia de Portais e Dimensões (Ancient Gateway) -->
-                <section id="ancient-gateway" class="mt-16 pt-8 border-t border-slate-800">
+                <section id="ancient-gateway" class="mt-16 pt-8 border-t border-slate-800 mb-16">
                     <h2 class="text-3xl font-bold text-white mb-6"><i class="fa-solid fa-portal-exit text-blue-500 mr-3"></i>Guia de Portais e Dimensões</h2>
                     <p class="text-slate-400 text-lg mb-8">Este guia explica como desbloquear viagens dimensionais, criar teletransportes e acessar áreas especiais como o Dragonspire Weld.</p>
 
                     <section id="gateway-access" class="mb-8">
-                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-door-open text-blue-400 mr-2"></i>1. Acesso Inicial</h3>
+                        <h3 class="text-xl font-bold text-blue-400 mb-3"><i class="fa-solid fa-door-open text-blue-400 mr-2"></i>1. Acesso Inicial</h3>
                         <p class="mb-2"><strong class="text-slate-200">Forgotten Temple Gateway:</strong> O primeiro passo é localizar esta estrutura no mapa (marcada pela bússola).</p>
                         <p class="mb-2"><strong class="text-slate-200">O Guardião:</strong> Ao entrar, você enfrentará um chefe Golem. Derrote-o ou esquive-se para entrar no portal.</p>
                         <p class="mb-2"><strong class="text-slate-200">Santuário:</strong> No centro do templo ("Paradise"), desça as escadas e ative a estátua central. Isso é obrigatório para começar a contar o progresso de memórias e desbloquear o acesso aos portais avançados.</p>
                     </section>
 
                     <section id="arcanist-workbench" class="mb-8">
-                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-hammer text-blue-400 mr-2"></i>2. Criação da Bancada Arcanista (Arcanist Workbench)</h3>
+                        <h3 class="text-xl font-bold text-blue-400 mb-3"><i class="fa-solid fa-hammer text-blue-400 mr-2"></i>2. Criação da Bancada Arcanista (Arcanist Workbench)</h3>
                         <p class="mb-4">Para criar itens mágicos e portais, você precisa desta bancada especializada.</p>
                         <p class="mb-2"><strong class="text-slate-200">Pré-requisito:</strong> Melhore sua Workbench comum para o Tier 2 (requer Cobre, Ferro e Linen Scraps - obtidos de esqueletos ou goblins).</p>
                         <p class="mb-2"><strong class="text-slate-200">Receita da Arcanist Workbench:</strong></p>
@@ -579,7 +590,7 @@
                     </section>
 
                     <section id="gateway-items" class="mb-8">
-                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-box-open text-blue-400 mr-2"></i>3. Itens Importantes</h3>
+                        <h3 class="text-xl font-bold text-blue-400 mb-3"><i class="fa-solid fa-box-open text-blue-400 mr-2"></i>3. Itens Importantes</h3>
                         <p class="mb-2"><strong class="text-slate-200">Teleporters:</strong> Com a Arcanist Workbench, você pode criar teletransportes pessoais para viajar rapidamente entre sua base e o templo.</p>
                         <p class="mb-2"><strong class="text-slate-200">Ancient Gateway:</strong> A estrutura física do portal.</p>
                         <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
@@ -588,7 +599,7 @@
                     </section>
 
                     <section id="fragment-keys" class="mb-8">
-                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-key text-blue-400 mr-2"></i>4. Chaves de Fragmento (Fragment Keys) e Dimensões</h3>
+                        <h3 class="text-xl font-bold text-blue-400 mb-3"><i class="fa-solid fa-key text-blue-400 mr-2"></i>4. Chaves de Fragmento (Fragment Keys) e Dimensões</h3>
                         <p class="mb-4">O portal por si só não funciona; ele precisa de uma chave específica para abrir um destino. Cada chave leva a um "fragmento" de mundo diferente com um limite de tempo para exploração.</p>
 
                         <section id="dragonspire-weld" class="mb-4">
@@ -626,7 +637,7 @@
                 <!-- END New Section: Guia de Portais e Dimensões (Ancient Gateway) -->
 
                 <!-- START New Section: Guia de Pesca (Fishing Guide) -->
-                <section id="fishing-guide" class="mt-16 pt-8 border-t border-slate-800">
+                <section id="fishing-guide" class="mt-16 pt-8 border-t border-slate-800 mb-16">
                     <h2 class="text-3xl font-bold text-white mb-6"><i class="fa-solid fa-fish text-blue-500 mr-3"></i>Guia de Pesca</h2>
                     <p class="text-slate-400 text-lg mb-8">Atualmente, não existem varas de pesca no Hytale. O método principal para obter peixes é através do uso de armadilhas.</p>
 
@@ -689,20 +700,24 @@
 
         // ScrollSpy Script
         document.addEventListener('DOMContentLoaded', () => {
-            const mainContainer = document.getElementById('main-scroll'); // Corrected to target the scrollable main element
-            const sections = document.querySelectorAll('section, header'); // Header incluído pois tem ID "inicio"
+            const mainContainer = document.getElementById('main-scroll');
+            const sections = document.querySelectorAll('section[id], header[id]'); 
             const navLinks = document.querySelectorAll('.sidebar-link');
 
             function highlightSidebar() {
                 let current = "";
-                
-                sections.forEach((section) => {
-                    const sectionTop = section.offsetTop;
-                    // Ajuste de 150px para ativar o link um pouco antes da seção chegar ao topo
-                    if (mainContainer.scrollTop >= sectionTop - 150) {
+                const offset = 70; // Adjust this value to fine-tune when a section becomes active
+
+                // Iterate sections in reverse to find the lowest section currently in view
+                // This ensures that when scrolling down, the link for the most recently entered section is highlighted.
+                for (let i = sections.length - 1; i >= 0; i--) {
+                    const section = sections[i];
+                    // Check if the scroll position is past the section's top, minus an offset.
+                    if (mainContainer.scrollTop >= section.offsetTop - offset) {
                         current = section.getAttribute("id");
+                        break; // Found the current section, stop iterating
                     }
-                });
+                }
 
                 navLinks.forEach((link) => {
                     link.classList.remove("active");
@@ -712,7 +727,6 @@
                 });
             }
 
-            // Escuta o scroll no container principal (main) em vez de window
             mainContainer.addEventListener('scroll', highlightSidebar);
             // Initial call to set active link on page load
             highlightSidebar();
