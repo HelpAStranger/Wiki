@@ -9,153 +9,203 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
     
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #e2e8f0; overflow-x: hidden; }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #1e293b; }
-        ::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #e2e8f0; }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+        
         .fade-in { animation: fadeIn 0.4s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .command-box { background-color: #1e293b; border-left: 4px solid #3b82f6; }
-        .bg-grid {
-            background-image: linear-gradient(to right, #1e293b 1px, transparent 1px), linear-gradient(to bottom, #1e293b 1px, transparent 1px);
-            background-size: 40px 40px;
-            mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+
+        /* Sidebar Styling */
+        .sidebar-link {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            color: #94a3b8;
+            border-radius: 0.5rem;
+            transition: all 0.2s;
+            text-decoration: none;
+            margin-bottom: 0.25rem;
         }
+        .sidebar-link:hover, .sidebar-link.active {
+            background-color: #1e293b;
+            color: #60a5fa; /* Blue for Hytale */
+        }
+        .sidebar-link i { width: 24px; text-align: center; margin-right: 0.75rem; }
+
+        .wiki-header {
+            border-bottom: 1px solid #334155;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Content formatting */
+        .wiki-content h2 { font-size: 1.5rem; font-weight: 700; color: #f8fafc; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #1e293b; }
+        .wiki-content p { margin-bottom: 1rem; line-height: 1.7; color: #cbd5e1; }
+        .command-box { background-color: #1e293b; border-left: 4px solid #3b82f6; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem; }
+        
         html { scroll-behavior: smooth; }
     </style>
 </head>
-<body class="min-h-screen flex flex-col relative">
+<body class="flex flex-col h-screen overflow-hidden">
 
-    <div class="absolute inset-0 bg-grid -z-10 h-screen w-full fixed"></div>
-
-    <!-- Navbar sempre visível -->
-    <nav class="w-full bg-slate-900/80 backdrop-blur-md border-b border-slate-700 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <a href="index.html" class="flex items-center cursor-pointer decoration-0">
-                    <i class="fa-solid fa-book-open text-blue-500 text-2xl mr-2"></i>
-                    <span class="font-bold text-xl tracking-tight text-white">Meka<span class="text-blue-500">Miners</span> Wiki</span>
+    <!-- Navbar Fixa -->
+    <nav class="w-full bg-slate-900 border-b border-slate-700 h-16 flex-none z-50 px-4">
+        <div class="h-full flex items-center justify-between max-w-[1920px] mx-auto">
+            <a href="index.html" class="flex items-center cursor-pointer decoration-0">
+                <i class="fa-solid fa-book-open text-blue-500 text-2xl mr-2"></i>
+                <span class="font-bold text-xl tracking-tight text-white hidden sm:block">Meka<span class="text-blue-500">Miners</span> Wiki</span>
+            </a>
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="text-slate-400 hover:text-white transition text-sm font-medium">
+                    <i class="fa-solid fa-house mr-1"></i> Início
                 </a>
-                <div>
-                    <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition decoration-0">
-                        <i class="fa-solid fa-house mr-1"></i> Início
-                    </a>
-                </div>
+                <a href="minecraftmodded.html" class="text-slate-400 hover:text-green-400 transition text-sm font-medium">
+                    <i class="fa-solid fa-cube mr-1"></i> Ir para Minecraft
+                </a>
             </div>
         </div>
     </nav>
 
-    <main class="flex-grow flex items-start justify-center p-4 sm:p-8">
-        <div class="w-full max-w-4xl fade-in pb-12">
-            
-            <!-- Header Image -->
-            <div class="relative w-full h-48 md:h-64 rounded-xl overflow-hidden mb-8 shadow-2xl">
-                <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-slate-900"></div>
-                <div class="absolute inset-0 opacity-30 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-                <div class="absolute bottom-0 left-0 p-6 md:p-8">
-                    <div class="flex items-center gap-3 mb-2">
-                        <span class="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded uppercase">Wiki Oficial</span>
-                    </div>
-                    <h1 class="text-3xl md:text-5xl font-bold text-white shadow-black drop-shadow-lg">Hytale - Mekaminers</h1>
-                </div>
+    <!-- Main Layout -->
+    <div class="flex flex-1 overflow-hidden relative">
+        
+        <!-- Sidebar -->
+        <aside class="w-64 bg-slate-900/50 border-r border-slate-700 flex-none overflow-y-auto hidden md:block backdrop-blur-sm">
+            <div class="p-4">
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4 px-2">Navegação</div>
+                
+                <a href="#intro" class="sidebar-link active">
+                    <i class="fa-solid fa-circle-info"></i> Introdução
+                </a>
+                <a href="#claims" class="sidebar-link">
+                    <i class="fa-solid fa-shield-halved"></i> Proteção (Claims)
+                </a>
+                <a href="#teleport" class="sidebar-link">
+                    <i class="fa-solid fa-bolt"></i> Teleporte
+                </a>
+                <a href="#homes" class="sidebar-link">
+                    <i class="fa-solid fa-compass"></i> Homes & Warps
+                </a>
+                <a href="#vip" class="sidebar-link">
+                    <i class="fa-solid fa-crown text-purple-400"></i> Vantagens VIP
+                </a>
+
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mt-8 mb-4 px-2">Guias & Tutoriais</div>
+                <a href="#" class="sidebar-link opacity-50 cursor-not-allowed" title="Em breve">
+                    <i class="fa-solid fa-scroll"></i> Missões
+                </a>
+                <a href="#" class="sidebar-link opacity-50 cursor-not-allowed" title="Em breve">
+                    <i class="fa-solid fa-users"></i> Facções
+                </a>
             </div>
+        </aside>
 
-            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
-                <!-- Sidebar -->
-                <div class="lg:col-span-1 hidden lg:block">
-                    <div class="sticky top-24 bg-slate-800/50 border border-slate-700 rounded-xl p-4">
-                        <h3 class="text-slate-300 font-bold mb-4 uppercase text-xs tracking-wider">Nesta Página</h3>
-                        <ul class="space-y-2 text-sm">
-                            <li><a href="#intro" class="text-slate-400 hover:text-blue-400 block transition">Introdução</a></li>
-                            <li><a href="#claims" class="text-slate-400 hover:text-blue-400 block transition">Proteção (Claims)</a></li>
-                            <li><a href="#teleport" class="text-slate-400 hover:text-blue-400 block transition">Teleporte</a></li>
-                            <li><a href="#homes" class="text-slate-400 hover:text-blue-400 block transition">Homes & Warps</a></li>
-                            <li><a href="#vip" class="text-slate-400 hover:text-blue-400 block transition">VIP</a></li>
-                            <li><a href="#ip" class="text-slate-400 hover:text-blue-400 block transition">IP do Servidor</a></li>
-                        </ul>
+        <!-- Main Content -->
+        <main class="flex-1 overflow-y-auto bg-[#0f172a] relative">
+            <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(#334155 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+            <div class="max-w-4xl mx-auto p-8 fade-in relative z-10 wiki-content">
+                
+                <!-- Header -->
+                <header class="wiki-header flex items-start gap-6">
+                    <div class="h-20 w-20 bg-blue-500/10 rounded-2xl border border-blue-500/30 flex items-center justify-center flex-none">
+                        <i class="fa-solid fa-dungeon text-4xl text-blue-500"></i>
                     </div>
-                </div>
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                             <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-500/20 text-blue-400 border border-blue-500/30 uppercase tracking-wide">Wiki Oficial</span>
+                        </div>
+                        <h1 class="text-4xl font-bold text-white mb-2">Hytale - Mekaminers</h1>
+                        <p class="text-slate-400 text-lg">Guia completo de sobrevivência, comandos e sistemas do servidor.</p>
+                    </div>
+                </header>
 
-                <!-- Main Content -->
-                <div class="lg:col-span-3 space-y-8">
-                    <section id="intro" class="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6">
-                        <h2 class="text-2xl font-bold text-white mb-4 flex items-center"><i class="fa-solid fa-door-open text-blue-500 mr-3"></i>Como Entrar e Jogar</h2>
-                        <p class="text-slate-300 leading-relaxed">Ao entrar no servidor, você já pode começar sua aventura explorando o mundo, coletando recursos e construindo sua base. Para garantir sua segurança e progresso, utilize o sistema de claim e party para proteger suas conquistas.</p>
-                    </section>
+                <section id="intro">
+                    <h2><i class="fa-solid fa-door-open text-blue-500 mr-3"></i>Como Entrar e Jogar</h2>
+                    <p>Ao entrar no servidor, você já pode começar sua aventura explorando o mundo, coletando recursos e construindo sua base. Para garantir sua segurança e progresso, utilize o sistema de claim e party para proteger suas conquistas.</p>
+                </section>
 
-                    <section id="claims">
-                        <h2 class="text-xl font-bold text-white mb-4 pb-2 border-b border-slate-700"><i class="fa-solid fa-shield-halved text-emerald-500 mr-2"></i> Proteção de Terreno</h2>
-                        <div class="space-y-4">
-                            <div class="command-box p-4 rounded-lg">
-                                <div class="flex items-start gap-3">
-                                    <code class="text-pink-400 font-bold whitespace-nowrap font-mono">/sc</code>
-                                    <p class="text-slate-300 text-sm">Cria e gerencia seu claim para proteger seu terreno contra invasões ou modificações indesejadas.</p>
-                                </div>
+                <section id="claims">
+                    <h2><i class="fa-solid fa-shield-halved text-emerald-500 mr-2"></i> Proteção de Terreno</h2>
+                    <div class="command-box">
+                        <div class="flex items-start gap-3">
+                            <code class="text-pink-400 font-bold whitespace-nowrap font-mono">/sc</code>
+                            <p class="text-slate-300 text-sm m-0">Cria e gerencia seu claim para proteger seu terreno contra invasões ou modificações indesejadas.</p>
+                        </div>
+                    </div>
+                    <div class="command-box">
+                        <div class="flex items-start gap-3">
+                            <code class="text-pink-400 font-bold whitespace-nowrap font-mono">/scp</code>
+                            <p class="text-slate-300 text-sm m-0">Acessa o sistema de party, permitindo adicionar amigos de confiança ao seu claim.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="teleport">
+                    <h2><i class="fa-solid fa-bolt text-yellow-500 mr-2"></i> Teleporte</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-slate-800 p-4 rounded-lg border border-slate-700"><code class="block text-pink-400 font-bold mb-2">/tpa &lt;jogador&gt;</code><p class="text-slate-400 text-sm m-0">Envia um pedido de teleporte para outro jogador.</p></div>
+                        <div class="bg-slate-800 p-4 rounded-lg border border-slate-700"><code class="block text-pink-400 font-bold mb-2">/tpahere &lt;jogador&gt;</code><p class="text-slate-400 text-sm m-0">Envia pedido para puxar um jogador até você.</p></div>
+                        <div class="bg-slate-800 p-4 rounded-lg border border-slate-700"><code class="block text-pink-400 font-bold mb-2">/tpaccept</code><p class="text-slate-400 text-sm m-0">Aceita um pedido de teleporte pendente.</p></div>
+                        <div class="bg-slate-800 p-4 rounded-lg border border-slate-700"><code class="block text-pink-400 font-bold mb-2">/tpdeny</code><p class="text-slate-400 text-sm m-0">Recusa um pedido de teleporte pendente.</p></div>
+                    </div>
+                </section>
+
+                <section id="homes">
+                    <h2><i class="fa-solid fa-compass text-orange-500 mr-2"></i> Homes, Warps e Spawn</h2>
+                    <div class="overflow-hidden border border-slate-700 rounded-lg">
+                        <table class="min-w-full divide-y divide-slate-700 bg-slate-800/50">
+                            <tbody class="divide-y divide-slate-700">
+                                <tr><td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-pink-400 font-mono">/sethome</td><td class="px-4 py-3 text-sm text-slate-300">Define o local atual como sua casa.</td></tr>
+                                <tr><td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-pink-400 font-mono">/home</td><td class="px-4 py-3 text-sm text-slate-300">Retorna imediatamente para sua casa definida.</td></tr>
+                                <tr><td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-pink-400 font-mono">/warps</td><td class="px-4 py-3 text-sm text-slate-300">Mostra a lista de locais públicos (warps) disponíveis.</td></tr>
+                                <tr><td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-pink-400 font-mono">/spawn</td><td class="px-4 py-3 text-sm text-slate-300">Retorna ao ponto de início principal do servidor.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="vip" class="bg-gradient-to-r from-purple-900/40 to-slate-800 border border-purple-500/30 rounded-xl p-6 mt-8">
+                    <h2 class="!mt-0 !border-0"><i class="fa-solid fa-crown text-purple-400 mr-2"></i> Vantagens VIP</h2>
+                    <ul class="space-y-3 mb-6 mt-4">
+                        <li class="flex items-center text-slate-300"><i class="fa-solid fa-check text-green-500 mr-3"></i><span>Sem cooldown em comandos.</span></li>
+                        <li class="flex items-center text-slate-300"><i class="fa-solid fa-check text-green-500 mr-3"></i><span>Acesso a <code class="text-pink-400 bg-slate-900 px-1 rounded">/rtp</code> e <code class="text-pink-400 bg-slate-900 px-1 rounded">/back</code>.</span></li>
+                        <li class="flex items-center text-slate-300"><i class="fa-solid fa-check text-green-500 mr-3"></i><span>Limite de Homes aumentado.</span></li>
+                        <li class="flex items-center text-slate-400 italic"><i class="fa-solid fa-plus text-slate-500 mr-3"></i><span>Entre outras vantagens exclusivas...</span></li>
+                    </ul>
+                    <a href="https://mekaminers.net" target="_blank" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-lg transition shadow-lg shadow-purple-900/20 items-center"><i class="fa-solid fa-store mr-2"></i> Adquirir VIP</a>
+                </section>
+
+                <section id="ip" class="mt-8">
+                    <h2><i class="fa-solid fa-server mr-2 text-xl text-blue-500"></i>Endereço de Conexão</h2>
+                     <div class="bg-slate-900 border border-slate-700 rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="flex items-center gap-4">
+                            <div class="h-12 w-12 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500">
+                                <i class="fa-solid fa-signal"></i>
                             </div>
-                            <div class="command-box p-4 rounded-lg">
-                                <div class="flex items-start gap-3">
-                                    <code class="text-pink-400 font-bold whitespace-nowrap font-mono">/scp</code>
-                                    <p class="text-slate-300 text-sm">Acessa o sistema de party, permitindo adicionar amigos de confiança ao seu claim.</p>
-                                </div>
+                            <div>
+                                <div class="text-sm text-slate-400">IP do Hytale</div>
+                                <div class="text-xl font-mono text-white font-bold tracking-wide">play.mekaminers.net:25674</div>
                             </div>
                         </div>
-                    </section>
-
-                    <section id="teleport">
-                        <h2 class="text-xl font-bold text-white mb-4 pb-2 border-b border-slate-700"><i class="fa-solid fa-bolt text-yellow-500 mr-2"></i> Teleporte</h2>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-slate-800 p-4 rounded-lg border border-slate-700"><code class="block text-pink-400 font-bold mb-2">/tpa &lt;jogador&gt;</code><p class="text-slate-400 text-sm">Envia um pedido de teleporte para outro jogador.</p></div>
-                            <div class="bg-slate-800 p-4 rounded-lg border border-slate-700"><code class="block text-pink-400 font-bold mb-2">/tpahere &lt;jogador&gt;</code><p class="text-slate-400 text-sm">Envia pedido para puxar um jogador até você.</p></div>
-                            <div class="bg-slate-800 p-4 rounded-lg border border-slate-700"><code class="block text-pink-400 font-bold mb-2">/tpaccept</code><p class="text-slate-400 text-sm">Aceita um pedido de teleporte pendente.</p></div>
-                            <div class="bg-slate-800 p-4 rounded-lg border border-slate-700"><code class="block text-pink-400 font-bold mb-2">/tpdeny</code><p class="text-slate-400 text-sm">Recusa um pedido de teleporte pendente.</p></div>
-                        </div>
-                    </section>
-
-                    <section id="homes">
-                        <h2 class="text-xl font-bold text-white mb-4 pb-2 border-b border-slate-700"><i class="fa-solid fa-compass text-orange-500 mr-2"></i> Homes, Warps e Spawn</h2>
-                        <div class="overflow-hidden border border-slate-700 rounded-lg">
-                            <table class="min-w-full divide-y divide-slate-700 bg-slate-800/50">
-                                <tbody class="divide-y divide-slate-700">
-                                    <tr><td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-pink-400 font-mono">/sethome</td><td class="px-4 py-3 text-sm text-slate-300">Define o local atual como sua casa.</td></tr>
-                                    <tr><td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-pink-400 font-mono">/home</td><td class="px-4 py-3 text-sm text-slate-300">Retorna imediatamente para sua casa definida.</td></tr>
-                                    <tr><td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-pink-400 font-mono">/warps</td><td class="px-4 py-3 text-sm text-slate-300">Mostra a lista de locais públicos (warps) disponíveis.</td></tr>
-                                    <tr><td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-pink-400 font-mono">/spawn</td><td class="px-4 py-3 text-sm text-slate-300">Retorna ao ponto de início principal do servidor.</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
-
-                    <section id="vip" class="bg-gradient-to-r from-purple-900/40 to-slate-800 border border-purple-500/30 rounded-xl p-6">
-                        <h2 class="text-xl font-bold text-white mb-4 flex items-center"><i class="fa-solid fa-crown text-purple-400 mr-2"></i> Vantagens VIP</h2>
-                        <ul class="space-y-3 mb-6">
-                            <li class="flex items-center text-slate-300"><i class="fa-solid fa-check text-green-500 mr-3"></i><span>Sem cooldown em comandos.</span></li>
-                            <li class="flex items-center text-slate-300"><i class="fa-solid fa-check text-green-500 mr-3"></i><span>Acesso a <code class="text-pink-400 bg-slate-900 px-1 rounded">/rtp</code> e <code class="text-pink-400 bg-slate-900 px-1 rounded">/back</code>.</span></li>
-                            <li class="flex items-center text-slate-300"><i class="fa-solid fa-check text-green-500 mr-3"></i><span>Limite de Homes aumentado.</span></li>
-                            <li class="flex items-center text-slate-400 italic"><i class="fa-solid fa-plus text-slate-500 mr-3"></i><span>Entre outras vantagens exclusivas...</span></li>
-                        </ul>
-                        <a href="https://mekaminers.net" target="_blank" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-lg transition shadow-lg shadow-purple-900/20 items-center"><i class="fa-solid fa-store mr-2"></i> Adquirir VIP</a>
-                    </section>
-
-                    <section id="ip" class="bg-slate-900 border border-slate-700 rounded-xl p-8 text-center relative overflow-hidden">
-                        <div class="relative z-10">
-                            <div class="inline-block p-3 rounded-full bg-blue-500/20 text-blue-400 mb-4"><i class="fa-solid fa-server text-2xl"></i></div>
-                            <h3 class="text-2xl font-bold text-white mb-2">Junte-se a nós!</h3>
-                            <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-                                <div class="bg-black/50 px-4 py-3 rounded-lg border border-slate-600 font-mono text-emerald-400 select-all">play.mekaminers.net:25674</div>
-                                <button onclick="copyIP('play.mekaminers.net:25674')" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold transition flex items-center shadow-lg active:scale-95"><i class="fa-regular fa-copy mr-2"></i> Copiar IP</button>
-                            </div>
-                            <p id="copy-feedback" class="text-green-400 text-sm mt-2 opacity-0 transition-opacity">IP copiado com sucesso!</p>
-                        </div>
-                    </section>
-                </div>
+                        <button onclick="copyIP('play.mekaminers.net:25674')" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg font-bold transition flex items-center shadow-lg active:scale-95 text-sm">
+                            <i class="fa-regular fa-copy mr-2"></i> Copiar
+                        </button>
+                    </div>
+                    <p id="copy-feedback" class="text-blue-400 text-xs mt-2 text-center opacity-0 transition-opacity">IP copiado para a área de transferência!</p>
+                </section>
+                
+                <footer class="mt-20 border-t border-slate-800 pt-8 pb-4 text-center text-slate-600 text-sm">
+                    <p>© Mekaminers Wiki - Hytale</p>
+                </footer>
             </div>
-        </div>
-    </main>
-    <footer class="w-full bg-slate-900 border-t border-slate-800 py-6 mt-8">
-        <div class="max-w-7xl mx-auto px-4 text-center"><p class="text-slate-500 text-sm">© Mekaminers. Todos os direitos reservados.</p></div>
-    </footer>
+        </main>
+    </div>
+
     <script>
         function copyIP(ip) {
             if (navigator.clipboard) {
