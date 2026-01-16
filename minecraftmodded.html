@@ -8,60 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
-    
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #e2e8f0; }
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 6px; height: 6px; }
-        ::-webkit-scrollbar-track { background: #0f172a; }
-        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
-        ::-webkit-scrollbar-thumb:hover { background: #475569; }
-        
-        .fade-in { animation: fadeIn 0.4s ease-in-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        
-        /* Sidebar Styling */
-        .sidebar-link {
-            display: flex;
-            align-items: center;
-            padding: 0.75rem 1rem;
-            color: #94a3b8;
-            border-radius: 0.5rem;
-            transition: all 0.2s;
-            text-decoration: none;
-            margin-bottom: 0.25rem;
-        }
-        .sidebar-link:hover, .sidebar-link.active {
-            background-color: #1e293b;
-            color: #38bdf8; /* Sky blue for Minecraft tech feel */
-        }
-        .sidebar-link i { width: 24px; text-align: center; margin-right: 0.75rem; }
-        
-        .wiki-header {
-            border-bottom: 1px solid #334155;
-            padding-bottom: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        
-        /* Content formatting */
-        .wiki-content h2 { 
-            font-size: 1.5rem; 
-            font-weight: 700; 
-            color: #f8fafc; 
-            margin-top: 3.5rem; /* Increased margin-top for better separation */
-            margin-bottom: 1.5rem; /* Increased margin-bottom */
-            padding-bottom: 0.5rem; 
-            border-bottom: 1px solid #1e293b; 
-        }
-        .wiki-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 1.5rem; margin-bottom: 0.75rem; }
-        .wiki-content p { margin-bottom: 1rem; line-height: 1.7; color: #cbd5e1; }
-        .wiki-content ul, .wiki-content ol { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1; }
-        .wiki-content ol { list-style-type: decimal; }
-        .wiki-content li { margin-bottom: 0.5rem; }
-        .wiki-content code { background-color: #1e293b; color: #f8fafc; padding: 0.2rem 0.4rem; border-radius: 0.3rem; font-family: 'Fira Code', monospace; }
-        
-        html { scroll-behavior: smooth; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="flex flex-col h-screen overflow-hidden">
 
@@ -138,10 +85,10 @@
                 </header>
 
                 <section id="java-req" class="mb-16 pt-8">
-                    <div class="bg-yellow-500/10 border-l-4 border-yellow-500 rounded-r-lg p-6 flex gap-4">
-                        <i class="fa-brands fa-java text-4xl text-yellow-500 flex-none py-1"></i>
+                    <div class="info-box warning">
+                        <i class="fa-brands fa-java text-yellow-500"></i>
                         <div>
-                            <h3 class="!mt-0 !text-yellow-100 !text-lg">Requisito Obrigatório: Java 17</h3>
+                            <h3 class="!mt-0 !text-yellow-100 !text-lg !mb-2">Requisito Obrigatório: Java 17</h3>
                             <p class="!mb-0 text-yellow-200/80 text-sm">
                                 Para jogar na Temporada 8, você <strong>deve</strong> ter o Java 17 instalado. Versões antigas (Java 8) ou muito recentes (Java 21+) podem causar falhas críticas ao iniciar o jogo.
                             </p>
@@ -150,7 +97,7 @@
                 </section>
 
                 <section id="downloads" class="mb-16">
-                    <h2><i class="fa-solid fa-download text-emerald-500 mr-2 text-xl"></i>Baixar e Instalar</h2>
+                    <h2><i class="fa-solid fa-download text-emerald-500"></i>Baixar e Instalar</h2>
                     <p>Escolha sua plataforma preferida para baixar o modpack. Recomendamos o uso do CurseForge ou a instalação manual via DropBox para usuários do TLauncher.</p>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
@@ -175,17 +122,20 @@
                         </a>
                     </div>
 
-                    <div class="bg-slate-800/50 rounded-lg p-4 border border-slate-700 text-sm">
-                        <strong class="text-slate-200 block mb-1"><i class="fa-solid fa-gamepad mr-1 text-purple-400"></i> Instalação no TLauncher</strong>
-                        <ul class="list-disc list-inside text-slate-400 pl-1 space-y-1">
-                            <li>Opção 1: Pesquise "MekaMiners" na aba <code>TLMods</code>.</li>
-                            <li>Opção 2: Baixe o <code>.zip</code> do Dropbox e importe manualmente ("Criar" > "Importar").</li>
-                        </ul>
+                    <div class="info-box">
+                        <i class="fa-solid fa-gamepad text-purple-400"></i>
+                        <div>
+                            <strong class="text-slate-200 block mb-1">Instalação no TLauncher</strong>
+                            <ul classlist="list-disc list-inside text-slate-400 pl-1 space-y-1">
+                                <li>Opção 1: Pesquise "MekaMiners" na aba <code>TLMods</code>.</li>
+                                <li>Opção 2: Baixe o <code>.zip</code> do Dropbox e importe manualmente ("Criar" > "Importar").</li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
 
                 <section id="ip-mc" class="mb-16">
-                    <h2><i class="fa-solid fa-network-wired text-emerald-500 mr-2 text-xl"></i>Endereço do Servidor</h2>
+                    <h2><i class="fa-solid fa-network-wired text-emerald-500"></i>Endereço do Servidor</h2>
                     <div class="bg-slate-900 border border-slate-700 rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                         <div class="flex items-center gap-4">
                             <div class="h-12 w-12 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-500">
@@ -204,16 +154,16 @@
                 </section>
 
                 <section id="mod-intro" class="mt-16 pt-8 border-t border-slate-800 mb-16">
-                    <h2><i class="fa-solid fa-book-open-reader text-blue-500 mr-2 text-xl"></i>Wiki dos Mods</h2>
+                    <h2><i class="fa-solid fa-book-open-reader text-blue-500"></i>Wiki dos Mods</h2>
                     <p>Esta seção contém guias detalhados para os principais mods do pacote, ajudando você na sua progressão industrial e mágica.</p>
                 </section>
 
                 <!-- Mekanism Guide -->
                 <section id="mekanism-guide" class="mb-16">
-                    <h2><i class="fa-solid fa-industry text-red-500 mr-2 text-xl"></i>Mekanism: Automação Industrial</h2>
+                    <h2><i class="fa-solid fa-industry text-red-500"></i>Mekanism: Automação Industrial</h2>
                     <p>Mekanism é um mod de tecnologia que adiciona máquinas de alta tecnologia, processamento de recursos avançado e sistemas de energia complexos. É conhecido por sua capacidade de processar minérios em até 5x o rendimento original.</p>
 
-                    <h3>Primeiros Passos</h3>
+                    <h3><i class="fa-solid fa-play text-red-400"></i>Primeiros Passos</h3>
                     <p>Para começar, você precisará de um gerador de energia básico e algumas máquinas de processamento. O <code>Basic Universal Cable</code> é essencial para transportar energia.</p>
                     <ul>
                         <li><strong>Gerador de Energia:</strong> Comece com um <code>Heat Generator</code> (que usa combustível como carvão) ou <code>Solar Generator</code> (energia solar, ideal para o dia). Conecte-o a um <code>Basic Universal Cable</code>.</li>
@@ -221,7 +171,7 @@
                         <li><strong>Transporte:</strong> Use <code>Basic Universal Cable</code> para energia, <code>Basic Logistical Transporter</code> para itens e <code>Basic Mechanical Pipe</code> para fluidos.</li>
                     </ul>
 
-                    <h3>Processamento de Minérios (5x)</h3>
+                    <h3><i class="fa-solid fa-flask text-red-400"></i>Processamento de Minérios (5x)</h3>
                     <p>O sistema de 5x processamento é o coração do Mekanism, permitindo multiplicar seus recursos. Ele envolve uma série de máquinas e gases:</p>
                     <ol>
                         <li><strong>Crusher:</strong> Transforma o minério bruto em pó (ex: <code>Iron Ore</code> -> <code>Iron Dust</code>).</li>
@@ -234,7 +184,7 @@
                     </ol>
                     <p>Para gerar <strong>Brine</strong>, você precisará de uma <code>Thermal Evaporation Plant</code>, que usa calor e água para evaporar e concentrar a salmoura.</p>
 
-                    <h3>Dicas Avançadas</h3>
+                    <h3><i class="fa-solid fa-star text-red-400"></i>Dicas Avançadas</h3>
                     <ul>
                         <li><strong>Geradores de Energia:</strong> Explore o <code>Fission Reactor</code> e <code>Fusion Reactor</code> para energia massiva, mas cuidado, eles são complexos e perigosos.</li>
                         <li><strong>Logística Avançada:</strong> Use <code>Logistical Transporters</code> com <code>Configurators</code> para configurar filtros de itens e auto-ejeção. <code>Pressurized Tubes</code> são para gases e <code>Mechanical Pipes</code> para fluidos.</li>
@@ -245,10 +195,10 @@
 
                 <!-- Create Guide -->
                 <section id="create-guide" class="mb-16">
-                    <h2><i class="fa-solid fa-gear text-orange-500 mr-2 text-xl"></i>Create: Engenharia e Automação Mecânica</h2>
+                    <h2><i class="fa-solid fa-gear text-orange-500"></i>Create: Engenharia e Automação Mecânica</h2>
                     <p>Create é um mod de automação e engenharia que se concentra em máquinas mecânicas, energia cinética e construções estéticas. Ele permite criar fábricas complexas e contraptions móveis.</p>
 
-                    <h3>Primeiros Passos</h3>
+                    <h3><i class="fa-solid fa-play text-orange-400"></i>Primeiros Passos</h3>
                     <p>A base do Create é a energia cinética (rotação). Você precisará de uma fonte de rotação e engrenagens para transmitir essa energia.</p>
                     <ul>
                         <li><strong>Fonte de Energia:</strong> Comece com uma <code>Water Wheel</code> (roda d'água) ou <code>Encased Fan</code> (ventilador enclausurado) com uma fonte de calor (lava ou fogo) para gerar vento.</li>
@@ -256,7 +206,7 @@
                         <li><strong>Transmissão de Energia:</strong> Conecte sua fonte de energia a <code>Shafts</code> e <code>Cogwheels</code> para levar a rotação às suas máquinas. Engrenagens grandes e pequenas podem mudar a velocidade e o torque.</li>
                     </ul>
 
-                    <h3>Máquinas e Automação</h3>
+                    <h3><i class="fa-solid fa-wrench text-orange-400"></i>Máquinas e Automação</h3>
                     <p>Create oferece diversas máquinas para processamento e transporte, todas movidas por energia cinética:</p>
                     <ul>
                         <li><strong>Processamento:</strong>
@@ -278,7 +228,7 @@
                         </li>
                         <li><strong>Contraptions:</strong> Crie máquinas móveis com <code>Mechanical Bearings</code> (rolamentos mecânicos), <code>Pistons</code> (pistões) e <code>Gantry Carriages</code> (vagões de pórtico) para construir pontes, elevadores e até veículos.</li>
                     </ul>
-                    <h4>Exemplo de Automação Simples: Moagem de Grãos</h4>
+                    <h4><i class="fa-solid fa-lightbulb text-orange-400"></i>Exemplo de Automação Simples: Moagem de Grãos</h4>
                     <ol>
                         <li>Coloque uma <code>Water Wheel</code> em um fluxo de água para gerar rotação.</li>
                         <li>Conecte a <code>Water Wheel</code> a um <code>Shaft</code> e, em seguida, a um <code>Cogwheel</code>.</li>
@@ -287,7 +237,7 @@
                         <li>Abaixo do <code>Millstone</code>, outro <code>Chute</code> para coletar a farinha em outro baú.</li>
                     </ol>
 
-                    <h3>Dicas Avançadas</h3>
+                    <h3><i class="fa-solid fa-star text-orange-400"></i>Dicas Avançadas</h3>
                     <ul>
                         <li><strong>Automação de Fazendas:</strong> Use <code>Mechanical Harvesters</code> e <code>Ploughs</code> para fazendas automáticas de colheita e plantio.</li>
                         <li><strong>Trens:</strong> Construa sistemas de trem complexos para transporte de longa distância e automação de estações com <code>Train Stations</code> e <code>Depots</code>.</li>
@@ -298,10 +248,10 @@
 
                 <!-- Ars Nouveau Guide -->
                 <section id="arsnouveau-guide" class="mb-16">
-                    <h2><i class="fa-solid fa-wand-magic-sparkles text-purple-500 mr-2 text-xl"></i>Ars Nouveau: Magia e Feitiçaria</h2>
+                    <h2><i class="fa-solid fa-wand-magic-sparkles text-purple-500"></i>Ars Nouveau: Magia e Feitiçaria</h2>
                     <p>Ars Nouveau é um mod de magia que permite aos jogadores criar e personalizar seus próprios feitiços, invocar familiares e automatizar tarefas com magia.</p>
 
-                    <h3>Primeiros Passos</h3>
+                    <h3><i class="fa-solid fa-play text-purple-400"></i>Primeiros Passos</h3>
                     <p>Para iniciar sua jornada mágica, você precisará de um <code>Worn Spellbook</code> e uma fonte de <code>Source</code> (mana).</p>
                     <ul>
                         <li><strong>Spellbook:</strong> O item central para criar e armazenar feitiços. Crafte-o com couro e papel.</li>
@@ -309,7 +259,7 @@
                         <li><strong>Glyphs:</strong> Colete os primeiros glyphs (ex: <code>Projectile</code>, <code>Harm</code>, <code>Touch</code>) explorando o mundo, encontrando bibliotecas ou crafte-os na <code>Glyph Press</code>.</li>
                     </ul>
 
-                    <h3>Criação de Feitiços</h3>
+                    <h3><i class="fa-solid fa-hat-wizard text-purple-400"></i>Criação de Feitiços</h3>
                     <p>Feitiços são criados combinando <code>Glyphs</code> em um <code>Ars Nouveau Lectern</code>. Cada feitiço tem três componentes principais:</p>
                     <ul>
                         <li><strong>Shape (Forma):</strong> Define como o feitiço é lançado (ex: <code>Projectile</code> para atirar, <code>Touch</code> para contato, <code>Self</code> para aplicar em si mesmo).</li>
@@ -324,14 +274,14 @@
                     </ul>
                     <p>Use o <code>Spell Turret</code> para automatizar o lançamento de feitiços em uma área.</p>
 
-                    <h3>Automação Mágica</h3>
+                    <h3><i class="fa-solid fa-robot text-purple-400"></i>Automação Mágica</h3>
                     <ul>
                         <li><strong>Golems:</strong> Invoque <code>Golems</code> para automatizar tarefas como colheita, mineração, combate e transporte de itens. Eles podem ser equipados com ferramentas e programados com <code>Golem Charm</code>.</li>
                         <li><strong>Warding Candle:</strong> Protege áreas contra mobs hostis.</li>
                         <li><strong>Rituals:</strong> Realize rituais em um <code>Ritual Altar</code> para efeitos poderosos, como invocar familiares, gerar recursos ou alterar o clima.</li>
                     </ul>
 
-                    <h3>Dicas Avançadas</h3>
+                    <h3><i class="fa-solid fa-star text-purple-400"></i>Dicas Avançadas</h3>
                     <ul>
                         <li><strong>Familiar:</strong> Escolha e treine um familiar (como um <code>Whirlisprig</code> ou <code>Drygmy</code>) para auxiliá-lo em combate, coleta de itens ou geração de Source.</li>
                         <li><strong>Infusion Altar:</strong> Use o <code>Infusion Altar</code> para criar itens mágicos avançados, como armaduras e ferramentas encantadas, e aprimorar seu equipamento com <code>Archwood</code>.</li>
@@ -342,10 +292,10 @@
 
                 <!-- Applied Energistics 2 Guide -->
                 <section id="ae2-guide" class="mb-16">
-                    <h2><i class="fa-solid fa-microchip text-cyan-500 mr-2 text-xl"></i>Applied Energistics 2: Armazenamento e Automação Digital</h2>
+                    <h2><i class="fa-solid fa-microchip text-cyan-500"></i>Applied Energistics 2: Armazenamento e Automação Digital</h2>
                     <p>Applied Energistics 2 (AE2) é um mod de tecnologia que revoluciona o armazenamento de itens e a automação de crafting, transformando-os em dados digitais dentro de uma rede.</p>
 
-                    <h3>Primeiros Passos</h3>
+                    <h3><i class="fa-solid fa-play text-cyan-400"></i>Primeiros Passos</h3>
                     <p>A base de qualquer sistema AE2 é o <code>ME Controller</code>, que fornece energia e canais para a rede.</p>
                     <ol>
                         <li><strong>Recursos Essenciais:</strong> Comece coletando <code>Certus Quartz</code> (para <code>Quartz Glass</code>, <code>Charged Certus Quartz</code> e processadores) e <code>Fluix Crystal</code> (para <code>Fluix Dust</code> e <code>Fluix Crystal</code>).</li>
@@ -358,7 +308,7 @@
                     </ol>
                     <p>Conecte todos esses componentes usando <code>ME Glass Cables</code>.</p>
 
-                    <h3>Rede e Canais</h3>
+                    <h3><i class="fa-solid fa-diagram-project text-cyan-400"></i>Rede e Canais</h3>
                     <p>AE2 opera com um sistema de canais. Cada cabo pode transportar 8 canais, e cada máquina conectada consome um canal. O <code>ME Controller</code> fornece 32 canais.</p>
                     <ul>
                         <li><strong>ME Glass Cables:</strong> Cabos básicos que transportam até 8 canais.</li>
@@ -368,7 +318,7 @@
                     </ul>
                     <p>Planeje sua rede cuidadosamente para não exceder o limite de canais, ou suas máquinas pararão de funcionar.</p>
 
-                    <h3>Armazenamento e Crafting Automático</h3>
+                    <h3><i class="fa-solid fa-box-archive text-cyan-400"></i>Armazenamento e Crafting Automático</h3>
                     <p>O AE2 permite armazenar milhões de itens em um único bloco e automatizar crafting complexos.</p>
                     <ul>
                         <li><strong>ME Storage Cells:</strong> Variam em tamanho e armazenam itens. Use <code>Item Storage Cells</code> para itens e <code>Fluid Storage Cells</code> para fluidos.</li>
@@ -379,7 +329,7 @@
                         <li><strong>Crafting Co-Processor:</strong> Aumenta a capacidade de processamento de crafting da sua rede, permitindo múltiplos crafts simultâneos.</li>
                     </ul>
 
-                    <h3>Dicas Avançadas</h3>
+                    <h3><i class="fa-solid fa-star text-cyan-400"></i>Dicas Avançadas</h3>
                     <ul>
                         <li><strong>Sub-redes:</strong> Crie sub-redes menores com seus próprios <code>ME Controllers</code> e conecte-as à sua rede principal usando <code>P2P Tunnels</code> para gerenciar canais de forma eficiente.</li>
                         <li><strong>Fluid Storage:</strong> Use <code>Fluid Storage Cells</code> e <code>Fluid Buses</code> para gerenciar fluidos dentro da sua rede AE2.</li>

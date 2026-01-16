@@ -1,0 +1,243 @@
+/* Base Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0f172a; /* slate-900 */
+    color: #e2e8f0; /* slate-200 */
+    overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #1e293b; /* slate-800 */
+}
+::-webkit-scrollbar-thumb {
+    background: #475569; /* slate-600 */
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b; /* slate-500 */
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.4s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Homepage Card Hover Effect */
+.card-hover {
+    transition: all 0.3s ease;
+}
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+}
+
+/* Homepage Grid Background */
+.bg-grid {
+    background-image: linear-gradient(to right, #1e293b 1px, transparent 1px),
+                      linear-gradient(to bottom, #1e293b 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+}
+
+/* Wiki Content Specific Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sidebar Styling */
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: #94a3b8; /* slate-400 */
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    text-decoration: none;
+    margin-bottom: 0.25rem;
+}
+.sidebar-link:hover {
+    background-color: #1e293b; /* slate-800 */
+    color: #cbd5e1; /* slate-300 */
+}
+.sidebar-link.active {
+    background-color: #1e293b; /* slate-800 */
+    color: #38bdf8; /* sky-400 */
+    font-weight: 600;
+}
+.sidebar-link i {
+    width: 24px;
+    text-align: center;
+    margin-right: 0.75rem;
+}
+
+/* Wiki Header */
+.wiki-header {
+    border-bottom: 1px solid #334155; /* slate-700 */
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Content Formatting */
+.wiki-content h2 {
+    font-size: 1.75rem; /* text-3xl */
+    font-weight: 700; /* font-bold */
+    color: #f8fafc; /* slate-50 */
+    margin-top: 3rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #334155; /* slate-700 */
+    display: flex;
+    align-items: center;
+}
+.wiki-content h2 i {
+    margin-right: 0.75rem;
+    font-size: 1.5rem;
+}
+
+.wiki-content h3 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 600; /* font-semibold */
+    color: #e2e8f0; /* slate-200 */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+.wiki-content h3 i {
+    margin-right: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.wiki-content h4 {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600; /* font-semibold */
+    color: #e2e8f0; /* slate-200 */
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+.wiki-content h4 i {
+    margin-right: 0.5rem;
+    font-size: 1.125rem;
+}
+
+.wiki-content p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: #cbd5e1; /* slate-300 */
+}
+.wiki-content ul,
+.wiki-content ol {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    color: #cbd5e1; /* slate-300 */
+}
+.wiki-content ol {
+    list-style-type: decimal;
+}
+.wiki-content li {
+    margin-bottom: 0.5rem;
+}
+.wiki-content code {
+    background-color: #1e293b; /* slate-800 */
+    color: #f8fafc; /* slate-50 */
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.3rem;
+    font-family: 'Fira Code', monospace; /* Added Fira Code for code blocks */
+    font-size: 0.9rem;
+}
+
+/* Command Box (Hytale) */
+.command-box {
+    background-color: #1e293b; /* slate-800 */
+    border-left: 4px solid #3b82f6; /* blue-500 */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+.command-box code {
+    color: #f472b6; /* pink-400 */
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-weight: 700;
+}
+
+/* Table Styling */
+.wiki-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    overflow: hidden; /* Ensures rounded corners apply to borders */
+}
+.wiki-content th,
+.wiki-content td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #334155; /* slate-700 */
+}
+.wiki-content th {
+    background-color: #1e293b; /* slate-800 */
+    color: #f8fafc; /* slate-50 */
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+}
+.wiki-content td {
+    background-color: #0f172a; /* slate-900 */
+    color: #cbd5e1; /* slate-300 */
+}
+.wiki-content tr:nth-child(even) td {
+    background-color: #1a2436; /* Slightly lighter for alternating rows */
+}
+.wiki-content tr:hover td {
+    background-color: #2d3a4e; /* Hover effect for rows */
+}
+.wiki-content table code {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-weight: 500;
+}
+
+/* Info/Warning Boxes */
+.info-box {
+    background-color: #1e293b; /* slate-800 */
+    border-left: 4px solid #3b82f6; /* blue-500 */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+.info-box.warning {
+    border-left-color: #eab308; /* yellow-500 */
+}
+.info-box.danger {
+    border-left-color: #ef4444; /* red-500 */
+}
+.info-box i {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+.info-box p {
+    margin-bottom: 0;
+    color: #cbd5e1;
+}
+.info-box strong {
+    color: #f8fafc;
+}
