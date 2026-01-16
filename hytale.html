@@ -45,7 +45,13 @@
 
         /* Content formatting */
         .wiki-content h2 { font-size: 1.5rem; font-weight: 700; color: #f8fafc; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #1e293b; }
+        .wiki-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        .wiki-content h4 { font-size: 1.125rem; font-weight: 600; color: #e2e8f0; margin-top: 1.25rem; margin-bottom: 0.5rem; } /* Added h4 style */
         .wiki-content p { margin-bottom: 1rem; line-height: 1.7; color: #cbd5e1; }
+        .wiki-content ul, .wiki-content ol { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1; }
+        .wiki-content ol { list-style-type: decimal; }
+        .wiki-content li { margin-bottom: 0.5rem; }
+        .wiki-content code { background-color: #1e293b; color: #f8fafc; padding: 0.2rem 0.4rem; border-radius: 0.3rem; font-family: 'Fira Code', monospace; }
         .command-box { background-color: #1e293b; border-left: 4px solid #3b82f6; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem; }
         
         html { scroll-behavior: smooth; }
@@ -95,7 +101,25 @@
                     <i class="fa-solid fa-life-ring"></i> Ajuda Conexão
                 </a>
 
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mt-8 mb-4 px-2">Exploração</div>
+                <a href="#minerios" class="sidebar-link">
+                    <i class="fa-solid fa-gem"></i> Localização de Minérios
+                </a>
+
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mt-8 mb-4 px-2">Sistemas Essenciais</div>
+                <a href="#memory-system" class="sidebar-link">
+                    <i class="fa-solid fa-brain"></i> Sistema de Memórias
+                </a>
+
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mt-8 mb-4 px-2">Viagem & Exploração</div>
+                <a href="#ancient-gateway" class="sidebar-link">
+                    <i class="fa-solid fa-portal-exit"></i> Portais & Dimensões
+                </a>
+
                 <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mt-8 mb-4 px-2">Guias & Tutoriais</div>
+                <a href="#agricultura-guia" class="sidebar-link">
+                    <i class="fa-solid fa-seedling"></i> Agricultura
+                </a>
                 <a href="#" class="sidebar-link opacity-50 cursor-not-allowed" title="Em breve">
                     <i class="fa-solid fa-scroll"></i> Missões
                 </a>
@@ -222,6 +246,312 @@
                         </div>
                     </div>
                 </section>
+
+                <!-- New Section: Ore Location Guide -->
+                <section id="minerios" class="mt-16 pt-8 border-t border-slate-800">
+                    <h2 class="text-3xl font-bold text-white mb-6"><i class="fa-solid fa-gem text-blue-500 mr-3"></i>Guia de Localização de Minérios</h2>
+                    <p class="text-slate-400 text-lg mb-8">Descubra onde encontrar os valiosos minérios de Hytale para otimizar sua exploração e progressão.</p>
+
+                    <!-- Cobre -->
+                    <section id="minerios-cobre" class="mb-8">
+                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-cube text-orange-400 mr-2"></i>Cobre (Copper)</h3>
+                        <p class="mb-2"><strong class="text-slate-200">Raridade:</strong> Comum.</p>
+                        <p class="mb-2"><strong class="text-slate-200">Localização:</strong> Encontrado em todas as Zonas (1 a 4).</p>
+                        <p class="mb-2"><strong class="text-slate-200">Onde minerar:</strong> Aparece tanto na superfície quanto em cavernas.</p>
+                        <div class="bg-blue-500/10 border-l-4 border-blue-500 rounded-r-lg p-4 my-4">
+                            <p class="!mb-0 text-blue-200/80 text-sm">
+                                <i class="fa-solid fa-lightbulb mr-2 text-blue-400"></i><strong>Dica:</strong> A Zona 1 (Planícies/Florestas) é o local recomendado para "farmar" com segurança, evitando inimigos difíceis.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Ferro -->
+                    <section id="minerios-ferro" class="mb-8">
+                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-cube text-slate-400 mr-2"></i>Ferro (Iron)</h3>
+                        <p class="mb-2"><strong class="text-slate-200">Raridade:</strong> Comum/Média.</p>
+                        <p class="mb-2"><strong class="text-slate-200">Localização:</strong> Encontrado em todas as Zonas, mas com maior abundância na Zona 2 (Deserto).</p>
+                        <p class="mb-2"><strong class="text-slate-200">Onde minerar:</strong></p>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li><strong>Geral:</strong> Camadas mais profundas e áreas abertas de cavernas.</li>
+                            <li><strong>Zona 2 (Deserto):</strong> Comum na superfície, em minas específicas do deserto e no chão de cavernas.</li>
+                        </ul>
+                        <div class="bg-blue-500/10 border-l-4 border-blue-500 rounded-r-lg p-4 my-4">
+                            <p class="!mb-0 text-blue-200/80 text-sm">
+                                <i class="fa-solid fa-lightbulb mr-2 text-blue-400"></i><strong>Dica:</strong> Procure por cavernas amplas para visualizar o brilho do minério.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Prata -->
+                    <section id="minerios-prata" class="mb-8">
+                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-cube text-gray-300 mr-2"></i>Prata (Silver)</h3>
+                        <p class="mb-2"><strong class="text-slate-200">Localização:</strong> Zona 3 (Neve/Gelo) e biomas de transição (Tundra).</p>
+                        <p class="mb-2"><strong class="text-slate-200">Onde minerar:</strong></p>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li>Minas no bioma de Tundra (entre a neve e a grama).</li>
+                            <li>Montanhas nevadas (fácil visualização contra pedra escura).</li>
+                            <li>Fundo do Oceano (difícil extração sem equipamento de mergulho).</li>
+                        </ul>
+                    </section>
+
+                    <!-- Ouro -->
+                    <section id="minerios-ouro" class="mb-8">
+                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-cube text-yellow-400 mr-2"></i>Ouro (Gold)</h3>
+                        <p class="mb-2"><strong class="text-slate-200">Localização:</strong> Zona 3 (Neve/Gelo).</p>
+                        <p class="mb-2"><strong class="text-slate-200">Onde minerar:</strong> Principalmente nas paredes de montanhas nevadas. O contraste com a rocha escura facilita a identificação.</p>
+                    </section>
+
+                    <!-- Tório -->
+                    <section id="minerios-torio" class="mb-8">
+                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-cube text-green-400 mr-2"></i>Tório (Thorium)</h3>
+                        <p class="mb-2"><strong class="text-slate-200">Localização:</strong> Zona 2 (Deserto/Badlands) e transições de Tundra.</p>
+                        <p class="mb-2"><strong class="text-slate-200">Onde minerar:</strong></p>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li><strong>Badlands (Zona 2):</strong> Encontrado em abundância nas falésias e montanhas (o minério é verde e destaca-se).</li>
+                            <li><strong>Minas de Tundra:</strong> Considerado um local com alta densidade do minério ("OP").</li>
+                            <li>Também pode aparecer na Zona 4, mas é muito perigoso.</li>
+                        </ul>
+                    </section>
+
+                    <!-- Cobalto -->
+                    <section id="minerios-cobalto" class="mb-8">
+                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-cube text-blue-500 mr-2"></i>Cobalto (Cobalt)</h3>
+                        <p class="mb-2"><strong class="text-slate-200">Localização:</strong> Zona 3 (Neve/Gelo) e Zona 4 (Vulcânica/Terras Devastadas).</p>
+                        <p class="mb-2"><strong class="text-slate-200">Onde minerar:</strong></p>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li><strong>Zona 3:</strong> Nas montanhas e picos gelados (Local mais seguro e recomendado).</li>
+                            <li><strong>Zona 4:</strong> Superfície e subsolo (tetos de cavernas).</li>
+                            <li><strong>Outras fontes:</strong> Pode ser obtido ao derrotar grandes criaturas de lava na área vulcânica.</li>
+                        </ul>
+                    </section>
+
+                    <!-- Adamantita -->
+                    <section id="minerios-adamantita" class="mb-8">
+                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-cube text-red-500 mr-2"></i>Adamantita (Adamantite)</h3>
+                        <p class="mb-2"><strong class="text-slate-200">Raridade:</strong> Rara.</p>
+                        <p class="mb-2"><strong class="text-slate-200">Localização:</strong> Exclusivo da Zona 4 (Vulcânica/Terras Devastadas).</p>
+                        <p class="mb-2"><strong class="text-slate-200">Onde minerar:</strong></p>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li>Superfície das montanhas vulcânicas (cor vermelha destaca-se).</li>
+                            <li>Subsolo da área vulcânica, especialmente nos tetos das cavernas.</li>
+                        </ul>
+                        <div class="bg-red-500/10 border-l-4 border-red-500 rounded-r-lg p-4 my-4">
+                            <p class="!mb-0 text-red-200/80 text-sm">
+                                <i class="fa-solid fa-triangle-exclamation mr-2 text-red-400"></i><strong>Aviso:</strong> Área de alto perigo com criaturas hostis fortes.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Mítrio -->
+                    <section id="minerios-mitrio" class="mb-8">
+                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-cube text-purple-400 mr-2"></i>Mítrio (Mithril)</h3>
+                        <p class="mb-2"><strong class="text-slate-200">Estado Atual:</strong> Não encontrado naturalmente no mundo em forma de bloco minerável.</p>
+                        <p class="mb-2"><strong class="text-slate-200">Obtenção:</strong> Especula-se que, no estado atual do jogo, só possa ser obtido através de loots (baús), recompensas ou não esteja totalmente implementado para mineração natural.</p>
+                    </section>
+
+                    <h2 class="text-2xl font-bold text-white mb-4 mt-12 border-t border-slate-800 pt-8"><i class="fa-solid fa-clipboard-list text-blue-500 mr-3"></i>Notas Adicionais para a Wiki</h2>
+                    <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                        <li><strong>Zonas:</strong>
+                            <ul class="list-circle list-inside ml-4 space-y-0.5">
+                                <li>Zona 1 (Temperada)</li>
+                                <li>Zona 2 (Deserto)</li>
+                                <li>Zona 3 (Gelo/Neve)</li>
+                                <li>Zona 4 (Vulcânica/Devastada)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Visualização:</strong> A maioria dos minérios no Hytale possui um brilho ou cor contrastante que facilita a visualização à distância, especialmente à noite ou em cavernas escuras.</li>
+                    </ul>
+                </section>
+
+                <!-- START New Section: Guia Completo de Agricultura (Crops Farming) -->
+                <section id="agricultura-guia" class="mt-16 pt-8 border-t border-slate-800">
+                    <h2 class="text-3xl font-bold text-white mb-6"><i class="fa-solid fa-seedling text-green-500 mr-3"></i>Guia Completo de Agricultura</h2>
+                    <p class="text-slate-400 text-lg mb-8">Este guia cobre o processo fundamental para cultivar plantações, obter sementes e progredir através dos níveis de agricultura no Hytale.</p>
+
+                    <section id="agricultura-passos" class="mb-8">
+                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-hand-sparkles text-green-400 mr-2"></i>1. Primeiros Passos</h3>
+                        
+                        <h4 class="text-lg font-semibold text-slate-200 mb-2">Bancada do Fazendeiro (Farmer's Workbench):</h4>
+                        <p class="mb-4">O item essencial para começar. Crie-a utilizando uma bancada de trabalho (workbench) normal.</p>
+
+                        <h4 class="text-lg font-semibold text-slate-200 mb-2">Ferramentas Necessárias:</h4>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li><strong>Enxada Rudimentar (Crude Hoe):</strong> Obrigatória para arar a terra.</li>
+                            <li><strong>Regador (Watering Can):</strong> Opcional, mas recomendado. Regar as plantas acelera o crescimento (a chuva também realiza essa função automaticamente).</li>
+                            <li><strong>Balde de Madeira:</strong> Usado para transportar água ou leite, mas não é estritamente necessário para o início do plantio.</li>
+                        </ul>
+                    </section>
+
+                    <section id="agricultura-sementes" class="mb-8">
+                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-leaf text-green-400 mr-2"></i>2. Obtendo Sementes e "Essence of Life"</h3>
+                        <p class="mb-4">Diferente de outros jogos, você não obtém sementes quebrando grama.</p>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li><strong>Exploração:</strong> Procure pelo mundo por vegetais selvagens maduros (como trigo, alface ou milho) gerados naturalmente.</li>
+                            <li><strong>Colheita:</strong> Ao colher uma planta selvagem, você recebe o vegetal e também <strong class="text-green-300">Essence of Life (Essência da Vida)</strong>. Esta essência é a "moeda" necessária para começar a agricultura.</li>
+                        </ul>
+                    </section>
+
+                    <section id="agricultura-ciclo" class="mb-8">
+                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-recycle text-green-400 mr-2"></i>3. O Ciclo de Cultivo</h3>
+                        <p class="mb-4">O ciclo básico de jogabilidade (gameplay loop) consiste em:</p>
+                        <ol class="list-decimal list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li><strong>Comprar Sementes:</strong> Use a Essence of Life na Bancada do Fazendeiro para comprar sacos de sementes (iniciando com Trigo e Alface).</li>
+                            <li><strong>Plantar:</strong> Are a terra com a enxada e plante as sementes.</li>
+                            <li><strong>Manutenção:</strong> Regue as plantas para um crescimento mais rápido (elas crescem dia e noite).</li>
+                            <li><strong>Colheita e Troca:</strong> Colha as plantas maduras para ganhar mais Essence of Life. Você também pode trocar os vegetais colhidos (ex: alface) diretamente por mais essência na bancada.</li>
+                            <li><strong>Reinvestimento:</strong> Use a essência acumulada para comprar mais sementes e repetir o processo.</li>
+                        </ol>
+                    </section>
+
+                    <section id="agricultura-progresso" class="mb-8">
+                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-layer-group text-green-400 mr-2"></i>4. Progressão e Tiers (Níveis)</h3>
+                        <p class="mb-4">Para desbloquear novas culturas, é necessário melhorar a Bancada do Fazendeiro.</p>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li><strong>Tier 1:</strong> Trigo e Alface.</li>
+                            <li><strong>Tier 2:</strong> Desbloqueia Cenoura e Milho.
+                                <ul class="list-circle list-inside ml-4 space-y-0.5">
+                                    <li>Requisito: Requer "Greater Essence of Life" (feita com 100 Essences of Life), vegetais e madeira.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Tier 3:</strong> Desbloqueia Couve-flor e Nabo.</li>
+                            <li><strong>Tier 4:</strong> Desbloqueia Berinjela e Abóbora.</li>
+                        </ul>
+                        <div class="bg-blue-500/10 border-l-4 border-blue-500 rounded-r-lg p-4 my-4">
+                            <p class="!mb-0 text-blue-200/80 text-sm">
+                                <i class="fa-solid fa-lightbulb mr-2 text-blue-400"></i><strong>Itens Desconhecidos:</strong> Alguns itens podem aparecer como desconhecidos; para desbloqueá-los, é necessário visitar o Forgotten Temple Gateway e desbloquear memórias.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section id="agricultura-outros" class="mb-8">
+                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-box-open text-green-400 mr-2"></i>5. Outros Itens</h3>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li><strong>Mudas de Árvores (Saplings):</strong> Podem ser compradas e plantadas para crescerem árvores.</li>
+                            <li><strong>Decoração:</strong> É possível criar vasos de flores e outros itens decorativos na bancada.</li>
+                        </ul>
+                    </section>
+                </section>
+                <!-- END New Section: Guia Completo de Agricultura (Crops Farming) -->
+
+                <!-- START New Section: Guia do Sistema de Memórias (Memory System) -->
+                <section id="memory-system" class="mt-16 pt-8 border-t border-slate-800">
+                    <h2 class="text-3xl font-bold text-white mb-6"><i class="fa-solid fa-brain text-blue-500 mr-3"></i>Guia do Sistema de Memórias</h2>
+                    <p class="text-slate-400 text-lg mb-8">O sistema de memórias é uma mecânica de progressão fundamental no Hytale que permite desbloquear novas receitas de criação (como mochilas melhores e baús), teletransportes e outros itens úteis.</p>
+
+                    <section id="memory-unlock" class="mb-8">
+                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-unlock-alt text-blue-400 mr-2"></i>1. Como Desbloquear o Sistema</h3>
+                        <p class="mb-2"><strong class="text-slate-200">Localização Inicial:</strong> Ao iniciar o jogo, procure por uma grande estrutura de pedra (ruína/templo) próxima ao local de spawn.</p>
+                        <p class="mb-2"><strong class="text-slate-200">O Guardião:</strong> No centro dessa construção, você encontrará um chefe (boss).</p>
+                        <div class="bg-blue-500/10 border-l-4 border-blue-500 rounded-r-lg p-4 my-4">
+                            <p class="!mb-0 text-blue-200/80 text-sm">
+                                <i class="fa-solid fa-lightbulb mr-2 text-blue-400"></i><strong>Dica:</strong> É possível evitar a luta correndo e pulando direto no portal de teletransporte localizado ali.
+                            </p>
+                        </div>
+                        <p class="mb-2"><strong class="text-slate-200">O Santuário ("Paradise"):</strong> O portal leva a uma área segura central. Procure pela construção científica no centro e clique com o botão direito para ativar o sistema de memórias.</p>
+                    </section>
+
+                    <section id="memory-collect" class="mb-8">
+                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-lightbulb text-blue-400 mr-2"></i>2. Como Coletar Memórias</h3>
+                        <p class="mb-2">As memórias são obtidas ao descobrir e observar coisas novas no mundo.</p>
+                        <p class="mb-2"><strong class="text-slate-200">Mecânica:</strong> Fique próximo a uma nova criatura, rocha ou construção. Se você vir partículas azuis, significa que a memória está sendo coletada.</p>
+                        <p class="mb-2"><strong class="text-slate-200">Variedade:</strong> Cada tipo único de criatura ou objeto concede uma memória.</p>
+                        <div class="bg-blue-500/10 border-l-4 border-blue-500 rounded-r-lg p-4 my-4">
+                            <p class="!mb-0 text-blue-200/80 text-sm">
+                                <i class="fa-solid fa-info-circle mr-2 text-blue-400"></i><strong>Nota Importante:</strong> Criaturas adultas e filhotes da mesma espécie contam como memórias diferentes.
+                            </p>
+                        </div>
+                        <p class="mb-2"><strong class="text-slate-200">Quantidade:</strong> Existem cerca de 240 tipos diferentes de criaturas para descobrir.</p>
+                    </section>
+
+                    <section id="memory-manage" class="mb-8">
+                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-clipboard-list text-blue-400 mr-2"></i>3. Gerenciamento e Registro</h3>
+                        <p class="mb-2"><strong class="text-slate-200">Capacidade da Mochila:</strong> Você tem um espaço limitado para carregar memórias não registradas (o vídeo menciona um limite de cerca de 48 memórias na mochila).</p>
+                        <p class="mb-2"><strong class="text-slate-200">Registrando:</strong> É necessário retornar à máquina no santuário ("Paradise") e pressionar o botão de "Record" (Gravar) para transferir as memórias da sua mochila para o sistema permanentemente.</p>
+                    </section>
+
+                    <section id="memory-rewards" class="mb-8">
+                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-gift text-blue-400 mr-2"></i>4. Recompensas</h3>
+                        <p class="mb-4">Ao acumular e registrar memórias suficientes, você desbloqueia recompensas progressivas.</p>
+                        <p class="mb-2"><strong class="text-slate-200">Exemplos de Desbloqueios:</strong></p>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li>Novos níveis de mochilas.</li>
+                            <li>Receitas de baús (como o Freedation Chest na bancada de móveis).</li>
+                            <li>Habilidades passivas ou receitas para a bancada de fazendeiro (como retorno de sementes).</li>
+                        </ul>
+                    </section>
+                </section>
+                <!-- END New Section: Guia do Sistema de Memórias (Memory System) -->
+
+                <!-- START New Section: Guia de Portais e Dimensões (Ancient Gateway) -->
+                <section id="ancient-gateway" class="mt-16 pt-8 border-t border-slate-800">
+                    <h2 class="text-3xl font-bold text-white mb-6"><i class="fa-solid fa-portal-exit text-blue-500 mr-3"></i>Guia de Portais e Dimensões</h2>
+                    <p class="text-slate-400 text-lg mb-8">Este guia explica como desbloquear viagens dimensionais, criar teletransportes e acessar áreas especiais como o Dragonspire Weld.</p>
+
+                    <section id="gateway-access" class="mb-8">
+                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-door-open text-blue-400 mr-2"></i>1. Acesso Inicial</h3>
+                        <p class="mb-2"><strong class="text-slate-200">Forgotten Temple Gateway:</strong> O primeiro passo é localizar esta estrutura no mapa (marcada pela bússola).</p>
+                        <p class="mb-2"><strong class="text-slate-200">O Guardião:</strong> Ao entrar, você enfrentará um chefe Golem. Derrote-o ou esquive-se para entrar no portal.</p>
+                        <p class="mb-2"><strong class="text-slate-200">Santuário:</strong> No centro do templo ("Paradise"), desça as escadas e ative a estátua central. Isso é obrigatório para começar a contar o progresso de memórias e desbloquear o acesso aos portais avançados.</p>
+                    </section>
+
+                    <section id="arcanist-workbench" class="mb-8">
+                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-hammer text-blue-400 mr-2"></i>2. Criação da Bancada Arcanista (Arcanist Workbench)</h3>
+                        <p class="mb-4">Para criar itens mágicos e portais, você precisa desta bancada especializada.</p>
+                        <p class="mb-2"><strong class="text-slate-200">Pré-requisito:</strong> Melhore sua Workbench comum para o Tier 2 (requer Cobre, Ferro e Linen Scraps - obtidos de esqueletos ou goblins).</p>
+                        <p class="mb-2"><strong class="text-slate-200">Receita da Arcanist Workbench:</strong></p>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li><strong>Thorium Ingots:</strong> Minério encontrado principalmente em desertos ou cavernas.</li>
+                            <li><strong>Linen Scraps:</strong> Drop de monstros.</li>
+                            <li><strong>Essence of the Void:</strong> Drop de criaturas noturnas do vazio (Void Crawler, Void Eye, Void Spectre, etc.).</li>
+                        </ul>
+                    </section>
+
+                    <section id="gateway-items" class="mb-8">
+                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-box-open text-blue-400 mr-2"></i>3. Itens Importantes</h3>
+                        <p class="mb-2"><strong class="text-slate-200">Teleporters:</strong> Com a Arcanist Workbench, você pode criar teletransportes pessoais para viajar rapidamente entre sua base e o templo.</p>
+                        <p class="mb-2"><strong class="text-slate-200">Ancient Gateway:</strong> A estrutura física do portal.</p>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li><strong>Materiais:</strong> Thorium Ingots, Essence of Life, Essence of Void e Cobblestone (pedregulho básico).</li>
+                        </ul>
+                    </section>
+
+                    <section id="fragment-keys" class="mb-8">
+                        <h3 class="text-xl font-bold text-white mb-3"><i class="fa-solid fa-key text-blue-400 mr-2"></i>4. Chaves de Fragmento (Fragment Keys) e Dimensões</h3>
+                        <p class="mb-4">O portal por si só não funciona; ele precisa de uma chave específica para abrir um destino. Cada chave leva a um "fragmento" de mundo diferente com um limite de tempo para exploração.</p>
+
+                        <section id="dragonspire-weld" class="mb-4">
+                            <h4 class="text-lg font-semibold text-slate-200 mb-2"><i class="fa-solid fa-dragon text-red-400 mr-2"></i>Dragonspire Weld (Mundo dos Dragões)</h4>
+                            <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                                <li><strong>Chave:</strong> Cobalt Ingot + Essence of Ice (encontrados em biomas de neve).</li>
+                                <li><strong>Características:</strong> Bioma montanhoso e gelado. É o lar dos Frost Dragons (Dragões de Gelo).</li>
+                                <li><strong>Tempo:</strong> ~7 minutos.</li>
+                            </ul>
+                        </section>
+
+                        <section id="windrider-valley" class="mb-4">
+                            <h4 class="text-lg font-semibold text-slate-200 mb-2"><i class="fa-solid fa-wind text-cyan-400 mr-2"></i>Windrider Valley (Vale dos Cavaleiros do Vento)</h4>
+                            <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                                <li><strong>Chave:</strong> Thorium Ingot + Essence of Light.</li>
+                                <li><strong>Características:</strong> Um vale/cânion habitado por tigres dente-de-sabre e pela facção Fen. Pode conter Torres de Mago.</li>
+                                <li><strong>Tempo:</strong> ~6 minutos.</li>
+                            </ul>
+                        </section>
+
+                        <section id="dread-wade" class="mb-4">
+                            <h4 class="text-lg font-semibold text-slate-200 mb-2"><i class="fa-solid fa-skull-crossbones text-purple-400 mr-2"></i>Dread Wade (O Pântano do Medo)</h4>
+                            <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                                <li><strong>Chave:</strong> Adamantite Ingot + Essence of Fire (encontrados em biomas de fogo/lava).</li>
+                                <li><strong>Características:</strong> Um pântano escuro e perigoso com crocodilos e sapos gigantes.</li>
+                            </ul>
+                            <div class="bg-red-500/10 border-l-4 border-red-500 rounded-r-lg p-4 my-4">
+                                <p class="!mb-0 text-red-200/80 text-sm">
+                                    <i class="fa-solid fa-triangle-exclamation mr-2 text-red-400"></i><strong>Evento Especial:</strong> Possui uma mecânica de "Void Breach" (Brecha do Vazio), onde portais se abrem e invocam hordas de monstros do vazio nos minutos finais.
+                                </p>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+                <!-- END New Section: Guia de Portais e Dimensões (Ancient Gateway) -->
                 
                 <footer class="mt-20 border-t border-slate-800 pt-8 pb-4 text-center text-slate-600 text-sm">
                     <p>© Mekaminers Wiki - Hytale</p>
@@ -246,8 +576,8 @@
 
         // ScrollSpy Script
         document.addEventListener('DOMContentLoaded', () => {
-            const mainContainer = document.querySelector('main');
-            const sections = document.querySelectorAll('section');
+            const mainContainer = document.getElementById('main-scroll'); // Corrected to target the scrollable main element
+            const sections = document.querySelectorAll('section, header'); // Header incluído pois tem ID "inicio"
             const navLinks = document.querySelectorAll('.sidebar-link');
 
             function highlightSidebar() {
@@ -271,6 +601,8 @@
 
             // Escuta o scroll no container principal (main) em vez de window
             mainContainer.addEventListener('scroll', highlightSidebar);
+            // Initial call to set active link on page load
+            highlightSidebar();
         });
     </script>
 </body>
