@@ -125,8 +125,8 @@
                     
                     <h2 class="text-2xl font-bold text-white mb-2">Minecraft Modded</h2>
                     
-                    <span class="mt-6 px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs font-bold uppercase tracking-wider rounded-full border border-yellow-500/30">
-                        Em Breve
+                    <span class="mt-6 px-3 py-1 bg-green-500/20 text-green-400 text-xs font-bold uppercase tracking-wider rounded-full border border-green-500/30">
+                        Disponível
                     </span>
                 </div>
 
@@ -140,8 +140,8 @@
                     
                     <h2 class="text-2xl font-bold text-white mb-2">Hytale</h2>
                     
-                    <span class="mt-6 px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-wider rounded-full border border-blue-500/30">
-                        Disponível
+                    <span class="mt-6 px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs font-bold uppercase tracking-wider rounded-full border border-yellow-500/30">
+                        Desenvolvimento
                     </span>
                 </div>
 
@@ -310,7 +310,7 @@
                                 <div class="bg-black/50 px-4 py-3 rounded-lg border border-slate-600 font-mono text-emerald-400 select-all">
                                     play.mekaminers.net:25674
                                 </div>
-                                <button onclick="copyIP()" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold transition flex items-center shadow-lg shadow-blue-900/20 active:scale-95">
+                                <button onclick="copyIP('play.mekaminers.net:25674')" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold transition flex items-center shadow-lg shadow-blue-900/20 active:scale-95">
                                     <i class="fa-regular fa-copy mr-2"></i> Copiar IP
                                 </button>
                             </div>
@@ -322,18 +322,145 @@
             </div>
         </div>
 
-        <!-- MINECRAFT MODDED WIKI (WIP) -->
-        <div id="minecraft-wiki" class="hidden w-full max-w-4xl fade-in text-center py-20">
-            <div class="inline-block p-8 rounded-full bg-slate-800 mb-8 border border-slate-700 animate-pulse">
-                <i class="fa-solid fa-person-digging text-6xl text-yellow-500"></i>
+        <!-- MINECRAFT MODDED WIKI -->
+        <div id="minecraft-wiki" class="hidden w-full max-w-4xl fade-in pb-12">
+             <!-- Header Image Area -->
+             <div class="relative w-full h-48 md:h-64 rounded-xl overflow-hidden mb-8 shadow-2xl">
+                <div class="absolute inset-0 bg-gradient-to-r from-emerald-900 to-slate-900"></div>
+                <div class="absolute inset-0 opacity-30 bg-[url('https://www.transparenttextures.com/patterns/circuit-board.png')]"></div>
+                <div class="absolute bottom-0 left-0 p-6 md:p-8">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="bg-emerald-600 text-white text-xs font-bold px-2 py-1 rounded uppercase">Temporada 8</span>
+                    </div>
+                    <h1 class="text-3xl md:text-5xl font-bold text-white shadow-black drop-shadow-lg">MekaMiners Oasis</h1>
+                </div>
             </div>
-            <h2 class="text-3xl font-bold text-white mb-4">Em Desenvolvimento</h2>
-            <p class="text-slate-400 max-w-md mx-auto mb-8">
-                A Wiki do Minecraft Modded está sendo construída. Volte em breve para guias sobre mods técnicos, magia e automação.
-            </p>
-            <button onclick="showHome()" class="px-6 py-3 border border-slate-600 text-slate-300 rounded-lg hover:bg-slate-800 transition">
-                Voltar ao Início
-            </button>
+
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Sidebar Navigation -->
+                <div class="lg:col-span-1 hidden lg:block">
+                    <div class="sticky top-24 bg-slate-800/50 border border-slate-700 rounded-xl p-4">
+                        <h3 class="text-slate-300 font-bold mb-4 uppercase text-xs tracking-wider">Nesta Página</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#java-req" class="text-slate-400 hover:text-emerald-400 block transition">Requisitos</a></li>
+                            <li><a href="#downloads" class="text-slate-400 hover:text-emerald-400 block transition">Downloads</a></li>
+                            <li><a href="#ip-mc" class="text-slate-400 hover:text-emerald-400 block transition">IP do Servidor</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="lg:col-span-3 space-y-8">
+
+                    <!-- Java Warning -->
+                    <section id="java-req" class="bg-yellow-500/10 border-l-4 border-yellow-500 rounded-r-lg p-6">
+                        <div class="flex items-start">
+                            <i class="fa-brands fa-java text-4xl text-yellow-500 mr-4 mt-1"></i>
+                            <div>
+                                <h2 class="text-xl font-bold text-white mb-2">Atenção: Java 17 Obrigatório</h2>
+                                <p class="text-slate-300">
+                                    Para jogar na <strong>Temporada 8</strong>, é obrigatório ter o <strong>Java 17</strong> instalado. Versões antigas (Java 8) ou muito recentes podem causar erros.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Downloads Section -->
+                    <section id="downloads">
+                        <h2 class="text-2xl font-bold text-white mb-6 flex items-center">
+                            <i class="fa-solid fa-download text-emerald-500 mr-3"></i>Baixar Modpack
+                        </h2>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                            <!-- Dropbox -->
+                            <a href="https://www.dropbox.com/scl/fi/k79t8t61monupvp187tbp/MekaMiners-Oasis-8.2.2.zip?rlkey=iz5ebfls7xis53iiwhwmfp0jj&st=zgxly0px&dl=1" target="_blank" class="group relative bg-[#0061FF]/10 hover:bg-[#0061FF]/20 border border-[#0061FF]/50 p-4 rounded-xl flex items-center transition-all hover:scale-[1.02]">
+                                <div class="bg-[#0061FF] w-12 h-12 rounded-lg flex items-center justify-center mr-4 shadow-lg">
+                                    <i class="fa-brands fa-dropbox text-white text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-white">Dropbox</h3>
+                                    <span class="text-xs text-blue-200">Download direto (.zip)</span>
+                                </div>
+                                <i class="fa-solid fa-arrow-up-right-from-square absolute top-4 right-4 text-[#0061FF] opacity-0 group-hover:opacity-100 transition"></i>
+                            </a>
+
+                            <!-- MediaFire -->
+                            <a href="https://www.mediafire.com/file/nape3kj8jp3xk72/MekaMiners_Oasis_8.2.2.zip/file" target="_blank" class="group relative bg-[#129cff]/10 hover:bg-[#129cff]/20 border border-[#129cff]/50 p-4 rounded-xl flex items-center transition-all hover:scale-[1.02]">
+                                <div class="bg-[#129cff] w-12 h-12 rounded-lg flex items-center justify-center mr-4 shadow-lg">
+                                    <i class="fa-solid fa-cloud-arrow-down text-white text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-white">MediaFire</h3>
+                                    <span class="text-xs text-blue-200">Download direto (.zip)</span>
+                                </div>
+                                <i class="fa-solid fa-arrow-up-right-from-square absolute top-4 right-4 text-[#129cff] opacity-0 group-hover:opacity-100 transition"></i>
+                            </a>
+
+                            <!-- CurseForge -->
+                            <a href="https://www.curseforge.com/minecraft/modpacks/mekaminers" target="_blank" class="group relative bg-[#f16436]/10 hover:bg-[#f16436]/20 border border-[#f16436]/50 p-4 rounded-xl flex items-center transition-all hover:scale-[1.02]">
+                                <div class="bg-[#f16436] w-12 h-12 rounded-lg flex items-center justify-center mr-4 shadow-lg">
+                                    <!-- Using fire-flame-curved as it closely resembles CF logo -->
+                                    <i class="fa-solid fa-fire-flame-curved text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-white">CurseForge</h3>
+                                    <span class="text-xs text-orange-200">Via App ou Site</span>
+                                </div>
+                                <i class="fa-solid fa-arrow-up-right-from-square absolute top-4 right-4 text-[#f16436] opacity-0 group-hover:opacity-100 transition"></i>
+                            </a>
+
+                            <!-- Technic -->
+                            <a href="https://www.technicpack.net/modpack/mekaminers.1931118" target="_blank" class="group relative bg-slate-700/30 hover:bg-slate-700/50 border border-slate-600 p-4 rounded-xl flex items-center transition-all hover:scale-[1.02]">
+                                <div class="bg-slate-700 w-12 h-12 rounded-lg flex items-center justify-center mr-4 shadow-lg">
+                                    <i class="fa-solid fa-gears text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-white">Technic Launcher</h3>
+                                    <span class="text-xs text-slate-300">Plataforma Technic</span>
+                                </div>
+                                <i class="fa-solid fa-arrow-up-right-from-square absolute top-4 right-4 text-slate-500 opacity-0 group-hover:opacity-100 transition"></i>
+                            </a>
+                        </div>
+
+                        <!-- TLauncher Specific Info -->
+                        <div class="bg-slate-800 border border-slate-700 rounded-xl p-5">
+                            <div class="flex items-center gap-3 mb-3">
+                                <i class="fa-solid fa-gamepad text-purple-400 text-xl"></i>
+                                <h3 class="font-bold text-white">Usuários TLauncher</h3>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-3">
+                                Você pode instalar de duas formas:
+                            </p>
+                            <ul class="list-disc list-inside text-slate-400 text-sm space-y-2 ml-2">
+                                <li>Procure por <strong>MekaMiners</strong> na aba <span class="bg-slate-900 px-1 py-0.5 rounded text-xs border border-slate-700 font-mono">TLMods > Search</span>.</li>
+                                <li>Ou instale manualmente usando o arquivo <strong>.zip</strong> dos links do DropBox ou MediaFire acima.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- IP Section -->
+                    <section id="ip-mc" class="bg-slate-900 border border-slate-700 rounded-xl p-8 text-center relative overflow-hidden">
+                        <div class="relative z-10">
+                            <div class="inline-block p-3 rounded-full bg-emerald-500/20 text-emerald-400 mb-4">
+                                <i class="fa-solid fa-server text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Conectar ao Servidor</h3>
+                            <p class="text-slate-400 mb-6">Utilize o IP abaixo no seu multiplayer (incluso no modpack)</p>
+                            
+                            <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                                <div class="bg-black/50 px-4 py-3 rounded-lg border border-slate-600 font-mono text-emerald-400 select-all">
+                                    jogar.mekaminers.net
+                                </div>
+                                <button onclick="copyIP('jogar.mekaminers.net')" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-bold transition flex items-center shadow-lg shadow-emerald-900/20 active:scale-95">
+                                    <i class="fa-regular fa-copy mr-2"></i> Copiar IP
+                                </button>
+                            </div>
+                            <p id="copy-feedback-mc" class="text-green-400 text-sm mt-2 opacity-0 transition-opacity">IP copiado com sucesso!</p>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
         </div>
 
     </main>
@@ -393,43 +520,44 @@
         }
 
         // Utility Functions
-        function copyIP() {
-            const ip = "play.mekaminers.net:25674";
+        function copyIP(ip) {
+            // Determine which feedback element to show based on the IP
+            const feedbackId = ip.includes('play') ? 'copy-feedback' : 'copy-feedback-mc';
             
-            // Use Clipboard API
             if (navigator.clipboard) {
                 navigator.clipboard.writeText(ip).then(() => {
-                    showCopyFeedback();
+                    showCopyFeedback(feedbackId);
                 }).catch(err => {
                     console.error('Failed to copy: ', err);
-                    // Fallback
-                    fallbackCopy(ip);
+                    fallbackCopy(ip, feedbackId);
                 });
             } else {
-                fallbackCopy(ip);
+                fallbackCopy(ip, feedbackId);
             }
         }
 
-        function fallbackCopy(text) {
+        function fallbackCopy(text, feedbackId) {
             const textArea = document.createElement("textarea");
             textArea.value = text;
             document.body.appendChild(textArea);
             textArea.select();
             try {
                 document.execCommand('copy');
-                showCopyFeedback();
+                showCopyFeedback(feedbackId);
             } catch (err) {
                 console.error('Fallback copy failed', err);
             }
             document.body.removeChild(textArea);
         }
 
-        function showCopyFeedback() {
-            const feedback = document.getElementById('copy-feedback');
-            feedback.classList.remove('opacity-0');
-            setTimeout(() => {
-                feedback.classList.add('opacity-0');
-            }, 2000);
+        function showCopyFeedback(elementId) {
+            const feedback = document.getElementById(elementId);
+            if (feedback) {
+                feedback.classList.remove('opacity-0');
+                setTimeout(() => {
+                    feedback.classList.add('opacity-0');
+                }, 2000);
+            }
         }
     </script>
 </body>
