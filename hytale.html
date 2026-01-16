@@ -79,7 +79,10 @@
             <div class="p-4">
                 <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4 px-2">Navegação</div>
                 
-                <a href="#intro" class="sidebar-link active">
+                <a href="#basic-survival" class="sidebar-link active">
+                    <i class="fa-solid fa-seedling"></i> Início & Sobrevivência
+                </a>
+                <a href="#intro" class="sidebar-link">
                     <i class="fa-solid fa-circle-info"></i> Introdução
                 </a>
                 <a href="#claims" class="sidebar-link">
@@ -120,6 +123,9 @@
                 <a href="#agricultura-guia" class="sidebar-link">
                     <i class="fa-solid fa-seedling"></i> Agricultura
                 </a>
+                <a href="#fishing-guide" class="sidebar-link">
+                    <i class="fa-solid fa-fish"></i> Pesca
+                </a>
                 <a href="#" class="sidebar-link opacity-50 cursor-not-allowed" title="Em breve">
                     <i class="fa-solid fa-scroll"></i> Missões
                 </a>
@@ -146,6 +152,72 @@
                         <p class="text-slate-400 text-lg">Guia completo de sobrevivência, comandos e sistemas do servidor.</p>
                     </div>
                 </header>
+
+                <!-- START New Section: Guia de Início e Sobrevivência Básica -->
+                <section id="basic-survival" class="mb-12">
+                    <h2><i class="fa-solid fa-seedling text-green-500 mr-3"></i>Guia de Início e Sobrevivência Básica</h2>
+                    <p>Este guia cobre os fundamentos para estabelecer sua base, entender a interface e sobreviver aos primeiros dias no jogo.</p>
+
+                    <section id="basic-survival-interface" class="mb-8">
+                        <h3><i class="fa-solid fa-gamepad text-blue-400 mr-2"></i>1. Interface e Comandos Úteis</h3>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li><strong>Mapa:</strong> Pressione <code class="text-pink-400">M</code> para ver o mapa e localizar o Spawn e o Forgotten Temple Gateway.</li>
+                            <li><strong>Coordenadas:</strong> Pressione <code class="text-pink-400">F7</code> para exibir suas coordenadas no canto superior esquerdo (útil para marcar a localização da base).</li>
+                            <li><strong>Configurações Recomendadas:</strong> Ative as barras de vida (Health Bars) e números de dano nas configurações gerais para ver a saúde dos inimigos.</li>
+                        </ul>
+                    </section>
+
+                    <section id="basic-survival-resources" class="mb-8">
+                        <h3><i class="fa-solid fa-tools text-orange-400 mr-2"></i>2. Primeiros Recursos e Crafting</h3>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li><strong>Coleta Inicial:</strong> Comece coletando <code class="text-pink-400">Rubble</code> (pedregulhos soltos no chão) e socando árvores para obter madeira. Quebre as árvores pela base para que o resto caia automaticamente.</li>
+                            <li><strong>Bancada (Workbench):</strong> Crie a Workbench padrão primeiro (a Builder's Workbench é para blocos de construção específicos e pode esperar).</li>
+                            <li><strong>Ferramentas:</strong> Crie picareta, machado e um martelo (hammer).</li>
+                        </ul>
+                    </section>
+
+                    <section id="basic-survival-workbenches" class="mb-8">
+                        <h3><i class="fa-solid fa-industry text-purple-400 mr-2"></i>3. Bancadas Especializadas</h3>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li><strong>Tanning Rack (Cortume):</strong> Usado para transformar peles (Hides) obtidas de animais em couro (Leather).</li>
+                            <li><strong>Furniture Workbench (Bancada de Móveis):</strong> Essencial para criar a Cama.</li>
+                            <li><strong>Furnace (Fornalha):</strong>
+                                <ul class="list-circle list-inside ml-4 space-y-0.5">
+                                    <li>Possui dois slots de entrada, permitindo fundir dois tipos de minérios (ex: Ouro e Prata) simultaneamente.</li>
+                                    <li><strong>Combustível:</strong> Troncos (Logs) ou Carvão (Charcoal). O processo gera carvão como subproduto às vezes.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="basic-survival-base" class="mb-8">
+                        <h3><i class="fa-solid fa-home text-green-400 mr-2"></i>4. Base e Respawn</h3>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li><strong>Defesa:</strong> Ao construir paredes, faça-as com 3 blocos de altura. Os mobs no Hytale conseguem pular até 2 blocos de altura.</li>
+                            <li><strong>Cama (Bed):</strong>
+                                <ul class="list-circle list-inside ml-4 space-y-0.5">
+                                    <li>Feita na Furniture Workbench (requer madeira e fibra de planta).</li>
+                                    <li>Colocar a cama define seu ponto de Respawn.</li>
+                                    <li>O sono depende do horário do jogo (não apenas da escuridão visual); o jogo avisará se ainda for cedo para dormir.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="basic-survival-tips" class="mb-8">
+                        <h3><i class="fa-solid fa-lightbulb text-yellow-400 mr-2"></i>5. Dicas de Sobrevivência</h3>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li><strong>Iluminação (Slot Z):</strong> Você pode equipar tochas no slot <code class="text-pink-400">Z</code> (mão secundária) para iluminar cavernas enquanto usa uma picareta.
+                                <ul class="list-circle list-inside ml-4 space-y-0.5">
+                                    <li><strong>Nota:</strong> Você não consegue colocar a tocha no chão se ela estiver no slot Z; ela precisa estar na mão principal para ser posicionada.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Comida:</strong> Comer recupera Vida e Energia. Evite comer no meio do combate, pois isso te deixa vulnerável.</li>
+                            <li><strong>Fuga:</strong> Em perigo, construa uma torre de 3 blocos para baixo de você ("tower up") para ficar fora do alcance de ataques corpo a corpo e poder se curar.</li>
+                        </ul>
+                    </section>
+                </section>
+                <!-- END New Section: Guia de Início e Sobrevivência Básica -->
 
                 <section id="intro">
                     <h2><i class="fa-solid fa-door-open text-blue-500 mr-3"></i>Como Entrar e Jogar</h2>
@@ -529,7 +601,7 @@
                         </section>
 
                         <section id="windrider-valley" class="mb-4">
-                            <h4 class="text-lg font-semibold text-slate-200 mb-2"><i class="fa-solid fa-wind text-cyan-400 mr-2"></i>Windrider Valley (Vale dos Cavaleiros do Vento)</h4>
+                            <h4 class="text-lg font-semibold text-cyan-400 mb-2"><i class="fa-solid fa-wind text-cyan-400 mr-2"></i>Windrider Valley (Vale dos Cavaleiros do Vento)</h4>
                             <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
                                 <li><strong>Chave:</strong> Thorium Ingot + Essence of Light.</li>
                                 <li><strong>Características:</strong> Um vale/cânion habitado por tigres dente-de-sabre e pela facção Fen. Pode conter Torres de Mago.</li>
@@ -538,7 +610,7 @@
                         </section>
 
                         <section id="dread-wade" class="mb-4">
-                            <h4 class="text-lg font-semibold text-slate-200 mb-2"><i class="fa-solid fa-skull-crossbones text-purple-400 mr-2"></i>Dread Wade (O Pântano do Medo)</h4>
+                            <h4 class="text-lg font-semibold text-purple-400 mb-2"><i class="fa-solid fa-skull-crossbones text-purple-400 mr-2"></i>Dread Wade (O Pântano do Medo)</h4>
                             <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
                                 <li><strong>Chave:</strong> Adamantite Ingot + Essence of Fire (encontrados em biomas de fogo/lava).</li>
                                 <li><strong>Características:</strong> Um pântano escuro e perigoso com crocodilos e sapos gigantes.</li>
@@ -552,6 +624,47 @@
                     </section>
                 </section>
                 <!-- END New Section: Guia de Portais e Dimensões (Ancient Gateway) -->
+
+                <!-- START New Section: Guia de Pesca (Fishing Guide) -->
+                <section id="fishing-guide" class="mt-16 pt-8 border-t border-slate-800">
+                    <h2 class="text-3xl font-bold text-white mb-6"><i class="fa-solid fa-fish text-blue-500 mr-3"></i>Guia de Pesca</h2>
+                    <p class="text-slate-400 text-lg mb-8">Atualmente, não existem varas de pesca no Hytale. O método principal para obter peixes é através do uso de armadilhas.</p>
+
+                    <section id="fishing-tools" class="mb-8">
+                        <h3 class="text-xl font-bold text-blue-400 mb-3"><i class="fa-solid fa-toolbox text-blue-400 mr-2"></i>1. Ferramentas Necessárias</h3>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li><strong>Fishing Trap (Armadilha de Pesca):</strong> Item colocável na água para capturar peixes passivamente.</li>
+                            <li><strong>Fish Bait (Isca de Peixe):</strong> Necessária para ativar a armadilha. Feita com frutas (berries).</li>
+                        </ul>
+                    </section>
+
+                    <section id="fishing-crafting" class="mb-8">
+                        <h3 class="text-xl font-bold text-blue-400 mb-3"><i class="fa-solid fa-hammer text-blue-400 mr-2"></i>2. Como Fabricar (Crafting)</h3>
+                        <p class="mb-2">Para criar tanto a armadilha quanto a isca, você precisará evoluir sua bancada:</p>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li><strong>Estação:</strong> <strong class="text-slate-200">Farmer's Workbench (Bancada do Fazendeiro)</strong>.</li>
+                            <li><strong>Nível:</strong> A receita é desbloqueada no <strong class="text-slate-200">Tier 2</strong>.</li>
+                            <li><strong>Custo:</strong> Ambos os itens exigem uma quantidade considerável de <strong class="text-green-300">Essence of Life (Essência da Vida)</strong> para serem fabricados.</li>
+                        </ul>
+                    </section>
+
+                    <section id="fishing-process" class="mb-8">
+                        <h3 class="text-xl font-bold text-blue-400 mb-3"><i class="fa-solid fa-fishing-rod text-blue-400 mr-2"></i>3. Como Pescar</h3>
+                        <ol class="list-decimal list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li><strong>Posicionamento:</strong> Coloque a <strong class="text-slate-200">Fishing Trap</strong> em um corpo de água (oceano, lago, etc.).</li>
+                            <li><strong>Isca:</strong> Com a <strong class="text-slate-200">Fish Bait (berries)</strong> em mãos, clique com o botão direito na armadilha para preenchê-la.</li>
+                            <li><strong>Espera:</strong> Aguarde até que a armadilha capture algo. O processo pode levar cerca de meio dia dentro do jogo.</li>
+                            <li><strong>Coleta:</strong> Quando pronta, interaja com a armadilha para coletar os peixes (ex: Bluegills, Lemon Peel Tanks).</li>
+                            <li><strong>Reutilização:</strong> As armadilhas não quebram após o uso; basta colocar mais isca para pescar novamente.</li>
+                        </ol>
+                    </section>
+
+                    <section id="fishing-alternative" class="mb-8">
+                        <h3 class="text-xl font-bold text-blue-400 mb-3"><i class="fa-solid fa-hand-fist text-blue-400 mr-2"></i>4. Método Alternativo (Caça)</h3>
+                        <p class="mb-4">É possível obter peixe cru (raw fish) combatendo e matando lagostas (lobsters/crayfish) encontradas em praias e áreas arenosas perto da água.</p>
+                    </section>
+                </section>
+                <!-- END New Section: Guia de Pesca (Fishing Guide) -->
                 
                 <footer class="mt-20 border-t border-slate-800 pt-8 pb-4 text-center text-slate-600 text-sm">
                     <p>© Mekaminers Wiki - Hytale</p>
