@@ -96,6 +96,38 @@
                 <a href="#" class="sidebar-link opacity-50 cursor-not-allowed" title="Em breve">
                     <i class="fas fa-shield-alt"></i> Facções
                 </a>
+
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mt-8 mb-4 px-2">Economia do Servidor</div>
+                <a href="#ecotale-economy" class="sidebar-link">
+                    <i class="fas fa-money-bill-wave"></i> Visão Geral
+                </a>
+                <a href="#your-money" class="sidebar-link">
+                    <i class="fas fa-credit-card"></i> Seu Dinheiro
+                </a>
+                <a href="#transfer-money" class="sidebar-link">
+                    <i class="fas fa-exchange-alt"></i> Transferir Dinheiro
+                </a>
+                <a href="#richest-players" class="sidebar-link">
+                    <i class="fas fa-trophy"></i> Ranking
+                </a>
+                <a href="#ecotalemarket" class="sidebar-link">
+                    <i class="fas fa-shopping-cart"></i> EcotaleMarket
+                </a>
+                <a href="#ecotalejobs" class="sidebar-link">
+                    <i class="fas fa-hard-hat"></i> EcotaleJobs
+                </a>
+                <a href="#economy-protection" class="sidebar-link">
+                    <i class="fas fa-shield-alt"></i> Proteção
+                </a>
+                <a href="#vip-benefits" class="sidebar-link">
+                    <i class="fas fa-star"></i> Benefícios VIP
+                </a>
+                <a href="#vip-types" class="sidebar-link">
+                    <i class="fas fa-gem"></i> Tipos de VIP
+                </a>
+                <a href="#important-tips" class="sidebar-link">
+                    <i class="fas fa-lightbulb"></i> Dicas Importantes
+                </a>
             </div>
         </aside>
 
@@ -852,6 +884,191 @@
                     </section>
                 </section>
                 <!-- END New Section: Backpacks -->
+
+                <!-- START New Section: Ecotale - Server Economy -->
+                <section id="ecotale-economy" class="mt-16 pt-8 border-t border-slate-800 mb-16">
+                    <h2><i class="fas fa-money-bill-wave"></i> Ecotale – Economia do Servidor</h2>
+                    <p class="text-slate-400 text-lg mb-8">O Ecotale é o sistema de economia do servidor. Ele controla seu dinheiro, recompensas, transferências e o mercado entre jogadores.</p>
+                    <p class="text-slate-400 text-lg mb-8">Tudo foi feito para ser simples de usar, justo e integrado ao gameplay.</p>
+
+                    <section id="your-money" class="mb-8">
+                        <h3><i class="fas fa-credit-card"></i> Seu Dinheiro</h3>
+                        <p class="mb-2">Use:</p>
+                        <div class="command-box">
+                            <div class="flex items-start gap-3">
+                                <code class="text-pink-400 font-bold whitespace-nowrap font-mono"><i class="fas fa-wallet wiki-inline-icon"></i>/balance</code>
+                                <p class="text-slate-300 text-sm m-0">Você verá seu saldo atual. Dependendo da configuração do servidor, o valor também pode aparecer na tela (HUD).</p>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <div>
+                                <h4 class="!mt-0 !text-blue-100 !text-lg !mb-2"><i class="fas fa-lightbulb"></i> O saldo usa formatação inteligente:</h4>
+                                <ul class="list-disc list-inside text-slate-400 pl-4 mt-2 space-y-1">
+                                    <li><code class="text-pink-400">1.000</code> → <code class="text-pink-400">1K</code></li>
+                                    <li><code class="text-pink-400">1.000.000</code> → <code class="text-pink-400">1M</code></li>
+                                    <li><code class="text-pink-400">1.000.000.000</code> → <code class="text-pink-400">1B</code></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="transfer-money" class="mb-8">
+                        <h3><i class="fas fa-exchange-alt"></i> Transferir Dinheiro para Outros Jogadores</h3>
+                        <p class="mb-2">Abrir interface de pagamento:</p>
+                        <div class="command-box">
+                            <div class="flex items-start gap-3">
+                                <code class="text-pink-400 font-bold whitespace-nowrap font-mono"><i class="fas fa-hand-holding-usd wiki-inline-icon"></i>/pay</code>
+                                <p class="text-slate-300 text-sm m-0">Ou envie diretamente: <code class="text-pink-400">/pay jogador valor</code></p>
+                            </div>
+                        </div>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li>Pode existir taxa de transferência.</li>
+                            <li>Só é possível pagar se você tiver saldo suficiente.</li>
+                            <li>Todas as transações são seguras.</li>
+                        </ul>
+                    </section>
+
+                    <section id="richest-players" class="mb-8">
+                        <h3><i class="fas fa-trophy"></i> Ranking de Jogadores Mais Ricos</h3>
+                        <p class="mb-2">Veja quem tem mais dinheiro no servidor:</p>
+                        <div class="command-box">
+                            <div class="flex items-start gap-3">
+                                <code class="text-pink-400 font-bold whitespace-nowrap font-mono"><i class="fas fa-chart-line wiki-inline-icon"></i>/topb</code>
+                                <p class="text-slate-300 text-sm m-0">Exibe o ranking dos jogadores com maior saldo.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="ecotalemarket" class="mb-8">
+                        <h3><i class="fas fa-shopping-cart"></i> EcotaleMarket – Mercado Global</h3>
+                        <p class="mb-4">O EcotaleMarket permite que jogadores comprem e vendam itens entre si, de qualquer lugar do mapa.</p>
+
+                        <h4><i class="fas fa-store"></i> Comprar Itens</h4>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li>Acesso global (não precisa ir a um local físico).</li>
+                            <li>Itens organizados por categorias.</li>
+                            <li>Sistema de busca por nome.</li>
+                            <li>Você não perde dinheiro se não tiver espaço no inventário.</li>
+                        </ul>
+                        <p class="mb-2">Comando:</p>
+                        <div class="command-box">
+                            <div class="flex items-start gap-3">
+                                <code class="text-pink-400 font-bold whitespace-nowrap font-mono"><i class="fas fa-cash-register wiki-inline-icon"></i>/market</code>
+                                <p class="text-slate-300 text-sm m-0">Abre a interface do mercado para comprar itens.</p>
+                            </div>
+                        </div>
+
+                        <h4><i class="fas fa-box-open"></i> Vender Itens</h4>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li>Escolha itens direto do seu inventário.</li>
+                            <li>Defina o preço que quiser.</li>
+                            <li>Cancele anúncios quando quiser.</li>
+                            <li>Acompanhe tudo o que já vendeu.</li>
+                        </ul>
+
+                        <h4><i class="fas fa-user-circle"></i> Perfil do Mercado</h4>
+                        <p class="mb-2">No perfil do mercado você pode:</p>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li>Ver anúncios ativos.</li>
+                            <li>Consultar histórico de vendas.</li>
+                            <li>Conferir estatísticas pessoais.</li>
+                        </ul>
+                    </section>
+
+                    <section id="ecotalejobs" class="mb-8">
+                        <h3><i class="fas fa-hard-hat"></i> EcotaleJobs – Ganhar Dinheiro Jogando</h3>
+                        <p class="mb-4">Com o EcotaleJobs, você ganha dinheiro automaticamente ao jogar, sem precisar de comandos.</p>
+
+                        <h4><i class="fas fa-pickaxe"></i> Mineração</h4>
+                        <p class="mb-2">Você recebe dinheiro ao minerar minérios.</p>
+                        <p class="mb-2">Como funciona:</p>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li>Minérios são identificados automaticamente.</li>
+                            <li>Quanto mais raro o minério, maior a recompensa.</li>
+                            <li>Minerar em maior profundidade paga mais.</li>
+                            <li>É necessário usar a ferramenta correta.</li>
+                        </ul>
+                        <h5 class="text-slate-200 font-semibold mb-2"><i class="fas fa-bolt wiki-inline-icon"></i> Vein Streak</h5>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li>Minerar vários minérios em sequência gera bônus.</li>
+                            <li>Sons avisam quando o bônus está ativo.</li>
+                            <li>Sequências maiores rendem mais.</li>
+                        </ul>
+
+                        <h4><i class="fas fa-skull-crossbones"></i> Matar Mobs</h4>
+                        <p class="mb-2">Todo mob do jogo pode gerar recompensa.</p>
+                        <p class="mb-2">Sistema automático:</p>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li>O sistema analisa força, vida e agressividade do mob.</li>
+                            <li>Classifica o nível do inimigo automaticamente.</li>
+                            <li>Funciona com mobs do jogo base e de mods.</li>
+                        </ul>
+                        <h5 class="text-slate-200 font-semibold mb-2"><i class="fas fa-info-circle wiki-inline-icon"></i> Exemplo de lógica:</h5>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li>Criaturas fracas → pouco dinheiro.</li>
+                            <li>Mobs hostis → recompensa média.</li>
+                            <li>Elites e bosses → recompensas altas.</li>
+                        </ul>
+                    </section>
+
+                    <section id="economy-protection" class="mb-8">
+                        <h3><i class="fas fa-shield-alt"></i> Proteção da Economia</h3>
+                        <p class="mb-2">Para manter o jogo justo:</p>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li>Recompensas diminuem se você farmar repetidamente o mesmo mob.</li>
+                            <li>Existe limite de ganho em curto período.</li>
+                            <li>Farms abusivos não funcionam.</li>
+                        </ul>
+                    </section>
+
+                    <section id="vip-benefits" class="mb-8">
+                        <h3><i class="fas fa-star"></i> Benefícios VIP</h3>
+                        <p class="mb-2">Os benefícios VIP estão ativos e concedem vantagens econômicas ao jogar normalmente.</p>
+                        <p class="mb-2">Eles funcionam automaticamente em:</p>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li>Mineração.</li>
+                            <li>Matar mobs.</li>
+                        </ul>
+                    </section>
+
+                    <section id="vip-types" class="mb-8">
+                        <h3><i class="fas fa-gem"></i> Tipos de VIP e Bônus</h3>
+                        <div class="overflow-hidden border border-slate-700 rounded-lg mb-4">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>VIP</th>
+                                        <th>Multiplicador de Dinheiro</th>
+                                        <th>Bônus de Chance</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><code class="font-mono">Plus</code></td><td>+20% (1.2x)</td><td>+5%</td></tr>
+                                    <tr><td><code class="font-mono">Ultra</code></td><td>+50% (1.5x)</td><td>+10%</td></tr>
+                                    <tr><td><code class="font-mono">Eternal</code></td><td>+100% (2.0x)</td><td>+15%</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h4 class="!mt-0 !text-slate-200 !text-lg !mb-2"><i class="fas fa-question-circle"></i> O que isso significa na prática?</h4>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li>Você ganha mais dinheiro pelas mesmas ações.</li>
+                            <li>A chance de receber recompensas é maior.</li>
+                            <li>Apenas um VIP é aplicado por vez.</li>
+                            <li>Jogadores sem VIP continuam jogando normalmente.</li>
+                        </ul>
+                    </section>
+
+                    <section id="important-tips" class="mb-8">
+                        <h3><i class="fas fa-lightbulb"></i> Dicas Importantes</h3>
+                        <ul class="list-disc list-inside text-slate-400 pl-4 mb-4 space-y-1">
+                            <li>Usar o mercado é uma das formas mais lucrativas de ganhar dinheiro.</li>
+                            <li>Minerar minérios raros rende mais.</li>
+                            <li>Evite farms repetitivos — o sistema reduz recompensas.</li>
+                            <li>Acompanhe o ranking para entender a economia do servidor.</li>
+                        </ul>
+                    </section>
+                </section>
+                <!-- END New Section: Ecotale - Server Economy -->
                 
                 <footer class="mt-20 border-t border-slate-800 pt-8 pb-4 text-center text-slate-600 text-sm">
                     <p>© Mekaminers Wiki - Hytale</p>
